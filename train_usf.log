@@ -1,0 +1,67 @@
+nohup: ignoring input
+[23:54:22] GPU free — starting UrbanSARFloods runs
+### unet_r34_co_int: in_ch 2, 2281 train chips, 3000 crops/epoch, fast-val 781 chips, class weights [1.0, 2.0, 10.0]
+  ep   1 loss 1.191  IoU open 0.322  urban 0.000  (urban->open 0.01)  346s *
+  ep   2 loss 1.037  IoU open 0.325  urban 0.024  (urban->open 0.00)  363s *
+  ep   3 loss 1.031  IoU open 0.349  urban 0.018  (urban->open 0.01)  341s *
+  ep   4 loss 1.002  IoU open 0.411  urban 0.044  (urban->open 0.01)  359s *
+  ep   5 loss 0.984  IoU open 0.387  urban 0.038  (urban->open 0.00)  387s
+  ep   6 loss 1.005  IoU open 0.422  urban 0.017  (urban->open 0.01)  376s
+  ep   7 loss 0.977  IoU open 0.388  urban 0.049  (urban->open 0.01)  355s
+  ep   8 loss 0.969  IoU open 0.416  urban 0.037  (urban->open 0.00)  359s
+  ep   9 loss 0.967  IoU open 0.429  urban 0.047  (urban->open 0.01)  330s *
+  ep  10 loss 0.930  IoU open 0.394  urban 0.038  (urban->open 0.01)  758s
+  ep  11 loss 0.931  IoU open 0.423  urban 0.051  (urban->open 0.01)  498s
+  ep  12 loss 0.928  IoU open 0.413  urban 0.031  (urban->open 0.01)  326s
+  ep  13 loss 0.889  IoU open 0.421  urban 0.046  (urban->open 0.01)  321s
+  ep  14 loss 0.895  IoU open 0.438  urban 0.055  (urban->open 0.01)  326s *
+  ep  15 loss 0.902  IoU open 0.415  urban 0.039  (urban->open 0.01)  333s
+  ep  16 loss 0.898  IoU open 0.420  urban 0.046  (urban->open 0.00)  358s
+  ep  17 loss 0.911  IoU open 0.442  urban 0.029  (urban->open 0.01)  366s
+  ep  18 loss 0.887  IoU open 0.453  urban 0.060  (urban->open 0.01)  389s *
+  ep  19 loss 0.867  IoU open 0.434  urban 0.066  (urban->open 0.01)  380s
+  ep  20 loss 0.866  IoU open 0.452  urban 0.051  (urban->open 0.01)  373s
+  ep  21 loss 0.878  IoU open 0.430  urban 0.065  (urban->open 0.00)  444s
+Traceback (most recent call last):
+  File "/home/manish-bilore/Desktop/SAR_Flood_Mapping/src/train_usf.py", line 186, in <module>
+    main(ap.parse_args())
+  File "/home/manish-bilore/Desktop/SAR_Flood_Mapping/src/train_usf.py", line 153, in main
+    s = evaluate(model, va_fast, dev, amp)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/manish-bilore/anaconda3/envs/sarflood/lib/python3.11/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/manish-bilore/Desktop/SAR_Flood_Mapping/src/train_usf.py", line 122, in evaluate
+    cm += confusion(lg, y[None].to(dev))
+                        ^^^^^^^^^^^^^^^
+RuntimeError: CUDA error: unspecified launch failure
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+/home/manish-bilore/anaconda3/envs/sarflood/lib/python3.11/site-packages/torch/cuda/__init__.py:174: UserWarning: CUDA initialization: CUDA unknown error - this may be due to an incorrectly set up environment, e.g. changing env variable CUDA_VISIBLE_DEVICES after program start. Setting the available devices to be zero. (Triggered internally at /pytorch/c10/cuda/CUDAFunctions.cpp:109.)
+  return torch._C._cuda_getDeviceCount() > 0
+### unet_r34_int: in_ch 4, 2281 train chips, 3000 crops/epoch, fast-val 781 chips, class weights [1.0, 2.0, 10.0]
+  ep   1 loss 1.105  IoU open 0.601  urban 0.000  (urban->open 0.01)  1821s *
+  ep   2 loss 0.900  IoU open 0.643  urban 0.030  (urban->open 0.01)  1717s *
+  ep   3 loss 0.822  IoU open 0.589  urban 0.012  (urban->open 0.01)  2118s
+  ep   4 loss 0.819  IoU open 0.686  urban 0.119  (urban->open 0.01)  1885s *
+  ep   5 loss 0.780  IoU open 0.696  urban 0.132  (urban->open 0.01)  1874s *
+  ep   6 loss 0.768  IoU open 0.685  urban 0.062  (urban->open 0.01)  2225s
+  ep   7 loss 0.745  IoU open 0.683  urban 0.040  (urban->open 0.01)  2009s
+  ep   8 loss 0.777  IoU open 0.655  urban 0.019  (urban->open 0.01)  1845s
+  ep   9 loss 0.747  IoU open 0.696  urban 0.068  (urban->open 0.01)  2013s
+  ep  10 loss 0.735  IoU open 0.694  urban 0.135  (urban->open 0.01)  74238s
+  ep  11 loss 0.733  IoU open 0.718  urban 0.152  (urban->open 0.01)  1896s *
+  ep  12 loss 0.715  IoU open 0.657  urban 0.147  (urban->open 0.01)  1951s
+  ep  13 loss 0.717  IoU open 0.725  urban 0.137  (urban->open 0.01)  1794s
+  ep  14 loss 0.711  IoU open 0.727  urban 0.123  (urban->open 0.01)  69622s
+  ep  15 loss 0.695  IoU open 0.720  urban 0.164  (urban->open 0.01)  1658s *
+  ep  16 loss 0.703  IoU open 0.695  urban 0.172  (urban->open 0.01)  1517s
+  ep  17 loss 0.688  IoU open 0.747  urban 0.175  (urban->open 0.01)  1914s *
+  ep  18 loss 0.682  IoU open 0.746  urban 0.173  (urban->open 0.01)  1516s
+  ep  19 loss 0.689  IoU open 0.736  urban 0.139  (urban->open 0.01)  1874s
+  ep  20 loss 0.674  IoU open 0.733  urban 0.172  (urban->open 0.01)  1988s
+  ep  21 loss 0.671  IoU open 0.749  urban 0.173  (urban->open 0.01)  1835s *
+  ep  22 loss 0.668  IoU open 0.758  urban 0.185  (urban->open 0.01)  1476s *
+  ep  23 loss 0.675  IoU open 0.750  urban 0.171  (urban->open 0.01)  1836s

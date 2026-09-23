@@ -1,0 +1,34 @@
+# --- data and model weights are not in git (tens of GB, all of it re-downloadable) ---
+data/
+runs/
+*.pt
+*.pth
+
+# outputs: keep the small provenance files, drop the rasters
+outputs/*/display/
+outputs/*/zoom/
+outputs/*/*.tif
+outputs/qa/
+!outputs/*/tables/
+!outputs/*/summary.json
+!outputs/audit/
+
+# report build products (the published HTML is copied into site/ by report/publish.sh)
+report/_site/
+report/.quarto/
+report/*_files/
+report/event.knit.md
+
+# python / editor / os
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+env/
+.Rproj.user/
+.Rhistory
+.DS_Store
+*.swp
+
+# archives used to move code between machines
+*.tar.gz

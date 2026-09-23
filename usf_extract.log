@@ -1,0 +1,49 @@
+>> step 1: extracting the text files (one full read of the archive)
+   Train list 4501 lines, e.g. ['../03_FU/GT/20190329_Iran_ID_17_19_GT.tif', '../03_FU/GT/20190329_Iran_ID_14_27_GT.tif']
+   Valid list 1970 lines, e.g. ['../03_FU/GT/20190329_Iran_ID_18_19_GT.tif', '../03_FU/GT/20190329_Iran_ID_18_13_GT.tif']
+   data_norm: ['std_in :[0.16280619 0.20849304 0.14008107 0.19767644 4.07141682 3.94773216 4.21006244 4.05494136]', 'mean_in :[  0.23651549   0.31761484   0.18514981   0.26901252 -14.57879175  -8.6098158  -14.29073382  -8.33534564]', 'median_in :[  0.23651549   0.31761484   0.18514981   0.26901252 -14.57879175  -8.6098158  -14.29073382  -8.33534564]', 'max_in :[ 0.56519184  0.70935154  0.53432751  0.66288453 -7.85489845 -1.61887217 -7.48478746 -1.26720715]', 'min_in :[  0.03540783   0.04156244   0.03062815   0.03643807 -23.19632721 -16.43351936 -23.46723938 -16.71599197]', 'num_0 :1161425968', 'num_1 :18120626', 'num_2 :363550']
+>> step 2: streaming chips
+   500 tif members read, 499 kept
+   1000 tif members read, 999 kept
+   1500 tif members read, 1499 kept
+   2000 tif members read, 1999 kept
+   2500 tif members read, 2499 kept
+   3000 tif members read, 2999 kept
+   3500 tif members read, 3402 kept
+   4000 tif members read, 3402 kept
+   4500 tif members read, 3402 kept
+   5000 tif members read, 3402 kept
+   5500 tif members read, 3402 kept
+   6000 tif members read, 3402 kept
+   6500 tif members read, 3402 kept
+   7000 tif members read, 3402 kept
+   7500 tif members read, 3402 kept
+   8000 tif members read, 3402 kept
+   8500 tif members read, 3576 kept
+   9000 tif members read, 3858 kept
+   9500 tif members read, 4128 kept
+   10000 tif members read, 4392 kept
+   10500 tif members read, 4663 kept
+   11000 tif members read, 4922 kept
+   11500 tif members read, 5189 kept
+   12000 tif members read, 5460 kept
+   12500 tif members read, 5724 kept
+ band      p1     p50    p99  nan_frac
+    1   0.054   0.320  0.740     0.051
+    2   0.088   0.424  0.837     0.051
+    3   0.024   0.209  0.664     0.052
+    4   0.036   0.290  0.770     0.052
+    5 -23.471 -14.537 -6.489     0.050
+    6 -18.553  -8.571  1.364     0.050
+    7 -23.769 -13.822 -5.743     0.050
+    8 -18.722  -7.811  2.346     0.050
+folder  kind  split   
+01_NF   GT    train       1133
+              valid       1439
+02_FO   GT    train        699
+              valid        312
+        SAR   unlisted    1011
+03_FU   GT    train        471
+              valid        219
+        SAR   unlisted     690
+>> done. kept 5974 files. When satisfied: rm /home/manish-bilore/Desktop/SAR_Flood_Mapping/data/benchmarks/urbansarfloods/urban_sar_floods.tar.gz

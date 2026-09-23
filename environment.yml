@@ -1,0 +1,35 @@
+# conda env create -f environment.yml   (GPU wheel below targets sm_61 / CUDA 11.8 — see docs/04_compute_plan.md)
+name: sarflood
+channels: [conda-forge]
+dependencies:
+  - python=3.11
+  - gdal
+  - rasterio
+  - rioxarray
+  - xarray
+  - geopandas
+  - shapely
+  - pyproj
+  - numpy
+  - scipy
+  - pandas
+  - scikit-image
+  - scikit-learn
+  - matplotlib
+  - pyyaml
+  - tqdm
+  - dask
+  - netcdf4
+  - poppler            # pdftotext / pdftoppm, used by src/nrsc_reference.py
+  - pysheds            # HAND from GLO-30
+  - pip
+  - pip:
+      - pystac-client
+      - planetary-computer
+      - stackstac
+      - asf-search
+      - hyp3-sdk
+      - segmentation-models-pytorch
+      - timm
+      # torch is installed separately so the CUDA build matches the GPU:
+      #   pip install torch==2.7.1+cu118 torchvision --index-url https://download.pytorch.org/whl/cu118

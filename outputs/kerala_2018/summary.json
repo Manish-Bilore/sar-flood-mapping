@@ -1,0 +1,124 @@
+{
+ "event": "kerala_2018",
+ "co_file": "co_20180821_p165.tif",
+ "path": 165,
+ "bbox": [
+  76.2,
+  9.05,
+  76.95,
+  10.3
+ ],
+ "factor": 5,
+ "pre_file": "pre_20180809_p165.tif",
+ "display_layers": [
+  "co_vh_db",
+  "co_vv_db",
+  "coh_co_coh",
+  "coh_dry_coh",
+  "coh_pre_coh",
+  "dem",
+  "dl_deeplab_r34_flood_frac",
+  "dl_deeplab_r34_prob",
+  "dl_segformer_b0_flood_frac",
+  "dl_segformer_b0_prob",
+  "dl_segformer_b2_flood_frac",
+  "dl_segformer_b2_prob",
+  "dl_unet_r18_flood_frac",
+  "dl_unet_r18_prob",
+  "dl_unet_r34_flood_frac",
+  "dl_unet_r34_prob",
+  "dry_vh_db",
+  "dry_vv_db",
+  "flood_cd_vv_frac",
+  "flood_gee2024_frac",
+  "flood_otsu_vh_frac",
+  "flood_otsu_vv_frac",
+  "flood_split_vv_frac",
+  "flood_urban_incr_frac",
+  "gee2024_after_vv_db",
+  "gee2024_before_vv_db",
+  "gsw_occ",
+  "gsw_seas",
+  "hand",
+  "logratio_vv_db",
+  "pre_vv_db",
+  "slope",
+  "worldcover"
+ ],
+ "excluded_methods": [
+  "gee2024"
+ ],
+ "builtup_km2": 390.4076,
+ "dl_voting_models": [
+  "dl_deeplab_r34",
+  "dl_segformer_b0",
+  "dl_segformer_b2",
+  "dl_unet_r18",
+  "dl_unet_r34"
+ ],
+ "dl_excluded": {},
+ "dl_gate_test_iou": 0.6,
+ "final_voters": [
+  "cd_vv",
+  "otsu_vv",
+  "split_vv",
+  "dl_ensemble"
+ ],
+ "final_km2": 507.65930000000003,
+ "valid_km2": 11501.013200000001,
+ "published": [
+  {
+   "source": "Otsu on S1 in GEE, PLOS One 2020",
+   "metric": "OA",
+   "value": 0.941,
+   "date": "2018-08-21",
+   "area": "Kerala state"
+  },
+  {
+   "source": "ALOS-2 + S1 rule-based, Current Science 2021",
+   "metric": "CSI",
+   "value": 0.816,
+   "date": "2018-08-21",
+   "area": "Alappuzha + Kottayam"
+  },
+  {
+   "source": "2024 GEE script (this author)",
+   "metric": "area_km2",
+   "value": 112.92,
+   "date": "2018-08-21",
+   "area": "3 districts (GAUL)"
+  }
+ ],
+ "zooms": {
+  "kochi_urban": [
+   76.285,
+   9.975,
+   6
+  ],
+  "aluva_periyar": [
+   76.355,
+   10.11,
+   6
+  ],
+  "kuttanad_paddy": [
+   76.4,
+   9.45,
+   6
+  ],
+  "chengannur": [
+   76.615,
+   9.32,
+   6
+  ]
+ },
+ "zoom_labels": {
+  "kochi_urban": "Kochi Urban",
+  "aluva_periyar": "Aluva \u2014 Periyar",
+  "kuttanad_paddy": "Kuttanad Paddy",
+  "chengannur": "Chengannur"
+ },
+ "setting": "",
+ "co_dates": [
+  "2018-08-21"
+ ]
+}

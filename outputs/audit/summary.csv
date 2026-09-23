@@ -1,0 +1,11 @@
+event,setting,n_co,n_in_peak,best_date,best_offset_days,best_path,best_dry_baseline,best_coherence_ok,verdict
+kerala_2018,rural+periurban,6,2.0,2018-08-21,0.0,165.0,10.0,True,OK
+hyderabad_2020,urban pluvial,2,0.0,2020-10-21,3.0,165.0,12.0,True,MARGINAL
+bengaluru_2022,urban pluvial,1,1.0,2022-09-05,0.0,165.0,9.0,True,OK
+delhi_2023,urban riverine,4,1.0,2023-07-16,0.0,27.0,10.0,True,OK
+chennai_2023,,0,,,,,,,
+mumbai_2024,urban pluvial (provisional date),1,0.0,2024-07-11,2.0,34.0,10.0,True,OK
+wayanad_2024,landslide (reference only),4,1.0,2024-08-01,0.0,165.0,9.0,True,OK
+assam_2020,rural riverine,11,4.0,2020-07-15,0.0,143.0,8.0,True,OK
+assam_2022,rural riverine (DeepSARFlood AOI; 10 Aug comparator),20,2.0,2022-06-16,0.0,41.0,7.0,True,OK
+bihar_2020,rural riverine (Kosi/Darbhanga),9,3.0,2020-07-26,0.0,121.0,12.0,True,OK

@@ -1,0 +1,85 @@
+# Study events after the S1 acquisition audit (20 Sep 2026, outputs/audit/summary.csv).
+# co: co-event S1 date(s) + relative orbit; dry: dry-season window for the same-path baseline median.
+# coherence: true -> SLC burst processing (urban only). bbox = [W, S, E, N].
+rural:
+  kerala_2018:
+    bbox: [76.20, 9.05, 76.95, 10.30]
+    co: [{date: 2018-08-21, path: 165, dir: DESCENDING}]       # peak; GEE script used DESC too
+    extra: [{date: 2018-08-09, path: 165, note: flood onset — NOT a valid pre-event baseline}]
+    dry: [2018-01-01, 2018-04-30]
+    coherence: false
+    compare: "PLOS One 2020 Otsu OA 94.1% (21 Aug); Curr Sci 2021 CSI 81.6% (Alappuzha/Kottayam)"
+    districts: [Ernakulam, Kottayam, Alappuzha]       # 2024 GEE AOI (GAUL, 5767.41 km²; reported flood 112.92 km²)
+    zooms:                                            # 10 m detail windows for the report: [lon, lat, size_km]
+      kochi_urban: [76.285, 9.975, 6]
+      aluva_periyar: [76.355, 10.110, 6]
+      kuttanad_paddy: [76.400, 9.450, 6]
+      chengannur: [76.615, 9.320, 6]
+    zoom_labels:                                      # display names (default: title-case of the key)
+      kochi_urban: Kochi Urban
+      aluva_periyar: Aluva — Periyar
+      kuttanad_paddy: Kuttanad Paddy
+      chengannur: Chengannur
+    exclude_methods: [gee2024]                        # kept as an appendix audit, out of the comparative tables
+    coherence:                                        # HyP3 burst InSAR (optional, needs Earthdata login)
+      path: 165
+      bbox: [76.20, 9.25, 76.70, 10.20]
+      pre: [2018-07-16, 2018-07-28]
+      co: [2018-08-09, 2018-08-21]
+      dry: [2018-02-10, 2018-02-22]                 # non-monsoon anchor, same relative orbit
+    published:                                        # literature comparators shown in the report
+      - {source: "Otsu on S1 in GEE, PLOS One 2020", metric: "OA", value: 0.941, date: 2018-08-21, area: "Kerala state"}
+      - {source: "ALOS-2 + S1 rule-based, Current Science 2021", metric: "CSI", value: 0.816, date: 2018-08-21, area: "Alappuzha + Kottayam"}
+      - {source: "2024 GEE script (this author)", metric: "area_km2", value: 112.92, date: 2018-08-21, area: "3 districts (GAUL)"}
+  assam_2020:
+    bbox: [93.00, 26.60, 94.00, 26.90]
+    co: [{date: 2020-07-15, path: 143, dir: ASCENDING}]
+    dry: [2020-01-01, 2020-03-31]
+    coherence: false
+    compare: "DeepSARFlood Assam 2020 demo; Mudi 2022 >=87% vs S2"
+  assam_2022:
+    bbox: [93.00, 26.60, 94.00, 26.90]
+    co: [{date: 2022-06-16, path: 41, dir: ASCENDING}, {date: 2022-08-10, path: 143, dir: ASCENDING}]
+    dry: [2022-01-01, 2022-03-31]
+    coherence: false
+    compare: "DeepSARFlood 10 Aug 2022 vs S2 labels (same AOI)"
+    districts: auto                                   # every ADM2 polygon intersecting the bbox
+    # zooms: omitted -> windows are centred on the largest flood clusters
+    published:
+      - {source: "DeepSARFlood (2025), S2-derived labels", metric: "IoU", value: 0.72, date: 2022-08-10, area: "same AOI"}
+  bihar_2020:
+    bbox: [85.70, 25.80, 86.60, 26.50]
+    co: [{date: 2020-07-26, path: 121, dir: DESCENDING}, {date: 2020-07-30, path: 12, dir: ASCENDING}]
+    dry: [2020-01-01, 2020-04-30]
+    coherence: false
+    compare: "GEE threshold Bihar 2020: OA 93.81%, kappa 0.70"
+urban:
+  bengaluru_2022:
+    bbox: [77.45, 12.80, 77.80, 13.15]
+    co: [{date: 2022-09-05, path: 165, dir: DESCENDING}]       # ~06:00 IST, hours after the 4 Sep night storm
+    dry: [2022-01-01, 2022-04-30]
+    coherence: true
+    compare: "none peer-reviewed -> GFM + reported locations (ORR, Bellandur, Yemalur, Mahadevapura)"
+  delhi_2023:
+    bbox: [77.10, 28.45, 77.40, 28.90]
+    co: [{date: 2023-07-16, path: 27, dir: ASCENDING}]         # peak
+    extra: [{date: 2023-07-12, path: 136}, {date: 2023-07-19, path: 63, note: no PC RTC}, {date: 2023-07-24, path: 136}]
+    dry: [2023-01-01, 2023-04-30]
+    coherence: true
+    compare: "ArcIndia 2025 NCI timing: onset 12, peak 16, recession 24 Jul"
+  hyderabad_2020:
+    bbox: [78.25, 17.20, 78.70, 17.60]
+    co: [{date: 2020-10-21, path: 165, dir: DESCENDING}]       # +7 d after 13-14 Oct, +3 d after 17-18 Oct -> residual water only
+    extra: [{date: 2020-10-09, path: 165, note: clean pre-event}]
+    dry: [2020-01-01, 2020-04-30]
+    coherence: true
+    compare: "HEC-RAS modelled extent (Curr Sci 2021) -> residual-inundation / detectability case"
+  mumbai_2024:
+    bbox: [72.77, 18.88, 73.05, 19.30]
+    co: [{date: 2024-07-11, path: 34, dir: DESCENDING}]        # PROVISIONAL: +2 d after 8 Jul rain; pluvial water drains in hours
+    dry: [2024-01-01, 2024-04-30]
+    coherence: true
+    compare: "Mumbai S1 2018-25 study (VV vs VH extents, ward-level)"
+dropped:
+  chennai_2023: "no S1 IW acquisition 1-18 Dec 2023 -> EOS-04 only (Bhoonidhi, manual); qualitative panel at most"
+  wayanad_2024: "landslide/debris flow, not inundation"

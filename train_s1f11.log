@@ -1,0 +1,295 @@
+nohup: ignoring input
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+
+### unet_r18: 14.3 M params, lr 0.001, amp False, 1008 crops/epoch, 126 steps/epoch
+  ep   1 loss 1.3596 val IoU 0.4747 F1 0.6437 (76s) *
+  ep   2 loss 0.8732 val IoU 0.5675 F1 0.7241 (69s) *
+  ep   3 loss 0.7345 val IoU 0.5930 F1 0.7445 (81s) *
+  ep   4 loss 0.6624 val IoU 0.4594 F1 0.6296 (93s)
+  ep   5 loss 0.6574 val IoU 0.6079 F1 0.7562 (101s) *
+  ep   6 loss 0.6843 val IoU 0.5859 F1 0.7389 (101s)
+  ep   7 loss 0.6657 val IoU 0.5798 F1 0.7340 (102s)
+  ep   8 loss 0.6363 val IoU 0.4610 F1 0.6311 (105s)
+  ep   9 loss 0.6347 val IoU 0.2978 F1 0.4589 (94s)
+  ep  10 loss 0.6536 val IoU 0.6180 F1 0.7639 (118s) *
+  ep  11 loss 0.5954 val IoU 0.2094 F1 0.3463 (118s)
+  ep  12 loss 0.6422 val IoU 0.5986 F1 0.7489 (102s)
+  ep  13 loss 0.6357 val IoU 0.4055 F1 0.5770 (75s)
+  ep  14 loss 0.6171 val IoU 0.6197 F1 0.7652 (84s) *
+  ep  15 loss 0.6145 val IoU 0.6143 F1 0.7611 (74s)
+  ep  16 loss 0.5862 val IoU 0.6066 F1 0.7552 (74s)
+  ep  17 loss 0.6138 val IoU 0.6098 F1 0.7576 (78s)
+  ep  18 loss 0.5961 val IoU 0.5852 F1 0.7383 (78s)
+  ep  19 loss 0.5712 val IoU 0.5344 F1 0.6965 (74s)
+  ep  20 loss 0.6168 val IoU 0.6266 F1 0.7705 (78s) *
+  ep  21 loss 0.5703 val IoU 0.5371 F1 0.6989 (80s)
+  ep  22 loss 0.5738 val IoU 0.6086 F1 0.7566 (77s)
+  ep  23 loss 0.5603 val IoU 0.5860 F1 0.7389 (74s)
+  ep  24 loss 0.5354 val IoU 0.6118 F1 0.7591 (72s)
+  ep  25 loss 0.5510 val IoU 0.5993 F1 0.7495 (72s)
+  ep  26 loss 0.5609 val IoU 0.6189 F1 0.7646 (71s)
+  ep  27 loss 0.5588 val IoU 0.6116 F1 0.7590 (91s)
+  ep  28 loss 0.5548 val IoU 0.5821 F1 0.7358 (89s)
+  ep  29 loss 0.5745 val IoU 0.6194 F1 0.7649 (92s)
+  ep  30 loss 0.5316 val IoU 0.6294 F1 0.7726 (92s) *
+  ep  31 loss 0.5470 val IoU 0.6208 F1 0.7661 (96s)
+  ep  32 loss 0.5184 val IoU 0.5679 F1 0.7244 (86s)
+  ep  33 loss 0.5373 val IoU 0.3730 F1 0.5433 (91s)
+  ep  34 loss 0.5369 val IoU 0.6342 F1 0.7761 (89s) *
+  ep  35 loss 0.5387 val IoU 0.5870 F1 0.7398 (100s)
+  ep  36 loss 0.5287 val IoU 0.6451 F1 0.7842 (91s) *
+  ep  37 loss 0.5194 val IoU 0.5703 F1 0.7264 (93s)
+  ep  38 loss 0.5119 val IoU 0.5791 F1 0.7335 (102s)
+  ep  39 loss 0.5109 val IoU 0.6468 F1 0.7855 (85s) *
+  ep  40 loss 0.5324 val IoU 0.6233 F1 0.7680 (102s)
+  ep  41 loss 0.5242 val IoU 0.6213 F1 0.7664 (111s)
+  ep  42 loss 0.5043 val IoU 0.5808 F1 0.7348 (101s)
+  ep  43 loss 0.4999 val IoU 0.6382 F1 0.7791 (80s)
+  ep  44 loss 0.4929 val IoU 0.6301 F1 0.7730 (86s)
+  ep  45 loss 0.4862 val IoU 0.6513 F1 0.7888 (89s) *
+  ep  46 loss 0.5134 val IoU 0.5342 F1 0.6964 (92s)
+  ep  47 loss 0.5088 val IoU 0.6472 F1 0.7858 (89s)
+  ep  48 loss 0.5311 val IoU 0.5571 F1 0.7155 (101s)
+  ep  49 loss 0.4657 val IoU 0.6233 F1 0.7679 (79s)
+  ep  50 loss 0.5108 val IoU 0.6112 F1 0.7587 (77s)
+  ep  51 loss 0.4885 val IoU 0.5839 F1 0.7373 (76s)
+  ep  52 loss 0.4903 val IoU 0.5950 F1 0.7461 (77s)
+  ep  53 loss 0.5010 val IoU 0.6284 F1 0.7718 (85s)
+  ep  54 loss 0.4731 val IoU 0.6230 F1 0.7677 (103s)
+  ep  55 loss 0.4892 val IoU 0.6208 F1 0.7660 (165s)
+  ep  56 loss 0.4572 val IoU 0.6086 F1 0.7567 (150s)
+  ep  57 loss 0.4850 val IoU 0.5986 F1 0.7489 (172s)
+  ep  58 loss 0.4776 val IoU 0.6118 F1 0.7591 (182s)
+  ep  59 loss 0.4865 val IoU 0.6178 F1 0.7637 (110s)
+  ep  60 loss 0.4977 val IoU 0.6131 F1 0.7602 (119s)
+  early stop (no val gain for 15 epochs)
+  valid    IoU 0.6513  F1 0.7888  P 0.802  R 0.776  kappa 0.763
+  test     IoU 0.6808  F1 0.8101  P 0.812  R 0.808  kappa 0.784
+  bolivia  IoU 0.6802  F1 0.8097  P 0.838  R 0.783  kappa 0.775
+
+### unet_r34: 24.4 M params, lr 0.001, amp False, 1008 crops/epoch, 126 steps/epoch
+  ep   1 loss 1.5548 val IoU 0.4842 F1 0.6525 (141s) *
+  ep   2 loss 0.9746 val IoU 0.4045 F1 0.5760 (156s)
+  ep   3 loss 0.7847 val IoU 0.5602 F1 0.7181 (156s) *
+  ep   4 loss 0.6878 val IoU 0.5501 F1 0.7098 (162s)
+  ep   5 loss 0.6582 val IoU 0.6099 F1 0.7577 (153s) *
+  ep   6 loss 0.6292 val IoU 0.5654 F1 0.7224 (160s)
+  ep   7 loss 0.6258 val IoU 0.5979 F1 0.7484 (155s)
+  ep   8 loss 0.6241 val IoU 0.5790 F1 0.7334 (160s)
+  ep   9 loss 0.6191 val IoU 0.6021 F1 0.7516 (157s)
+  ep  10 loss 0.6086 val IoU 0.5936 F1 0.7449 (167s)
+  ep  11 loss 0.6355 val IoU 0.6037 F1 0.7529 (159s)
+  ep  12 loss 0.5661 val IoU 0.6269 F1 0.7706 (169s) *
+  ep  13 loss 0.5894 val IoU 0.5531 F1 0.7123 (163s)
+  ep  14 loss 0.5844 val IoU 0.6267 F1 0.7705 (167s)
+  ep  15 loss 0.5686 val IoU 0.6302 F1 0.7731 (159s) *
+  ep  16 loss 0.5853 val IoU 0.6198 F1 0.7653 (162s)
+  ep  17 loss 0.6277 val IoU 0.6212 F1 0.7664 (163s)
+  ep  18 loss 0.5798 val IoU 0.6326 F1 0.7749 (161s) *
+  ep  19 loss 0.5702 val IoU 0.6190 F1 0.7647 (163s)
+  ep  20 loss 0.5731 val IoU 0.6234 F1 0.7680 (164s)
+  ep  21 loss 0.5702 val IoU 0.6186 F1 0.7643 (166s)
+  ep  22 loss 0.5657 val IoU 0.6004 F1 0.7503 (167s)
+  ep  23 loss 0.5436 val IoU 0.6185 F1 0.7643 (161s)
+  ep  24 loss 0.5550 val IoU 0.6014 F1 0.7511 (164s)
+  ep  25 loss 0.5427 val IoU 0.6374 F1 0.7786 (169s) *
+  ep  26 loss 0.5261 val IoU 0.5346 F1 0.6967 (164s)
+  ep  27 loss 0.5495 val IoU 0.6208 F1 0.7660 (124s)
+  ep  28 loss 0.5186 val IoU 0.5487 F1 0.7086 (107s)
+  ep  29 loss 0.5082 val IoU 0.6065 F1 0.7551 (108s)
+  ep  30 loss 0.5326 val IoU 0.2358 F1 0.3817 (109s)
+  ep  31 loss 0.5409 val IoU 0.6332 F1 0.7754 (109s)
+  ep  32 loss 0.5506 val IoU 0.6048 F1 0.7537 (108s)
+  ep  33 loss 0.5326 val IoU 0.6351 F1 0.7769 (106s)
+  ep  34 loss 0.5337 val IoU 0.6346 F1 0.7765 (87s)
+  ep  35 loss 0.5086 val IoU 0.6318 F1 0.7744 (96s)
+  ep  36 loss 0.5134 val IoU 0.6471 F1 0.7857 (212s) *
+  ep  37 loss 0.5242 val IoU 0.5872 F1 0.7399 (244s)
+  ep  38 loss 0.4947 val IoU 0.6439 F1 0.7834 (244s)
+  ep  39 loss 0.5274 val IoU 0.6494 F1 0.7875 (244s) *
+  ep  40 loss 0.4814 val IoU 0.6362 F1 0.7777 (244s)
+  ep  41 loss 0.5034 val IoU 0.6101 F1 0.7578 (244s)
+  ep  42 loss 0.5090 val IoU 0.6241 F1 0.7686 (152s)
+  ep  43 loss 0.4981 val IoU 0.6189 F1 0.7646 (107s)
+  ep  44 loss 0.4999 val IoU 0.6093 F1 0.7572 (144s)
+  ep  45 loss 0.4826 val IoU 0.6303 F1 0.7732 (109s)
+  ep  46 loss 0.4740 val IoU 0.6235 F1 0.7681 (89s)
+  ep  47 loss 0.4799 val IoU 0.6237 F1 0.7682 (97s)
+  ep  48 loss 0.4794 val IoU 0.6418 F1 0.7819 (112s)
+  ep  49 loss 0.4722 val IoU 0.6301 F1 0.7730 (97s)
+  ep  50 loss 0.5018 val IoU 0.5597 F1 0.7177 (95s)
+  ep  51 loss 0.4662 val IoU 0.6421 F1 0.7820 (93s)
+  ep  52 loss 0.4809 val IoU 0.6277 F1 0.7713 (93s)
+  ep  53 loss 0.4728 val IoU 0.6054 F1 0.7542 (93s)
+  ep  54 loss 0.4538 val IoU 0.6284 F1 0.7718 (94s)
+  early stop (no val gain for 15 epochs)
+  valid    IoU 0.6494  F1 0.7875  P 0.771  R 0.804  kappa 0.761
+  test     IoU 0.6792  F1 0.8090  P 0.798  R 0.820  kappa 0.782
+  bolivia  IoU 0.6105  F1 0.7582  P 0.821  R 0.704  kappa 0.716
+
+### deeplab_r34: 22.4 M params, lr 0.001, amp False, 1008 crops/epoch, 126 steps/epoch
+  ep   1 loss 1.2001 val IoU 0.5364 F1 0.6983 (112s) *
+  ep   2 loss 0.7800 val IoU 0.5844 F1 0.7377 (108s) *
+  ep   3 loss 0.7032 val IoU 0.2143 F1 0.3529 (122s)
+  ep   4 loss 0.6868 val IoU 0.1891 F1 0.3181 (123s)
+  ep   5 loss 0.6775 val IoU 0.5554 F1 0.7142 (117s)
+  ep   6 loss 0.6479 val IoU 0.5970 F1 0.7477 (125s) *
+  ep   7 loss 0.6386 val IoU 0.3292 F1 0.4953 (124s)
+  ep   8 loss 0.6096 val IoU 0.5532 F1 0.7123 (153s)
+  ep   9 loss 0.6047 val IoU 0.5714 F1 0.7273 (154s)
+  ep  10 loss 0.6481 val IoU 0.5445 F1 0.7051 (151s)
+  ep  11 loss 0.5973 val IoU 0.0529 F1 0.1005 (151s)
+  ep  12 loss 0.6370 val IoU 0.0621 F1 0.1169 (131s)
+  ep  13 loss 0.5702 val IoU 0.5197 F1 0.6839 (132s)
+  ep  14 loss 0.6017 val IoU 0.5304 F1 0.6932 (128s)
+  ep  15 loss 0.5663 val IoU 0.6345 F1 0.7764 (152s) *
+  ep  16 loss 0.5848 val IoU 0.5972 F1 0.7478 (223s)
+  ep  17 loss 0.5818 val IoU 0.5669 F1 0.7236 (223s)
+  ep  18 loss 0.5660 val IoU 0.5853 F1 0.7384 (114s)
+  ep  19 loss 0.5813 val IoU 0.6292 F1 0.7724 (97s)
+  ep  20 loss 0.5783 val IoU 0.6195 F1 0.7651 (97s)
+  ep  21 loss 0.5708 val IoU 0.4310 F1 0.6024 (103s)
+  ep  22 loss 0.5521 val IoU 0.5752 F1 0.7303 (97s)
+  ep  23 loss 0.5377 val IoU 0.6082 F1 0.7563 (97s)
+  ep  24 loss 0.5469 val IoU 0.6262 F1 0.7701 (96s)
+  ep  25 loss 0.5208 val IoU 0.5259 F1 0.6893 (97s)
+  ep  26 loss 0.5545 val IoU 0.6293 F1 0.7725 (97s)
+  ep  27 loss 0.5464 val IoU 0.6399 F1 0.7804 (97s) *
+  ep  28 loss 0.5709 val IoU 0.6460 F1 0.7849 (96s) *
+  ep  29 loss 0.5572 val IoU 0.5516 F1 0.7110 (138s)
+  ep  30 loss 0.5444 val IoU 0.6167 F1 0.7629 (95s)
+  ep  31 loss 0.5464 val IoU 0.6486 F1 0.7868 (96s) *
+  ep  32 loss 0.5192 val IoU 0.6088 F1 0.7568 (96s)
+  ep  33 loss 0.5513 val IoU 0.6172 F1 0.7633 (97s)
+  ep  34 loss 0.4893 val IoU 0.6246 F1 0.7690 (97s)
+  ep  35 loss 0.5007 val IoU 0.5660 F1 0.7229 (97s)
+  ep  36 loss 0.5180 val IoU 0.6388 F1 0.7796 (96s)
+  ep  37 loss 0.5229 val IoU 0.6412 F1 0.7814 (161s)
+  ep  38 loss 0.5159 val IoU 0.6548 F1 0.7914 (223s) *
+  ep  39 loss 0.5082 val IoU 0.5991 F1 0.7493 (223s)
+  ep  40 loss 0.5078 val IoU 0.6098 F1 0.7576 (223s)
+  ep  41 loss 0.4884 val IoU 0.5791 F1 0.7334 (223s)
+  ep  42 loss 0.5011 val IoU 0.5913 F1 0.7431 (223s)
+  ep  43 loss 0.4911 val IoU 0.5467 F1 0.7070 (223s)
+  ep  44 loss 0.4948 val IoU 0.6367 F1 0.7780 (223s)
+  ep  45 loss 0.5222 val IoU 0.6492 F1 0.7873 (142s)
+  ep  46 loss 0.4852 val IoU 0.5887 F1 0.7411 (89s)
+  ep  47 loss 0.4888 val IoU 0.5700 F1 0.7261 (90s)
+  ep  48 loss 0.4849 val IoU 0.6443 F1 0.7836 (91s)
+  ep  49 loss 0.5044 val IoU 0.6335 F1 0.7757 (95s)
+  ep  50 loss 0.4974 val IoU 0.6038 F1 0.7529 (93s)
+  ep  51 loss 0.4724 val IoU 0.5980 F1 0.7484 (95s)
+  ep  52 loss 0.4835 val IoU 0.6203 F1 0.7656 (94s)
+  ep  53 loss 0.4753 val IoU 0.5776 F1 0.7323 (98s)
+  early stop (no val gain for 15 epochs)
+  valid    IoU 0.6548  F1 0.7914  P 0.801  R 0.782  kappa 0.766
+  test     IoU 0.6848  F1 0.8129  P 0.814  R 0.812  kappa 0.787
+  bolivia  IoU 0.7486  F1 0.8562  P 0.830  R 0.884  kappa 0.828
+
+### segformer_b0: 3.7 M params, lr 0.0003, amp True, 1008 crops/epoch, 126 steps/epoch
+/home/manish-bilore/anaconda3/envs/sarflood/lib/python3.11/site-packages/torch/optim/lr_scheduler.py:182: UserWarning: Detected call of `lr_scheduler.step()` before `optimizer.step()`. In PyTorch 1.1.0 and later, you should call them in the opposite order: `optimizer.step()` before `lr_scheduler.step()`.  Failure to do this will result in PyTorch skipping the first value of the learning rate schedule. See more details at https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate
+  warnings.warn(
+  ep   1 loss 1.5334 val IoU 0.3696 F1 0.5397 (80s) *
+  ep   2 loss 0.8957 val IoU 0.4946 F1 0.6618 (71s) *
+  ep   3 loss 0.7376 val IoU 0.6112 F1 0.7587 (69s) *
+  ep   4 loss 0.6557 val IoU 0.5449 F1 0.7054 (72s)
+  ep   5 loss 0.6016 val IoU 0.6298 F1 0.7729 (69s) *
+  ep   6 loss 0.5965 val IoU 0.5770 F1 0.7318 (71s)
+  ep   7 loss 0.5886 val IoU 0.6182 F1 0.7641 (71s)
+  ep   8 loss 0.5999 val IoU 0.6357 F1 0.7773 (69s) *
+  ep   9 loss 0.5940 val IoU 0.6329 F1 0.7752 (71s)
+  ep  10 loss 0.5449 val IoU 0.6325 F1 0.7749 (70s)
+  ep  11 loss 0.5657 val IoU 0.6107 F1 0.7583 (69s)
+  ep  12 loss 0.5772 val IoU 0.6307 F1 0.7735 (74s)
+  ep  13 loss 0.5522 val IoU 0.6455 F1 0.7845 (71s) *
+  ep  14 loss 0.5475 val IoU 0.6471 F1 0.7858 (71s) *
+  ep  15 loss 0.5381 val IoU 0.6402 F1 0.7807 (70s)
+  ep  16 loss 0.5527 val IoU 0.6221 F1 0.7670 (73s)
+  ep  17 loss 0.5149 val IoU 0.6788 F1 0.8087 (75s) *
+  ep  18 loss 0.5334 val IoU 0.6336 F1 0.7757 (74s)
+  ep  19 loss 0.5210 val IoU 0.6423 F1 0.7822 (74s)
+  ep  20 loss 0.5414 val IoU 0.6378 F1 0.7789 (74s)
+  ep  21 loss 0.5091 val IoU 0.6715 F1 0.8035 (74s)
+  ep  22 loss 0.4932 val IoU 0.6686 F1 0.8014 (69s)
+  ep  23 loss 0.5424 val IoU 0.6441 F1 0.7835 (68s)
+  ep  24 loss 0.5180 val IoU 0.6429 F1 0.7826 (68s)
+  ep  25 loss 0.5271 val IoU 0.6789 F1 0.8087 (68s) *
+  ep  26 loss 0.4976 val IoU 0.6288 F1 0.7721 (68s)
+  ep  27 loss 0.5189 val IoU 0.6548 F1 0.7914 (67s)
+  ep  28 loss 0.5113 val IoU 0.6656 F1 0.7992 (68s)
+  ep  29 loss 0.4858 val IoU 0.6340 F1 0.7760 (68s)
+  ep  30 loss 0.4974 val IoU 0.6844 F1 0.8127 (67s) *
+  ep  31 loss 0.4627 val IoU 0.6875 F1 0.8148 (68s) *
+  ep  32 loss 0.4565 val IoU 0.6228 F1 0.7675 (68s)
+  ep  33 loss 0.5005 val IoU 0.6587 F1 0.7943 (72s)
+  ep  34 loss 0.4735 val IoU 0.6542 F1 0.7910 (83s)
+  ep  35 loss 0.4632 val IoU 0.6786 F1 0.8086 (79s)
+  ep  36 loss 0.4547 val IoU 0.6842 F1 0.8125 (82s)
+  ep  37 loss 0.4720 val IoU 0.6162 F1 0.7626 (80s)
+  ep  38 loss 0.4285 val IoU 0.6641 F1 0.7981 (82s)
+  ep  39 loss 0.4376 val IoU 0.6412 F1 0.7814 (90s)
+  ep  40 loss 0.4475 val IoU 0.6627 F1 0.7972 (80s)
+  ep  41 loss 0.4400 val IoU 0.6775 F1 0.8078 (85s)
+  ep  42 loss 0.4405 val IoU 0.6794 F1 0.8091 (83s)
+  ep  43 loss 0.4098 val IoU 0.6722 F1 0.8040 (84s)
+  ep  44 loss 0.4107 val IoU 0.6723 F1 0.8040 (77s)
+  ep  45 loss 0.4416 val IoU 0.6731 F1 0.8046 (79s)
+  ep  46 loss 0.4188 val IoU 0.6828 F1 0.8115 (79s)
+  early stop (no val gain for 15 epochs)
+  valid    IoU 0.6875  F1 0.8148  P 0.787  R 0.845  kappa 0.791
+  test     IoU 0.6626  F1 0.7970  P 0.796  R 0.798  kappa 0.769
+  bolivia  IoU 0.6877  F1 0.8149  P 0.797  R 0.833  kappa 0.779
+
+### segformer_b2: 24.7 M params, lr 0.0002, amp True, 1008 crops/epoch, 126 steps/epoch
+  ep   1 loss 1.1633 val IoU 0.4829 F1 0.6513 (211s) *
+  ep   2 loss 0.8483 val IoU 0.5694 F1 0.7256 (178s) *
+  ep   3 loss 0.6587 val IoU 0.6276 F1 0.7712 (178s) *
+  ep   4 loss 0.6281 val IoU 0.6372 F1 0.7784 (185s) *
+  ep   5 loss 0.5560 val IoU 0.5821 F1 0.7359 (222s)
+  ep   6 loss 0.5498 val IoU 0.6450 F1 0.7842 (294s) *
+  ep   7 loss 0.5260 val IoU 0.6229 F1 0.7676 (217s)
+  ep   8 loss 0.5407 val IoU 0.6329 F1 0.7752 (183s)
+  ep   9 loss 0.5373 val IoU 0.6281 F1 0.7716 (199s)
+  ep  10 loss 0.4980 val IoU 0.6151 F1 0.7617 (219s)
+  ep  11 loss 0.5051 val IoU 0.6519 F1 0.7893 (227s) *
+  ep  12 loss 0.4603 val IoU 0.6197 F1 0.7652 (249s)
+  ep  13 loss 0.4867 val IoU 0.6685 F1 0.8013 (244s) *
+  ep  14 loss 0.5178 val IoU 0.6418 F1 0.7818 (226s)
+  ep  15 loss 0.5110 val IoU 0.6843 F1 0.8126 (221s) *
+  ep  16 loss 0.4791 val IoU 0.6303 F1 0.7732 (232s)
+  ep  17 loss 0.4358 val IoU 0.6512 F1 0.7888 (189s)
+  ep  18 loss 0.4842 val IoU 0.6882 F1 0.8153 (197s) *
+  ep  19 loss 0.4571 val IoU 0.6530 F1 0.7901 (209s)
+  ep  20 loss 0.4458 val IoU 0.6866 F1 0.8142 (236s)
+  ep  21 loss 0.4383 val IoU 0.6758 F1 0.8065 (210s)
+  ep  22 loss 0.4403 val IoU 0.6099 F1 0.7577 (207s)
+  ep  23 loss 0.4365 val IoU 0.6820 F1 0.8110 (207s)
+  ep  24 loss 0.3998 val IoU 0.6748 F1 0.8058 (194s)
+  ep  25 loss 0.4360 val IoU 0.6149 F1 0.7616 (194s)
+  ep  26 loss 0.4143 val IoU 0.6535 F1 0.7904 (201s)
+  ep  27 loss 0.4055 val IoU 0.6716 F1 0.8035 (204s)
+  ep  28 loss 0.4143 val IoU 0.6748 F1 0.8058 (197s)
+  ep  29 loss 0.4178 val IoU 0.6629 F1 0.7973 (194s)
+  ep  30 loss 0.3929 val IoU 0.6973 F1 0.8216 (188s) *
+  ep  31 loss 0.3832 val IoU 0.6733 F1 0.8048 (192s)
+  ep  32 loss 0.3736 val IoU 0.6688 F1 0.8015 (186s)
+  ep  33 loss 0.3937 val IoU 0.6861 F1 0.8138 (180s)
+  ep  34 loss 0.3420 val IoU 0.6641 F1 0.7981 (182s)
+  ep  35 loss 0.3663 val IoU 0.6685 F1 0.8013 (188s)
+  ep  36 loss 0.3635 val IoU 0.6781 F1 0.8081 (192s)
+  ep  37 loss 0.3697 val IoU 0.6941 F1 0.8194 (192s)
+  ep  38 loss 0.3530 val IoU 0.6446 F1 0.7839 (190s)
+  ep  39 loss 0.3608 val IoU 0.6800 F1 0.8095 (173s)
+  ep  40 loss 0.3436 val IoU 0.6912 F1 0.8174 (178s)
+  ep  41 loss 0.3395 val IoU 0.6836 F1 0.8121 (181s)
+  ep  42 loss 0.3412 val IoU 0.6784 F1 0.8084 (183s)
+  ep  43 loss 0.3539 val IoU 0.6906 F1 0.8170 (181s)
+  ep  44 loss 0.3366 val IoU 0.6830 F1 0.8116 (182s)
+  ep  45 loss 0.3300 val IoU 0.6806 F1 0.8099 (202s)
+  early stop (no val gain for 15 epochs)
+  valid    IoU 0.6973  F1 0.8216  P 0.830  R 0.813  kappa 0.800
+  test     IoU 0.6985  F1 0.8225  P 0.862  R 0.787  kappa 0.799
+  bolivia  IoU 0.6353  F1 0.7770  P 0.825  R 0.734  kappa 0.737
+
+### attunet: 7.9 M params, lr 0.001, amp False, 1008 crops/epoch, 126 steps/epoch
+  !! attunet: OOM at bs 8 — rerun with --bs 4

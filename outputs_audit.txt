@@ -1,0 +1,93 @@
+
+=== kerala_2018  (rural+periurban)
+  2018-08-09  Sentinel-1A  path 165 DESC  Δpeak  -6 d  dry=10  pre36d=3  coh=Y  rtc=Y
+  2018-08-21  Sentinel-1A  path 165 DESC  Δpeak  +0 d  dry=10  pre36d=3  coh=Y  rtc=Y
+  2018-08-21  Sentinel-1A  path 173 ASCE  Δpeak  +0 d  dry= 0  pre36d=0  coh=n  rtc=Y
+  2018-08-27  Sentinel-1B  path 165 DESC  Δpeak  +6 d  dry=10  pre36d=3  coh=Y  rtc=Y
+  2018-08-27  Sentinel-1B  path 173 ASCE  Δpeak  +6 d  dry= 0  pre36d=1  coh=n  rtc=Y
+  2018-09-02  Sentinel-1A  path 165 DESC  Δpeak +12 d  dry=10  pre36d=4  coh=Y  rtc=Y
+
+=== hyderabad_2020  (urban pluvial)
+  2020-10-09  Sentinel-1A  path 165 DESC  Δpeak  -4 d  dry=12  pre36d=3  coh=Y  rtc=Y
+  2020-10-21  Sentinel-1A  path 165 DESC  Δpeak  +3 d  dry=12  pre36d=3  coh=Y  rtc=Y
+
+=== bengaluru_2022  (urban pluvial)
+  2022-09-05  Sentinel-1A  path 165 DESC  Δpeak  +0 d  dry= 9  pre36d=2  coh=Y  rtc=Y
+
+=== delhi_2023  (urban riverine)
+  2023-07-12  Sentinel-1A  path 136 DESC  Δpeak  -1 d  dry= 5  pre36d=3  coh=Y  rtc=Y
+  2023-07-16  Sentinel-1A  path  27 ASCE  Δpeak  +0 d  dry=10  pre36d=3  coh=Y  rtc=Y
+  2023-07-19  Sentinel-1A  path  63 DESC  Δpeak  +2 d  dry= 5  pre36d=3  coh=Y  rtc=n
+  2023-07-24  Sentinel-1A  path 136 DESC  Δpeak  +7 d  dry= 5  pre36d=3  coh=Y  rtc=Y
+
+=== chennai_2023  (urban pluvial/coastal)
+  no S1 IW SLC in window
+
+=== mumbai_2024  (urban pluvial (provisional date))
+  2024-07-11  Sentinel-1A  path  34 DESC  Δpeak  +2 d  dry=10  pre36d=3  coh=Y  rtc=Y
+
+=== wayanad_2024  (landslide (reference only))
+  2024-07-25  Sentinel-1A  path  63 DESC  Δpeak  -5 d  dry= 7  pre36d=3  coh=Y  rtc=Y
+  2024-08-01  Sentinel-1A  path 165 DESC  Δpeak  +0 d  dry= 9  pre36d=3  coh=Y  rtc=Y
+  2024-08-06  Sentinel-1A  path  63 DESC  Δpeak  +4 d  dry= 7  pre36d=3  coh=Y  rtc=Y
+  2024-08-13  Sentinel-1A  path 165 DESC  Δpeak +11 d  dry= 9  pre36d=3  coh=Y  rtc=Y
+
+=== assam_2020  (rural riverine)
+  2020-07-05  Sentinel-1A  path   4 DESC  Δpeak  -8 d  dry= 7  pre36d=1  coh=n  rtc=Y
+  2020-07-08  Sentinel-1A  path  41 ASCE  Δpeak  -5 d  dry= 7  pre36d=3  coh=Y  rtc=Y
+  2020-07-15  Sentinel-1A  path 143 ASCE  Δpeak  +0 d  dry= 8  pre36d=3  coh=Y  rtc=Y
+  2020-07-16  Sentinel-1B  path  77 DESC  Δpeak  +0 d  dry= 7  pre36d=0  coh=n  rtc=Y
+  2020-07-17  Sentinel-1A  path   4 DESC  Δpeak  +0 d  dry= 7  pre36d=1  coh=n  rtc=Y
+  2020-07-20  Sentinel-1A  path  41 ASCE  Δpeak  +0 d  dry= 7  pre36d=3  coh=Y  rtc=Y
+  2020-07-22  Sentinel-1A  path  77 DESC  Δpeak  +2 d  dry= 7  pre36d=1  coh=n  rtc=Y
+  2020-07-23  Sentinel-1B  path   4 DESC  Δpeak  +3 d  dry= 7  pre36d=2  coh=Y  rtc=Y
+  2020-07-26  Sentinel-1B  path  41 ASCE  Δpeak  +6 d  dry= 7  pre36d=3  coh=Y  rtc=Y
+  2020-07-27  Sentinel-1A  path 143 ASCE  Δpeak  +7 d  dry= 8  pre36d=3  coh=Y  rtc=Y
+  2020-07-29  Sentinel-1A  path   4 DESC  Δpeak  +9 d  dry= 7  pre36d=3  coh=Y  rtc=Y
+
+=== assam_2022  (rural riverine (DeepSARFlood AOI; 10 Aug comparator))
+  2022-06-11  Sentinel-1A  path 143 ASCE  Δpeak  -4 d  dry= 7  pre36d=3  coh=Y  rtc=Y
+  2022-06-13  Sentinel-1A  path   4 DESC  Δpeak  -2 d  dry= 7  pre36d=3  coh=Y  rtc=Y
+  2022-06-16  Sentinel-1A  path  41 ASCE  Δpeak  +0 d  dry= 7  pre36d=3  coh=Y  rtc=Y
+  2022-06-18  Sentinel-1A  path  77 DESC  Δpeak  +0 d  dry= 7  pre36d=3  coh=Y  rtc=Y
+  2022-06-23  Sentinel-1A  path 143 ASCE  Δpeak  +1 d  dry= 7  pre36d=3  coh=Y  rtc=Y
+  2022-06-28  Sentinel-1A  path  41 ASCE  Δpeak  +6 d  dry= 7  pre36d=3  coh=Y  rtc=Y
+  2022-06-30  Sentinel-1A  path  77 DESC  Δpeak  +8 d  dry= 7  pre36d=3  coh=Y  rtc=Y
+  2022-07-05  Sentinel-1A  path 143 ASCE  Δpeak +13 d  dry= 7  pre36d=3  coh=Y  rtc=Y
+  2022-07-07  Sentinel-1A  path   4 DESC  Δpeak +15 d  dry= 7  pre36d=2  coh=Y  rtc=Y
+  2022-07-12  Sentinel-1A  path  77 DESC  Δpeak +20 d  dry= 7  pre36d=3  coh=Y  rtc=Y
+  2022-07-17  Sentinel-1A  path 143 ASCE  Δpeak +25 d  dry= 7  pre36d=3  coh=Y  rtc=Y
+  2022-07-19  Sentinel-1A  path   4 DESC  Δpeak +27 d  dry= 7  pre36d=2  coh=Y  rtc=Y
+  2022-07-22  Sentinel-1A  path  41 ASCE  Δpeak +30 d  dry= 7  pre36d=2  coh=Y  rtc=Y
+  2022-07-24  Sentinel-1A  path  77 DESC  Δpeak +32 d  dry= 7  pre36d=3  coh=Y  rtc=Y
+  2022-07-29  Sentinel-1A  path 143 ASCE  Δpeak +37 d  dry= 7  pre36d=3  coh=Y  rtc=Y
+  2022-07-31  Sentinel-1A  path   4 DESC  Δpeak +39 d  dry= 7  pre36d=2  coh=Y  rtc=n
+  2022-08-03  Sentinel-1A  path  41 ASCE  Δpeak +42 d  dry= 7  pre36d=2  coh=Y  rtc=Y
+  2022-08-05  Sentinel-1A  path  77 DESC  Δpeak +44 d  dry= 7  pre36d=3  coh=Y  rtc=Y
+  2022-08-10  Sentinel-1A  path 143 ASCE  Δpeak +49 d  dry= 7  pre36d=3  coh=Y  rtc=Y
+  2022-08-12  Sentinel-1A  path   4 DESC  Δpeak +51 d  dry= 7  pre36d=3  coh=Y  rtc=Y
+
+=== bihar_2020  (rural riverine (Kosi/Darbhanga))
+  2020-07-17  Sentinel-1B  path  85 ASCE  Δpeak  -8 d  dry=10  pre36d=3  coh=Y  rtc=Y
+  2020-07-18  Sentinel-1A  path  12 ASCE  Δpeak  -7 d  dry=10  pre36d=4  coh=Y  rtc=Y
+  2020-07-23  Sentinel-1A  path  85 ASCE  Δpeak  -2 d  dry=10  pre36d=4  coh=Y  rtc=Y
+  2020-07-26  Sentinel-1A  path 121 DESC  Δpeak  +0 d  dry=12  pre36d=3  coh=Y  rtc=Y
+  2020-07-29  Sentinel-1B  path  85 ASCE  Δpeak  +0 d  dry=10  pre36d=4  coh=Y  rtc=Y
+  2020-07-30  Sentinel-1A  path  12 ASCE  Δpeak  +0 d  dry=10  pre36d=4  coh=Y  rtc=Y
+  2020-08-04  Sentinel-1A  path  85 ASCE  Δpeak  +2 d  dry=10  pre36d=5  coh=Y  rtc=Y
+  2020-08-07  Sentinel-1A  path 121 DESC  Δpeak  +5 d  dry=12  pre36d=3  coh=Y  rtc=Y
+  2020-08-11  Sentinel-1A  path  12 ASCE  Δpeak  +9 d  dry=10  pre36d=4  coh=Y  rtc=Y
+
+          event                                              setting  n_co  n_in_peak  best_date  best_offset_days  best_path  best_dry_baseline best_coherence_ok  verdict
+   kerala_2018                                      rural+periurban     6        2.0 2018-08-21               0.0      165.0               10.0              True       OK
+hyderabad_2020                                        urban pluvial     2        0.0 2020-10-21               3.0      165.0               12.0              True MARGINAL
+bengaluru_2022                                        urban pluvial     1        1.0 2022-09-05               0.0      165.0                9.0              True       OK
+    delhi_2023                                       urban riverine     4        1.0 2023-07-16               0.0       27.0               10.0              True       OK
+  chennai_2023                                                  NaN     0        NaN        NaN               NaN        NaN                NaN               NaN      NaN
+   mumbai_2024                     urban pluvial (provisional date)     1        0.0 2024-07-11               2.0       34.0               10.0              True       OK
+  wayanad_2024                           landslide (reference only)     4        1.0 2024-08-01               0.0      165.0                9.0              True       OK
+    assam_2020                                       rural riverine    11        4.0 2020-07-15               0.0      143.0                8.0              True       OK
+    assam_2022 rural riverine (DeepSARFlood AOI; 10 Aug comparator)    20        2.0 2022-06-16               0.0       41.0                7.0              True       OK
+    bihar_2020                      rural riverine (Kosi/Darbhanga)     9        3.0 2020-07-26               0.0      121.0               12.0              True       OK
+
+EOS-04 (Bhoonidhi) is not queried here: check MISSED/MARGINAL events manually at bhoonidhi.nrsc.gov.in

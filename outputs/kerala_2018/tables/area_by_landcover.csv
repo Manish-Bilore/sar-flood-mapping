@@ -1,0 +1,118 @@
+method,landcover,km2
+cd_vv,tree,8.3985
+cd_vv,shrub,0.0777
+cd_vv,grass,24.5017
+cd_vv,cropland,251.091
+cd_vv,built-up,0.1625
+cd_vv,bare,0.0777
+cd_vv,water,30.1045
+cd_vv,herb. wetland,125.50080000000001
+cd_vv,mangrove,0.014700000000000001
+gee2024,tree,777.2714000000001
+gee2024,shrub,0.3255
+gee2024,grass,64.1744
+gee2024,cropland,225.9948
+gee2024,built-up,89.0325
+gee2024,bare,0.8005
+gee2024,water,91.1901
+gee2024,herb. wetland,67.8802
+gee2024,mangrove,1.6209
+otsu_vh,tree,14.672600000000001
+otsu_vh,shrub,0.09680000000000001
+otsu_vh,grass,33.5965
+otsu_vh,cropland,300.7196
+otsu_vh,built-up,1.6519000000000001
+otsu_vh,bare,0.8798
+otsu_vh,water,102.1285
+otsu_vh,herb. wetland,154.3835
+otsu_vh,mangrove,0.301
+otsu_vv,tree,10.6895
+otsu_vv,shrub,0.0891
+otsu_vv,grass,30.359900000000003
+otsu_vv,cropland,283.6159
+otsu_vv,built-up,1.0777
+otsu_vv,bare,0.5095000000000001
+otsu_vv,water,94.7814
+otsu_vv,herb. wetland,151.3693
+otsu_vv,mangrove,0.22660000000000002
+split_vv,tree,13.417
+split_vv,shrub,0.09820000000000001
+split_vv,grass,33.1684
+split_vv,cropland,293.4139
+split_vv,built-up,1.3164
+split_vv,bare,0.6338
+split_vv,water,100.0939
+split_vv,herb. wetland,153.3528
+split_vv,mangrove,0.3052
+urban_incr,tree,0.0
+urban_incr,shrub,0.0
+urban_incr,grass,0.0
+urban_incr,cropland,0.0
+urban_incr,built-up,48.2357
+urban_incr,bare,0.0
+urban_incr,water,0.0
+urban_incr,herb. wetland,0.0
+urban_incr,mangrove,0.0
+dl_deeplab_r34,tree,14.875300000000001
+dl_deeplab_r34,shrub,0.10060000000000001
+dl_deeplab_r34,grass,30.9833
+dl_deeplab_r34,cropland,171.0841
+dl_deeplab_r34,built-up,1.2288000000000001
+dl_deeplab_r34,bare,0.4949
+dl_deeplab_r34,water,82.69380000000001
+dl_deeplab_r34,herb. wetland,76.4316
+dl_deeplab_r34,mangrove,0.3808
+dl_segformer_b0,tree,35.3432
+dl_segformer_b0,shrub,0.1158
+dl_segformer_b0,grass,43.4298
+dl_segformer_b0,cropland,143.3477
+dl_segformer_b0,built-up,2.7094
+dl_segformer_b0,bare,0.9684
+dl_segformer_b0,water,88.23490000000001
+dl_segformer_b0,herb. wetland,63.9971
+dl_segformer_b0,mangrove,0.7708
+dl_segformer_b2,tree,33.0023
+dl_segformer_b2,shrub,0.11410000000000001
+dl_segformer_b2,grass,42.8815
+dl_segformer_b2,cropland,187.1223
+dl_segformer_b2,built-up,2.0772
+dl_segformer_b2,bare,0.7265
+dl_segformer_b2,water,100.62620000000001
+dl_segformer_b2,herb. wetland,94.33330000000001
+dl_segformer_b2,mangrove,0.7413000000000001
+dl_unet_r18,tree,14.5311
+dl_unet_r18,shrub,0.0855
+dl_unet_r18,grass,22.7867
+dl_unet_r18,cropland,73.9937
+dl_unet_r18,built-up,0.9532
+dl_unet_r18,bare,0.1971
+dl_unet_r18,water,58.295500000000004
+dl_unet_r18,herb. wetland,21.0744
+dl_unet_r18,mangrove,0.5216000000000001
+dl_unet_r34,tree,14.055000000000001
+dl_unet_r34,shrub,0.0592
+dl_unet_r34,grass,20.024
+dl_unet_r34,cropland,47.7683
+dl_unet_r34,built-up,0.9432
+dl_unet_r34,bare,0.0878
+dl_unet_r34,water,53.632200000000005
+dl_unet_r34,herb. wetland,13.183900000000001
+dl_unet_r34,mangrove,0.5048
+dl_ensemble,tree,17.4619
+dl_ensemble,shrub,0.0947
+dl_ensemble,grass,31.2575
+dl_ensemble,cropland,108.97630000000001
+dl_ensemble,built-up,1.336
+dl_ensemble,bare,0.4178
+dl_ensemble,water,75.5138
+dl_ensemble,herb. wetland,44.9162
+dl_ensemble,mangrove,0.5309
+final_majority,tree,11.0105
+final_majority,shrub,0.0897
+final_majority,grass,28.685100000000002
+final_majority,cropland,256.5403
+final_majority,built-up,0.9275
+final_majority,bare,0.33390000000000003
+final_majority,water,78.2461
+final_majority,herb. wetland,131.6094
+final_majority,mangrove,0.21680000000000002

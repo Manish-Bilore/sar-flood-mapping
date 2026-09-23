@@ -1,0 +1,25 @@
+project:
+  type: default
+  output-dir: _site
+
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    toc-location: left
+    number-sections: true
+    embed-resources: true
+    theme: [cosmo, offline.scss]
+    page-layout: full
+    grid:
+      sidebar-width: 240px
+      body-width: 1150px
+    fig-dpi: 110
+    code-fold: true
+    code-summary: "R code"
+    df-print: kable
+
+execute:
+  echo: false
+  warning: false
+  message: false

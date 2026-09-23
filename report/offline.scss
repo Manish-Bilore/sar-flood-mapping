@@ -1,0 +1,4 @@
+/*-- scss:defaults --*/
+// no Google Fonts fetch at render time (robust offline, deterministic embed)
+$web-font-path: false;
+$font-family-sans-serif: "Source Sans Pro", "Source Sans 3", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;

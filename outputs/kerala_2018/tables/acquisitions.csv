@@ -1,0 +1,7 @@
+event,date,platform,path,direction,days_from_peak,in_peak,n_dry_same_path,n_pre_same_path_36d,coherence_pair_ok,pc_rtc
+kerala_2018,2018-08-09,Sentinel-1A,165,DESCENDING,-6,False,10,3,True,True
+kerala_2018,2018-08-21,Sentinel-1A,165,DESCENDING,0,True,10,3,True,True
+kerala_2018,2018-08-21,Sentinel-1A,173,ASCENDING,0,True,0,0,False,True
+kerala_2018,2018-08-27,Sentinel-1B,165,DESCENDING,6,False,10,3,True,True
+kerala_2018,2018-08-27,Sentinel-1B,173,ASCENDING,6,False,0,1,False,True
+kerala_2018,2018-09-02,Sentinel-1A,165,DESCENDING,12,False,10,4,True,True

@@ -1,0 +1,10 @@
+variant,area_km2,iou_vs_default,dl_models_voting
+default (3 of 4: 3 classical + 1 DL vote),507.65930000000003,1.0,5
+looser vote (2 of 4),589.1343,0.8617038593746791,5
+unanimous (4 of 4),157.6148,0.3104735794262018,5
+DL gate 0.55,507.65930000000003,1.0,5
+DL gate 0.65,507.65930000000003,1.0,5
+"DL gate 1.01 (classical only, 2 of 3)",581.6466,0.8727968151107562,0
+"classical only, unanimous (3 of 3)",431.00140000000005,0.8489973492064461,0
++ VH-Otsu as a 5th voter (3 of 5),582.0291,0.8722232273266062,5
+every DL model votes separately (majority of 8),338.9617,0.6056283216252061,5

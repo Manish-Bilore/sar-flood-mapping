@@ -1,0 +1,49 @@
+   Train list 4501 lines, e.g. ['../03_FU/GT/20190329_Iran_ID_17_19_GT.tif', '../03_FU/GT/20190329_Iran_ID_14_27_GT.tif']
+   Valid list 1970 lines, e.g. ['../03_FU/GT/20190329_Iran_ID_18_19_GT.tif', '../03_FU/GT/20190329_Iran_ID_18_13_GT.tif']
+   data_norm: ['std_in :[0.16280619 0.20849304 0.14008107 0.19767644 4.07141682 3.94773216 4.21006244 4.05494136]', 'mean_in :[  0.23651549   0.31761484   0.18514981   0.26901252 -14.57879175  -8.6098158  -14.29073382  -8.33534564]', 'median_in :[  0.23651549   0.31761484   0.18514981   0.26901252 -14.57879175  -8.6098158  -14.29073382  -8.33534564]', 'max_in :[ 0.56519184  0.70935154  0.53432751  0.66288453 -7.85489845 -1.61887217 -7.48478746 -1.26720715]', 'min_in :[  0.03540783   0.04156244   0.03062815   0.03643807 -23.19632721 -16.43351936 -23.46723938 -16.71599197]', 'num_0 :1161425968', 'num_1 :18120626', 'num_2 :363550']
+   renamed 5974 files from the first run
+>> step 2: streaming chips
+   500 tif members read, 0 kept
+   1000 tif members read, 0 kept
+   1500 tif members read, 0 kept
+   2000 tif members read, 0 kept
+   2500 tif members read, 0 kept
+   3000 tif members read, 0 kept
+   3500 tif members read, 52 kept
+   4000 tif members read, 306 kept
+   4500 tif members read, 571 kept
+   5000 tif members read, 821 kept
+   5500 tif members read, 1087 kept
+   6000 tif members read, 1363 kept
+   6500 tif members read, 1635 kept
+   7000 tif members read, 1903 kept
+   7500 tif members read, 2185 kept
+   8000 tif members read, 2456 kept
+   8500 tif members read, 2605 kept
+   9000 tif members read, 2678 kept
+   9500 tif members read, 2749 kept
+   10000 tif members read, 2821 kept
+   10500 tif members read, 2892 kept
+   11000 tif members read, 2970 kept
+   11500 tif members read, 3062 kept
+   12000 tif members read, 3130 kept
+   12500 tif members read, 3204 kept
+folder  split  has_gt
+01_NF   train  True      1111
+        valid  True      1439
+02_FO   train  True       699
+        valid  True       312
+03_FU   train  True       471
+        valid  True       219
+
+per-class band means (0 non-flood, 1 open flood, 2 urban flood):
+    class0     class1  class2
+b1   0.267   0.229000   0.529
+b2   0.357   0.314000   0.656
+b3   0.186   0.105000   0.253
+b4   0.258   0.130000   0.334
+b5 -15.319 -16.851999 -13.441
+b6  -9.395 -10.289000  -6.227
+b7 -14.744 -22.169001 -12.985
+b8  -8.787 -17.471001  -5.009
+>> done. 4251 chips, 19.1 GB. When satisfied: rm /home/manish-bilore/Desktop/SAR_Flood_Mapping/data/benchmarks/urbansarfloods/urban_sar_floods.tar.gz

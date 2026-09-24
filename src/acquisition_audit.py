@@ -59,7 +59,17 @@ def pc_rtc_dates(bbox, start, end):
              int(i.properties.get("sat:relative_orbit", -1))) for i in items}
 
 acq_rows, summ_rows = [], []
-for ev, cfg in EVENTS.items():
+import sys as _sys
+_args = [a for a in _sys.argv[1:] if not a.startswith("--")]
+_win = next((a.split("=", 1)[1] for a in _sys.argv[1:] if a.startswith("--window=")), None)
+_sel = {k: v for k, v in EVENTS.items() if not _args or k in _args}
+if _win:                                   # e.g. --window=2024-06-15,2024-10-15  (overrides the built-in search window)
+    w0, w1 = _win.split(",")
+    _sel = {k: {**v, "window": (w0, w1)} for k, v in _sel.items()}
+if not _sel:
+    _sys.exit(f"unknown event(s) {_args}; known: {sorted(EVENTS)}")
+
+for ev, cfg in _sel.items():
     print(f"\n=== {ev}  ({cfg['setting']})")
     p0, p1 = (pd.Timestamp(x) for x in cfg["peak"])
     co = asf_scenes(cfg["bbox"], *cfg["window"])

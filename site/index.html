@@ -1,11 +1,140 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1"><title>SAR Flood Mapping — Reports</title>
-<style>:root{color-scheme:light dark}body{max-width:46rem;margin:4rem auto;padding:0 1rem;
-font:16px/1.6 system-ui,sans-serif}h1{font-size:1.6rem;margin-bottom:.2rem}p.sub{color:#666;margin-top:0}
-ul{list-style:none;padding:0}li{padding:.6rem 0;border-bottom:1px solid #8883}li span{color:#888;font-size:.85em}
-a{text-decoration:none}a:hover{text-decoration:underline}</style></head><body>
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SAR flood mapping without Earth Engine</title>
+<meta name="description" content="Sentinel-1 flood mapping for Indian events, rebuilt from public archives on a single laptop — classical thresholding and change detection, five segmentation networks trained on Sen1Floods11, InSAR coherence from HyP3, and a parameterised report that regenerates end to end for every event.">
+<style>
+:root {
+  color-scheme: light dark;
+  --fg: #16181d; --dim: #5d6470; --line: #e3e6ec; --bg: #fff; --card: #f7f8fa;
+  --ok: #1a7f4b; --wip: #b8770c; --todo: #6b7280; --no: #a02c3a; --link: #1b4ea8;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --fg: #e7e9ee; --dim: #9aa3b2; --line: #2a2f3a; --bg: #111318; --card: #171a20;
+           --ok: #4ac585; --wip: #e0a63c; --todo: #8d95a3; --no: #e8798a; --link: #7db0ff; }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--fg);
+  font: 16px/1.62 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+.wrap { max-width: 62rem; margin: 0 auto; padding: 3.5rem 1.25rem 5rem; }
+h1 { font-size: 2rem; line-height: 1.2; margin: 0 0 .5rem; letter-spacing: -.02em; }
+.tag { color: var(--dim); max-width: 46rem; margin: 0 0 1.25rem; }
+.meta { color: var(--dim); font-size: .9rem; margin-bottom: 2.5rem; }
+a { color: var(--link); text-decoration: none; }
+a:hover { text-decoration: underline; }
+h2 { font-size: 1.05rem; text-transform: uppercase; letter-spacing: .08em; color: var(--dim);
+  margin: 2.75rem 0 .9rem; font-weight: 600; }
+ul.find { margin: 0; padding-left: 1.1rem; }
+ul.find li { margin-bottom: .55rem; }
+table { width: 100%; border-collapse: collapse; }
+th { text-align: left; font-size: .78rem; text-transform: uppercase; letter-spacing: .06em;
+  color: var(--dim); font-weight: 600; padding: 0 .6rem .5rem 0; border-bottom: 1px solid var(--line); }
+td { padding: .95rem .6rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+td small { display: block; color: var(--dim); font-size: .82rem; margin-top: .15rem; }
+.ev { font-weight: 600; min-width: 13rem; }
+.ev .dot { display: inline-block; width: .5rem; height: .5rem; border-radius: 50%;
+  margin-right: .5rem; background: var(--todo); vertical-align: middle; }
+tr.ok .dot { background: var(--ok); } tr.wip .dot { background: var(--wip); }
+.size { color: var(--dim); font-size: .75rem; font-weight: 400; margin-left: .4rem; }
+.res b { font-size: 1.02rem; white-space: nowrap; } .res b.ok { color: var(--ok); } .res b.no { color: var(--no); }
+.badge { font-size: .72rem; padding: .18rem .5rem; border-radius: 999px; white-space: nowrap;
+  border: 1px solid currentColor; }
+.badge.ok { color: var(--ok); } .badge.wip { color: var(--wip); } .badge.todo { color: var(--todo); }
+.note { color: var(--dim); font-size: .9rem; }
+.foot { margin-top: 3rem; padding: 1.1rem 1.2rem; background: var(--card); border-radius: .6rem;
+  color: var(--dim); font-size: .88rem; }
+@media (max-width: 720px) {
+  .wrap { padding-top: 2.25rem; } h1 { font-size: 1.55rem; }
+  th:nth-child(4), td.note { display: none; }
+}
+</style></head>
+<body><div class="wrap">
+
 <h1>SAR flood mapping without Earth Engine</h1>
-<p class="sub">Sentinel-1 event reports — classical baselines, deep learning, coherence, sensitivity.
-<a href="https://github.com/Manish-Bilore/sar-flood-mapping">Source on GitHub</a></p>
-<ul><li><a href="kerala_2018.html">Kerala 2018</a> <span>31.3 MB</span></li></ul>
-<p class="sub">Updated 2026-09-24</p></body></html>
+<p class="tag">Sentinel-1 flood mapping for Indian events, rebuilt from public archives on a single laptop — classical thresholding and change detection, five segmentation networks trained on Sen1Floods11, InSAR coherence from HyP3, and a parameterised report that regenerates end to end for every event.</p>
+<p class="meta">3 of 8 events published ·
+  <a href="https://github.com/Manish-Bilore/sar-flood-mapping">source and method on GitHub</a> ·
+  Manish Bilore · updated 24 Sep 2026</p>
+
+<h2>What came out of it</h2>
+<ul class="find">
+      <li>Benchmark IoU does not predict transfer — five networks within 0.663–0.681 test IoU on Sen1Floods11 map flood extents differing by 3–3.5× on the same scene, in both rural events.</li>
+      <li>A ratio of decibel values is not a flood rule. The 2024 Earth Engine logic it replaces puts 79 % of its detections in tree cover, because the drop it demands scales with a pixel&#x27;s own brightness.</li>
+      <li>Global thresholding fails in dense cities. Over Bengaluru, Otsu lands at −2.6 dB, separating built-up from vegetation rather than water from land, while change detection against a dry-season median still works.</li>
+      <li>Revisit, not method, is the binding constraint for urban pluvial floods. Mumbai 2024 has one orbit at a 12-day repeat and no pass within three days of the cloudburst.</li>
+      <li>Urban flood extent is a lower bound everywhere: intensity rules look for a backscatter drop, while flooded streets get brighter through double bounce.</li>
+</ul>
+
+<h2>Events</h2>
+<table>
+  <thead><tr><th>Event</th><th>Flood extent</th><th>Status</th><th>What it tests</th></tr></thead>
+  <tbody>
+    <tr class="ok">
+      <td class="ev"><span class="dot"></span><a href="kerala_2018.html">Kerala 2018</a><span class="size">31 MB</span>
+        <small>Rural + peri-urban · Periyar / Kuttanad · 21 Aug 2018</small></td>
+      <td class="res"><b>508 km²</b><small>majority of 3 classical maps + deep-learning ensemble</small></td>
+      <td class="st"><span class="badge ok">Published</span></td>
+      <td class="note">The anchor event, recreating an earlier Earth Engine workflow — and auditing what that rule got wrong. Five networks, InSAR coherence on three pairs, a georeferenced NRSC sheet for comparison, and a sensitivity analysis of every ensemble choice.</td>
+    </tr>
+    <tr class="ok">
+      <td class="ev"><span class="dot"></span><a href="assam_2022_20220810.html">Assam 2022</a><span class="size">22 MB</span>
+        <small>Rural riverine · Brahmaputra · 10 Aug 2022</small></td>
+      <td class="res"><b>320 km²</b><small>majority of 3 classical maps + deep-learning ensemble</small></td>
+      <td class="st"><span class="badge ok">Published</span></td>
+      <td class="note">Second rural case on a different river system and orbit. The deep-learning ordering repeats exactly, while the classical methods disagree by a factor of 1.8 — so here the ensemble&#x27;s vote rule genuinely changes the answer, unlike Kerala.</td>
+    </tr>
+    <tr class="ok">
+      <td class="ev"><span class="dot"></span><a href="mumbai_2024_detectability.html">Mumbai 2024</a><span class="size">2 MB</span>
+        <small>Urban pluvial + coastal · 11 Jul 2024 (+3 d)</small></td>
+      <td class="res"><b class="no">not separable</b><small>9 passes tested</small></td>
+      <td class="st"><span class="badge ok">Published</span></td>
+      <td class="note">No acquisition near the flood peak, so a single map would prove nothing. The same rule is run over all nine passes of the season instead: the event date is not separable from the rest, and the seasonal scatter sets a detection floor for how large a flood would have to be.</td>
+    </tr>
+    <tr class="wip">
+      <td class="ev"><span class="dot"></span>Bengaluru 2022
+        <small>Urban pluvial · tech corridor · 5 Sep 2022</small></td>
+      <td class="res"><b>10 km²</b><small>majority of 1 classical map + deep-learning ensemble</small></td>
+      <td class="st"><span class="badge wip">In progress</span></td>
+      <td class="note">The one urban event with a near-peak pass — hours after the night storm. Global thresholds are rejected as implausible; change detection and the UrbanSARFloods models carry the result. Waiting on a model trained for the band subset open processing can actually supply.</td>
+    </tr>
+    <tr class="todo">
+      <td class="ev"><span class="dot"></span>Delhi 2023
+        <small>Urban riverine · Yamuna · 16 Jul 2023</small></td>
+      <td class="res">—</td>
+      <td class="st"><span class="badge todo">Planned</span></td>
+      <td class="note">Peak-window acquisition plus a four-scene time series through onset, peak and recession.</td>
+    </tr>
+    <tr class="todo">
+      <td class="ev"><span class="dot"></span>Hyderabad 2020
+        <small>Urban pluvial · 21 Oct 2020</small></td>
+      <td class="res">—</td>
+      <td class="st"><span class="badge todo">Planned</span></td>
+      <td class="note">Residual-inundation case — the pass falls days after the peak, so it tests what survives to be seen.</td>
+    </tr>
+    <tr class="todo">
+      <td class="ev"><span class="dot"></span>Bihar 2020
+        <small>Rural riverine · Kosi · 26 Jul 2020</small></td>
+      <td class="res">—</td>
+      <td class="st"><span class="badge todo">Planned</span></td>
+      <td class="note">Third rural case, with a published accuracy figure to compare against.</td>
+    </tr>
+    <tr class="todo">
+      <td class="ev"><span class="dot"></span>Assam 2020
+        <small>Rural riverine · Brahmaputra · 15 Jul 2020</small></td>
+      <td class="res">—</td>
+      <td class="st"><span class="badge todo">Planned</span></td>
+      <td class="note">Six-day revisit era — the same AOI as 2022 with twice the sampling.</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="foot">
+  <b>Not mapped:</b> <b>Chennai 2023</b> No Sentinel-1 IW acquisition at all between 1 and 18 Dec 2023. · <b>Wayanad 2024</b> Landslide and debris flow, not inundation — the target class is not floodwater.<br><br>
+  Every report regenerates from one parameterised Quarto template: raw imagery, speckle filtering, VV against VH,
+  InSAR coherence, terrain and water masks, classical baselines, five deep-learning models, inter-method agreement,
+  a sensitivity analysis of the ensemble, and the limits of each result. Input data is open throughout —
+  Sentinel-1 RTC from the Planetary Computer, SLC bursts through ASF HyP3, Copernicus DEM, JRC Global Surface Water,
+  ESA WorldCover.
+</div>
+
+</div></body></html>

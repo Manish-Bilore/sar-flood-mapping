@@ -1,0 +1,4 @@
+nohup: ignoring input
+/home/manish-bilore/anaconda3/envs/sarflood/lib/python3.11/site-packages/torch/cuda/__init__.py:174: UserWarning: CUDA initialization: CUDA unknown error - this may be due to an incorrectly set up environment, e.g. changing env variable CUDA_VISIBLE_DEVICES after program start. Setting the available devices to be zero. (Triggered internally at /pytorch/c10/cuda/CUDAFunctions.cpp:109.)
+  return torch._C._cuda_getDeviceCount() > 0
+### unet_r34_vvcoh_int: in_ch 6, 2281 train chips, 3000 crops/epoch, fast-val 781 chips, class weights [1.0, 2.0, 10.0]

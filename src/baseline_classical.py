@@ -17,13 +17,15 @@ Usage: python -u src/baseline_classical.py kerala_2018 [--perm-months 10] [--co 
 from __future__ import annotations
 import argparse, sys
 from pathlib import Path
-import numpy as np, pandas as pd, rioxarray
+import numpy as np, pandas as pd, rioxarray, yaml
 
 sys.path.insert(0, str(Path(__file__).parent))
 from sarlib import (lee_filter, refined_lee, to_db, otsu_threshold, split_based_threshold,  # noqa: E402
                     exclusion_mask, clean)
 
 ROOT = Path(__file__).resolve().parents[1]
+_CFG = yaml.safe_load(open(ROOT / "config/events.yaml"))
+EVENTS = {**_CFG["rural"], **_CFG["urban"]}
 WC = {10: "tree", 20: "shrub", 30: "grass", 40: "cropland", 50: "built-up", 60: "bare",
       80: "perm. water", 90: "herb. wetland", 95: "mangrove", 70: "snow", 100: "moss"}
 
@@ -54,6 +56,13 @@ def main(ev, perm_months, co_tag):
     hand_ex = (np.nan_to_num(hand, nan=0) > 15.0) if hand is not None else None
     slope_ex = (np.nan_to_num(slope, nan=0) > 5.0) if slope is not None else None
     perm = (np.nan_to_num(seas, nan=0) >= perm_months) if seas is not None else np.zeros_like(valid)
+    tidal = np.zeros_like(valid)                                # coastal events: water that comes and goes with the tide
+    itd = EVENTS[ev].get("intertidal")
+    if itd and (anc / "gsw_occ.tif").exists():
+        occ = read(anc / "gsw_occ.tif").values[0]
+        tidal = (np.nan_to_num(occ, nan=0) >= itd[0]) & (np.nan_to_num(occ, nan=0) <= itd[1]) & ~perm
+        print(f"  intertidal band (GSW occurrence {itd[0]}-{itd[1]} %): {tidal.sum() * 1e-4 * 100:.1f} km² "
+              f"— excluded from flood and reported separately")
     if seas is not None and wc is not None:
         perm |= np.isnan(seas) & (wc == 80)                      # open sea: GSW nodata, WorldCover water
     if ex is None:
@@ -65,7 +74,25 @@ def main(ev, perm_months, co_tag):
     print(f"  thresholds dB: otsu_vv {thr['otsu_vv']:.2f}  otsu_vh {thr['otsu_vh']:.2f}  "
           f"split_vv {thr['split_vv']:.2f} ({nsel}/{ntot} bimodal tiles)")
 
+    # Plausibility guard. Open water at C band sits near -15 to -22 dB (VV) / -22 to -28 dB (VH). A global threshold far
+    # above that means the histogram valley the method found separates something else — in a dense city, built-up from
+    # vegetation. Such a map is not a flood map, so it is rejected here rather than passed downstream.
+    lim = EVENTS[ev].get("max_water_db", {"otsu_vv": -10.0, "split_vv": -10.0, "otsu_vh": -15.0})
+    if isinstance(lim, (int, float)):
+        lim = {"otsu_vv": float(lim), "split_vv": float(lim), "otsu_vh": float(lim) - 5}
+    rejected = {m: thr[m] for m in ("otsu_vv", "otsu_vh", "split_vv") if thr[m] > lim.get(m, -10.0)}
+    for m, v in rejected.items():
+        print(f"  !! {m}: threshold {v:.2f} dB is above the plausible water range ({lim.get(m):.0f} dB) — "
+              f"map rejected (the histogram split is not water/land here)")
+    if "split_vv" not in rejected and ntot and nsel / ntot < 0.05:
+        print(f"  !! split_vv: only {nsel}/{ntot} tiles were bimodal ({100 * nsel / ntot:.1f} %) — threshold is weakly supported")
+
     water = {"otsu_vv": vv_db < thr["otsu_vv"], "otsu_vh": vh_db < thr["otsu_vh"], "split_vv": vv_db < thr["split_vv"]}
+    water = {k: v for k, v in water.items() if k not in rejected}
+    for m in rejected:                                  # a previous run may have written this map before the guard existed
+        stale = out / f"flood_{m}.tif"
+        if stale.exists():
+            stale.unlink(); print(f"     removed stale {stale.name} from an earlier run")
     res = dict(water)
 
     if dry_f.exists():
@@ -82,11 +109,8 @@ def main(ev, perm_months, co_tag):
         b_db, a_db = to_db(refined_lee(read(gb).values[0])), to_db(refined_lee(read(ga).values[0]))   # same filter as GEE
         with np.errstate(divide="ignore", invalid="ignore"):
             res["gee2024"] = (a_db / b_db) > 1.1                  # dB/dB ratio, final threshold 1.1 as in the script
-    elif pre_f:
-        print("  (gee2024 inputs missing -> approximating with the 9 Aug pre scene; run fetch_gee2024_inputs.py)")
-        pvv_db = to_db(refined_lee(read(pre_f[0]).values[0]))
-        with np.errstate(divide="ignore", invalid="ignore"):
-            res["gee2024"] = (vv_db / pvv_db) > 1.1
+    else:                                # the replica needs the exact 2024 mosaics; approximating it would not be a replica
+        print("  (no gee2024 mosaics for this event -> the 2024-rule replica is skipped)")
 
     px_km2 = abs(np.prod(co.rio.resolution())) / 1e6
     dmask = None
@@ -106,7 +130,7 @@ def main(ev, perm_months, co_tag):
             if slope is not None:
                 mask = mask & ~(np.nan_to_num(slope, nan=0) >= 5)
         elif m != "urban_incr":
-            mask = mask & ~perm & ~ex
+            mask = mask & ~perm & ~tidal & ~ex
         mask = clean(mask, 8)
         ref.copy(data=mask.astype("uint8")).rio.write_nodata(255).rio.to_raster(
             out / f"flood_{m}.tif", driver="COG", compress="DEFLATE")
@@ -117,6 +141,7 @@ def main(ev, perm_months, co_tag):
         row["raw_km2"] = raw.sum() * px_km2
         if m not in ("gee2024", "urban_incr"):
             r = raw & ~perm; row["rm_perm_km2"] = (raw & perm).sum() * px_km2
+            row["rm_tidal_km2"] = (r & tidal).sum() * px_km2; r = r & ~tidal
             if hand_ex is not None:
                 row["rm_hand_km2"] = (r & hand_ex).sum() * px_km2; r = r & ~hand_ex
             if slope_ex is not None:
@@ -127,6 +152,13 @@ def main(ev, perm_months, co_tag):
         rows.append(row)
     df = pd.DataFrame(rows)
     df.to_csv(out / "stats.csv", index=False)
+    if rejected:                                   # so the report can state which methods failed here, and why
+        import json
+        json.dump({m: dict(threshold_db=float(v), limit_db=float(lim.get(m, -10.0)),
+                           reason="global threshold above the plausible open-water range — histogram split is not water/land")
+                   for m, v in rejected.items()} | ({"split_vv_support": dict(bimodal_tiles=int(nsel), tiles=int(ntot))}
+                                                    if ntot else {}),
+                  open(out / "rejected_methods.json", "w"), indent=1)
     print(df[["method", "threshold_db", "area_km2"] + [c for c in df if c in ("area_km2_districts", "km2_built-up", "km2_cropland", "km2_tree")]]
           .round(2).to_string(index=False))
     print("\n  mask attribution (km², sequential perm -> HAND>15 m -> slope>5°):")
@@ -140,4 +172,9 @@ if __name__ == "__main__":
     ap.add_argument("event"); ap.add_argument("--perm-months", type=int, default=10)
     ap.add_argument("--co", default=None, help="co-event date tag, e.g. 20180821")
     a = ap.parse_args()
-    main(a.event, a.perm_months, a.co)
+    cos = sorted((ROOT / f"data/events/{a.event}/rtc").glob("co_*.tif"))
+    tags = [a.co] if a.co else [f.stem.split("_")[1] for f in cos]      # no --co -> every co-event date
+    if not tags:
+        sys.exit(f"no co-event scene in data/events/{a.event}/rtc")
+    for t in tags:
+        main(a.event, a.perm_months, t)

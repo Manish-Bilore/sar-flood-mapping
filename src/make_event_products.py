@@ -25,6 +25,25 @@ WC = {10: "tree", 20: "shrub", 30: "grass", 40: "cropland", 50: "built-up", 60: 
       90: "herb. wetland", 95: "mangrove", 70: "snow", 100: "moss"}
 
 
+def pick_co(d, want=None):
+    """Select the co-event scene and a suffix that keeps multi-date events apart.
+    Returns (path, suffix) where suffix is '' for single-date events and '_<yyyymmdd>' when the event has several."""
+    fs = sorted((d / "rtc").glob("co_*.tif"))
+    if not fs:
+        sys.exit(f"no co-event scene in {d / 'rtc'}")
+    if want:
+        w = str(want).replace("-", "")
+        sel = [f for f in fs if w in f.stem]
+        if not sel:
+            sys.exit(f"co date {want} not found; available: {[f.stem.split('_')[1] for f in fs]}")
+        fs_sel = sel[0]
+    else:
+        fs_sel = fs[0]
+        if len(fs) > 1:
+            print(f"  note: {len(fs)} co-event dates ({[f.stem.split('_')[1] for f in fs]}); using {fs_sel.stem.split('_')[1]} — pass --co to choose")
+    return fs_sel, (f"_{fs_sel.stem.split('_')[1]}" if len(fs) > 1 else "")
+
+
 def rd(f, band=None):
     da = rioxarray.open_rasterio(f, masked=True)
     return da.isel(band=band) if band is not None else da.squeeze("band", drop=True)
@@ -52,12 +71,14 @@ def window(da, lon, lat, km):
     return da.sel(x=slice(x - h, x + h), y=slice(y + h, y - h))
 
 
-def main(ev, k):
-    cfg = EVENTS[ev]; d = ROOT / f"data/events/{ev}"; out = ROOT / f"outputs/{ev}"
+def main(ev, k, co_date=None):
+    cfg = EVENTS[ev]; d = ROOT / f"data/events/{ev}"
+    co_f, sfx = pick_co(d, co_date)
+    out = ROOT / f"outputs/{ev}{sfx}"
     disp, tab = out / "display", out / "tables"; tab.mkdir(parents=True, exist_ok=True)
-    co_f = sorted((d / "rtc").glob("co_*.tif"))[0]; path = co_f.stem.split("_p")[-1]
+    path = co_f.stem.split("_p")[-1]
     bdir = d / "baseline" if (d / "baseline/stats.csv").exists() else d / "baseline" / co_f.stem.split("_")[1]
-    summ = {"event": ev, "co_file": co_f.name, "path": int(path), "bbox": cfg["bbox"], "factor": k}
+    summ = {"event": ev, "tag": ev + sfx, "co_file": co_f.name, "path": int(path), "bbox": cfg["bbox"], "factor": k}
     print(f"=== {ev}: {co_f.name}, baselines in {bdir.relative_to(ROOT)}")
 
     # ---------------- raw SAR, full resolution ----------------
@@ -82,13 +103,13 @@ def main(ev, k):
         layers["logratio_vv_db"] = coarsen_mean(rd(bdir / "logratio_vv_db.tif"), k)
     for f in sorted(bdir.glob("flood_*.tif")):
         layers[f.stem + "_frac"] = coarsen_mean(rd(f).where(lambda a: a < 255), k)
-    for f in sorted((d / "dl").glob("*_prob.tif")) if (d / "dl").exists() else []:
+    for f in sorted((d / f"dl{sfx}").glob("*_prob.tif")) if (d / f"dl{sfx}").exists() else []:
         layers["dl_" + f.stem] = coarsen_mean(rd(f).astype("float32") / 100, k)
-    for f in sorted((d / "dl").glob("*_flood.tif")) if (d / "dl").exists() else []:
+    for f in sorted((d / f"dl{sfx}").glob("*_flood.tif")) if (d / f"dl{sfx}").exists() else []:
         layers["dl_" + f.stem + "_frac"] = coarsen_mean(rd(f).where(lambda a: a < 255), k)
-    for f in sorted((d / "usf").glob("*_p_urban.tif")) if (d / "usf").exists() else []:
+    for f in sorted((d / f"usf{sfx}").glob("*_p_urban.tif")) if (d / f"usf{sfx}").exists() else []:
         layers["usf_" + f.stem] = coarsen_mean(rd(f).where(lambda a: a < 255).astype("float32") / 100, k)
-    for f in sorted((d / "usf").glob("*_class.tif")) if (d / "usf").exists() else []:
+    for f in sorted((d / f"usf{sfx}").glob("*_class.tif")) if (d / f"usf{sfx}").exists() else []:
         c = rd(f).where(lambda a: a < 255)
         layers["usf_" + f.stem + "_urbanfrac"] = coarsen_mean((c == 2).astype("float32"), k)
         layers["usf_" + f.stem + "_openfrac"] = coarsen_mean((c == 1).astype("float32"), k)
@@ -114,10 +135,17 @@ def main(ev, k):
     wc = rd(anc / "worldcover.tif").values if (anc / "worldcover.tif").exists() else np.zeros(vv_db.shape)
     hand = rd(anc / "hand.tif").values if (anc / "hand.tif").exists() else np.zeros(vv_db.shape)
     masks = {f.stem.replace("flood_", ""): (rd(f).values == 1) for f in sorted(bdir.glob("flood_*.tif"))}
-    if (d / "dl").exists():
-        masks.update({"dl_" + f.stem.replace("_flood", ""): (rd(f).values == 1) for f in sorted((d / "dl").glob("*_flood.tif"))})
+    if not masks:
+        sys.exit(f"no flood_*.tif in {bdir} — run: python -u src/baseline_classical.py {ev}"
+                 + (f" --co {co_f.stem.split('_')[1]}" if sfx else ""))
+    if (d / f"dl{sfx}").exists():
+        masks.update({"dl_" + f.stem.replace("_flood", ""): (rd(f).values == 1) for f in sorted((d / f"dl{sfx}").glob("*_flood.tif"))})
     excl = list(cfg.get("exclude_methods") or [])   # stay in the per-method tables, out of consensus + agreement
     summ["excluded_methods"] = excl
+    rj = bdir / "rejected_methods.json"
+    summ["rejected_methods"] = json.load(open(rj)) if rj.exists() else {}
+    for m in [k for k in summ["rejected_methods"] if k != "split_vv_support"]:
+        masks.pop(m, None)
     summ["builtup_km2"] = float(np.sum((wc == 50) & valid) * px_km2)
     inland_water = (np.nan_to_num(seas) >= 10) & valid
     flood_ref = masks.get("cd_vv", np.zeros_like(valid))
@@ -326,7 +354,7 @@ def main(ev, k):
                                                   water_side_db=np.nanmean(db[wat]), contrast_db=np.nanmean(db[lnd]) - np.nanmean(db[wat]),
                                                   n_edge_px=int(wat.sum() + lnd.sum())))
         extra = [out / "final_flood_10m.tif"] if (out / "final_flood_10m.tif").exists() else []
-        for f in sorted(bdir.glob("flood_*.tif")) + (sorted((d / "dl").glob("*_prob.tif")) if (d / "dl").exists() else []) + extra:
+        for f in sorted(bdir.glob("flood_*.tif")) + (sorted((d / f"dl{sfx}").glob("*_prob.tif")) if (d / f"dl{sfx}").exists() else []) + extra:
             save(window(rd(f), lon, lat, km), zd / f.name, "uint8")
         for f in (sorted((d / "coh").glob("*_coh.tif")) if (d / "coh").exists() else []):
             save(window(rd(f), lon, lat, km), zd / f.name)
@@ -345,10 +373,10 @@ def main(ev, k):
     st = bdir / "stats.csv"
     if st.exists():
         pd.read_csv(st).to_csv(tab / "baseline_stats.csv", index=False)
-    if (d / "dl/stats.csv").exists():
-        pd.read_csv(d / "dl/stats.csv").to_csv(tab / "dl_stats.csv", index=False)
-    if (d / "usf/stats.csv").exists():
-        pd.read_csv(d / "usf/stats.csv").to_csv(tab / "usf_event.csv", index=False)
+    if (d / f"dl{sfx}/stats.csv").exists():
+        pd.read_csv(d / f"dl{sfx}/stats.csv").to_csv(tab / "dl_stats.csv", index=False)
+    if (d / f"usf{sfx}/stats.csv").exists():
+        pd.read_csv(d / f"usf{sfx}/stats.csv").to_csv(tab / "usf_event.csv", index=False)
     runs = []
     for mj in sorted((ROOT / "runs/s1f11").glob("*/metrics.json")):
         m = json.load(open(mj))
@@ -379,4 +407,5 @@ def main(ev, k):
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser(); ap.add_argument("event"); ap.add_argument("--factor", type=int, default=5)
-    a = ap.parse_args(); main(a.event, a.factor)
+    ap.add_argument("--co", help="co-event date (YYYY-MM-DD) for events with more than one")
+    a = ap.parse_args(); main(a.event, a.factor, a.co)

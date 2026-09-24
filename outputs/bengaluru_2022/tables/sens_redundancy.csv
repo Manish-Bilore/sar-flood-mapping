@@ -1,0 +1,16 @@
+a,b,iou
+cd_vv,dl_deeplab_r34,0.3672171172860615
+cd_vv,dl_segformer_b0,0.3423881456793552
+cd_vv,dl_segformer_b2,0.34196263292771734
+cd_vv,dl_unet_r18,0.27163339336027365
+cd_vv,dl_unet_r34,0.24144132452050096
+dl_deeplab_r34,dl_segformer_b0,0.5197903774440975
+dl_deeplab_r34,dl_segformer_b2,0.5526929185833042
+dl_deeplab_r34,dl_unet_r18,0.4466769574524335
+dl_deeplab_r34,dl_unet_r34,0.36686823539722185
+dl_segformer_b0,dl_segformer_b2,0.7258328044270097
+dl_segformer_b0,dl_unet_r18,0.30119290372493296
+dl_segformer_b0,dl_unet_r34,0.244764757538372
+dl_segformer_b2,dl_unet_r18,0.3392415229030339
+dl_segformer_b2,dl_unet_r34,0.2744235382037776
+dl_unet_r18,dl_unet_r34,0.6821818493811802

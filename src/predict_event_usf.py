@@ -63,8 +63,10 @@ def predict(model, x, dev, tile=512, ov=64):
 
 def main(a):
     ev = a.event
-    d = ROOT / f"data/events/{ev}"; out = d / "usf"; out.mkdir(parents=True, exist_ok=True)
-    co_f = sorted((d / "rtc").glob("co_*.tif"))[0]; path = co_f.stem.split("_p")[-1]
+    d = ROOT / f"data/events/{ev}"
+    from make_event_products import pick_co
+    co_f, sfx = pick_co(d, a.co)
+    out = d / f"usf{sfx}"; out.mkdir(parents=True, exist_ok=True); path = co_f.stem.split("_p")[-1]
     co = rioxarray.open_rasterio(co_f, masked=True)
     ref = co.isel(band=0)
     px_km2 = abs(np.prod(ref.rio.resolution())) / 1e6
@@ -78,12 +80,14 @@ def main(a):
     band[4], band[5] = to_db(dry.isel(band=1).values), to_db(dry.isel(band=0).values)      # pre VH, pre VV
     band[6], band[7] = to_db(co.isel(band=1).values), to_db(co.isel(band=0).values)        # co  VH, co  VV
     cohd = d / "coh"
-    for k, nm in ((1, "pre"), (3, "co")):
-        f = cohd / f"{nm}_coh.tif"
+    for k, nm, suffix in ((1, "pre", ""), (3, "co", ""), (0, "pre", "_vh"), (2, "co", "_vh")):
+        f = cohd / f"{nm}_coh{suffix}.tif"
         if f.exists():
-            band[k] = rd(f).rio.reproject_match(ref, resampling=5).values                  # VV coherence
+            band[k] = rd(f).rio.reproject_match(ref, resampling=5).values
     have = set(band)
-    print("  bands available:", sorted(have), "(missing VH coherence: 0, 2)")
+    miss_coh = [b for b in (0, 1, 2, 3) if b not in have]
+    print("  bands available:", sorted(have),
+          f"(missing coherence bands: {miss_coh} — add with: python src/coherence_hyp3.py {ev} --pol VH)" if miss_coh else "")
 
     runs = sorted((ROOT / "runs/usf").glob("*/best.pt"))
     if a.runs:
@@ -98,15 +102,16 @@ def main(a):
     built = (rd(wc_f).rio.reproject_match(ref, resampling=0).values == 50) if wc_f.exists() else None
     rows = []
     for rp in runs:
-        tag = rp.parent.name                                   # <model>_<bands>
-        bands_key = tag.rsplit("_", 1)[-1] if tag.rsplit("_", 1)[-1] in BANDS else "all"
+        tag = rp.parent.name                                   # <model>_<bands>; bands may contain '_' (co_int)
+        bands_key = next((k for k in sorted(BANDS, key=len, reverse=True) if tag.endswith("_" + k)), "all")
+        model_name = tag[: -(len(bands_key) + 1)] if tag.endswith("_" + bands_key) else tag
         idx = BANDS[bands_key]
         miss = [b for b in idx if b not in have]
         if miss and not a.allow_missing_coh:
             print(f"  {tag}: needs bands {miss} (VH coherence) — skipped"); continue
         x = np.stack([np.nan_to_num((band.get(b, np.full(ref.shape, np.nan)) - mean[b]) / std[b],
                                     nan=0.0, posinf=0.0, neginf=0.0) for b in idx]).astype(np.float32)
-        model, _, _ = build(tag.rsplit("_", 1)[0], in_ch=len(idx), pretrained=False, classes=3)
+        model, _, _ = build(model_name, in_ch=len(idx), pretrained=False, classes=3)
         model.load_state_dict(torch.load(rp, map_location=dev)); model.to(dev).eval()
         print(f"  {tag} on {dev} ({len(idx)} bands{', zero-filled: ' + str(miss) if miss else ''})", flush=True)
         p = predict(model, x, dev, a.tile, a.overlap)
@@ -129,7 +134,8 @@ def main(a):
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
-    ap.add_argument("event"); ap.add_argument("--runs", help="comma-separated run names under runs/usf/")
+    ap.add_argument("event"); ap.add_argument("--co", help="co-event date (YYYY-MM-DD) for multi-date events")
+    ap.add_argument("--runs", help="comma-separated run names under runs/usf/")
     ap.add_argument("--cpu", action="store_true"); ap.add_argument("--tile", type=int, default=512)
     ap.add_argument("--overlap", type=int, default=64)
     ap.add_argument("--allow-missing-coh", action="store_true", dest="allow_missing_coh",

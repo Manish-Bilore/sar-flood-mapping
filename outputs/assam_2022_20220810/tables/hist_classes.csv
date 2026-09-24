@@ -1,0 +1,1621 @@
+feature,cls,db,density
+VV,permanent water,-34.875,0.0
+VV,permanent water,-34.625,0.0
+VV,permanent water,-34.375,0.0
+VV,permanent water,-34.125,0.0
+VV,permanent water,-33.875,0.0
+VV,permanent water,-33.625,0.0
+VV,permanent water,-33.375,0.0
+VV,permanent water,-33.125,0.0
+VV,permanent water,-32.875,0.0
+VV,permanent water,-32.625,0.0
+VV,permanent water,-32.375,0.0
+VV,permanent water,-32.125,0.0
+VV,permanent water,-31.875,0.0
+VV,permanent water,-31.625,0.0
+VV,permanent water,-31.375,0.0
+VV,permanent water,-31.125,0.0
+VV,permanent water,-30.875,0.0
+VV,permanent water,-30.625,0.0
+VV,permanent water,-30.375,0.0
+VV,permanent water,-30.125,0.0
+VV,permanent water,-29.875,0.0
+VV,permanent water,-29.625,0.0
+VV,permanent water,-29.375,0.0
+VV,permanent water,-29.125,0.0
+VV,permanent water,-28.875,0.0
+VV,permanent water,-28.625,0.0
+VV,permanent water,-28.375,0.0
+VV,permanent water,-28.125,0.0
+VV,permanent water,-27.875,0.0
+VV,permanent water,-27.625,0.0
+VV,permanent water,-27.375,0.0
+VV,permanent water,-27.125,0.0
+VV,permanent water,-26.875,0.0
+VV,permanent water,-26.625,4e-05
+VV,permanent water,-26.375,4e-05
+VV,permanent water,-26.125,0.00012
+VV,permanent water,-25.875,0.00018
+VV,permanent water,-25.625,0.00052
+VV,permanent water,-25.375,0.00086
+VV,permanent water,-25.125,0.002
+VV,permanent water,-24.875,0.004
+VV,permanent water,-24.625,0.00774
+VV,permanent water,-24.375,0.01254
+VV,permanent water,-24.125,0.02046
+VV,permanent water,-23.875,0.0332
+VV,permanent water,-23.625,0.04674
+VV,permanent water,-23.375,0.06708
+VV,permanent water,-23.125,0.08744
+VV,permanent water,-22.875,0.10936
+VV,permanent water,-22.625,0.1295
+VV,permanent water,-22.375,0.14416
+VV,permanent water,-22.125,0.1543
+VV,permanent water,-21.875,0.16028
+VV,permanent water,-21.625,0.15908
+VV,permanent water,-21.375,0.15744
+VV,permanent water,-21.125,0.15544
+VV,permanent water,-20.875,0.15232
+VV,permanent water,-20.625,0.15032
+VV,permanent water,-20.375,0.13952
+VV,permanent water,-20.125,0.13702
+VV,permanent water,-19.875,0.13194
+VV,permanent water,-19.625,0.12066
+VV,permanent water,-19.375,0.11644
+VV,permanent water,-19.125,0.1089
+VV,permanent water,-18.875,0.10394
+VV,permanent water,-18.625,0.0986
+VV,permanent water,-18.375,0.09796
+VV,permanent water,-18.125,0.09788
+VV,permanent water,-17.875,0.0915
+VV,permanent water,-17.625,0.0909
+VV,permanent water,-17.375,0.08534
+VV,permanent water,-17.125,0.08222
+VV,permanent water,-16.875,0.07436
+VV,permanent water,-16.625,0.06696
+VV,permanent water,-16.375,0.06196
+VV,permanent water,-16.125,0.05316
+VV,permanent water,-15.875,0.0474
+VV,permanent water,-15.625,0.04358
+VV,permanent water,-15.375,0.03916
+VV,permanent water,-15.125,0.03406
+VV,permanent water,-14.875,0.0311
+VV,permanent water,-14.625,0.02558
+VV,permanent water,-14.375,0.02422
+VV,permanent water,-14.125,0.02084
+VV,permanent water,-13.875,0.0191
+VV,permanent water,-13.625,0.01686
+VV,permanent water,-13.375,0.01524
+VV,permanent water,-13.125,0.01352
+VV,permanent water,-12.875,0.01346
+VV,permanent water,-12.625,0.01118
+VV,permanent water,-12.375,0.01032
+VV,permanent water,-12.125,0.0102
+VV,permanent water,-11.875,0.0089
+VV,permanent water,-11.625,0.00792
+VV,permanent water,-11.375,0.00816
+VV,permanent water,-11.125,0.00674
+VV,permanent water,-10.875,0.00606
+VV,permanent water,-10.625,0.00602
+VV,permanent water,-10.375,0.0052
+VV,permanent water,-10.125,0.00494
+VV,permanent water,-9.875,0.00462
+VV,permanent water,-9.625,0.00428
+VV,permanent water,-9.375,0.00432
+VV,permanent water,-9.125,0.00348
+VV,permanent water,-8.875,0.00328
+VV,permanent water,-8.625,0.00348
+VV,permanent water,-8.375,0.00308
+VV,permanent water,-8.125,0.00274
+VV,permanent water,-7.875,0.00278
+VV,permanent water,-7.625,0.00258
+VV,permanent water,-7.375,0.00238
+VV,permanent water,-7.125,0.002
+VV,permanent water,-6.875,0.00192
+VV,permanent water,-6.625,0.00232
+VV,permanent water,-6.375,0.00202
+VV,permanent water,-6.125,0.00148
+VV,permanent water,-5.875,0.00178
+VV,permanent water,-5.625,0.00138
+VV,permanent water,-5.375,0.00122
+VV,permanent water,-5.125,0.00128
+VV,permanent water,-4.875,0.00084
+VV,permanent water,-4.625,0.00076
+VV,permanent water,-4.375,0.00068
+VV,permanent water,-4.125,0.00022
+VV,permanent water,-3.875,0.00036
+VV,permanent water,-3.625,0.00032
+VV,permanent water,-3.375,0.0001
+VV,permanent water,-3.125,6e-05
+VV,permanent water,-2.875,2e-05
+VV,permanent water,-2.625,2e-05
+VV,permanent water,-2.375,2e-05
+VV,permanent water,-2.125,0.0
+VV,permanent water,-1.875,0.0
+VV,permanent water,-1.625,0.0
+VV,permanent water,-1.375,0.0
+VV,permanent water,-1.125,0.0
+VV,permanent water,-0.875,0.0
+VV,permanent water,-0.625,0.0
+VV,permanent water,-0.375,0.0
+VV,permanent water,-0.125,0.0
+VV,permanent water,0.125,0.0
+VV,permanent water,0.375,0.0
+VV,permanent water,0.625,0.0
+VV,permanent water,0.875,0.0
+VV,permanent water,1.125,0.0
+VV,permanent water,1.375,0.0
+VV,permanent water,1.625,0.0
+VV,permanent water,1.875,0.0
+VV,permanent water,2.125,0.0
+VV,permanent water,2.375,0.0
+VV,permanent water,2.625,0.0
+VV,permanent water,2.875,0.0
+VV,permanent water,3.125,0.0
+VV,permanent water,3.375,0.0
+VV,permanent water,3.625,0.0
+VV,permanent water,3.875,0.0
+VV,permanent water,4.125,0.0
+VV,permanent water,4.375,0.0
+VV,permanent water,4.625,0.0
+VV,permanent water,4.875,0.0
+VV,permanent water,5.125,0.0
+VV,permanent water,5.375,0.0
+VV,permanent water,5.625,0.0
+VV,permanent water,5.875,0.0
+VV,permanent water,6.125,0.0
+VV,permanent water,6.375,0.0
+VV,permanent water,6.625,0.0
+VV,permanent water,6.875,0.0
+VV,permanent water,7.125,0.0
+VV,permanent water,7.375,0.0
+VV,permanent water,7.625,0.0
+VV,permanent water,7.875,0.0
+VV,permanent water,8.125,0.0
+VV,permanent water,8.375,0.0
+VV,permanent water,8.625,0.0
+VV,permanent water,8.875,0.0
+VV,permanent water,9.125,0.0
+VV,permanent water,9.375,0.0
+VV,permanent water,9.625,0.0
+VV,permanent water,9.875,0.0
+VV,flood (change detection),-34.875,0.0
+VV,flood (change detection),-34.625,0.0
+VV,flood (change detection),-34.375,0.0
+VV,flood (change detection),-34.125,0.0
+VV,flood (change detection),-33.875,0.0
+VV,flood (change detection),-33.625,0.0
+VV,flood (change detection),-33.375,0.0
+VV,flood (change detection),-33.125,0.0
+VV,flood (change detection),-32.875,0.0
+VV,flood (change detection),-32.625,0.0
+VV,flood (change detection),-32.375,0.0
+VV,flood (change detection),-32.125,0.0
+VV,flood (change detection),-31.875,0.0
+VV,flood (change detection),-31.625,0.0
+VV,flood (change detection),-31.375,0.0
+VV,flood (change detection),-31.125,0.0
+VV,flood (change detection),-30.875,0.0
+VV,flood (change detection),-30.625,0.0
+VV,flood (change detection),-30.375,0.0
+VV,flood (change detection),-30.125,0.0
+VV,flood (change detection),-29.875,0.0
+VV,flood (change detection),-29.625,0.0
+VV,flood (change detection),-29.375,0.0
+VV,flood (change detection),-29.125,0.0
+VV,flood (change detection),-28.875,0.0
+VV,flood (change detection),-28.625,0.0
+VV,flood (change detection),-28.375,0.0
+VV,flood (change detection),-28.125,0.0
+VV,flood (change detection),-27.875,0.0
+VV,flood (change detection),-27.625,0.0
+VV,flood (change detection),-27.375,0.0
+VV,flood (change detection),-27.125,0.0
+VV,flood (change detection),-26.875,2e-05
+VV,flood (change detection),-26.625,4e-05
+VV,flood (change detection),-26.375,2e-05
+VV,flood (change detection),-26.125,4e-05
+VV,flood (change detection),-25.875,0.00022
+VV,flood (change detection),-25.625,0.00044
+VV,flood (change detection),-25.375,0.00102
+VV,flood (change detection),-25.125,0.00154
+VV,flood (change detection),-24.875,0.00288
+VV,flood (change detection),-24.625,0.00546
+VV,flood (change detection),-24.375,0.00936
+VV,flood (change detection),-24.125,0.01594
+VV,flood (change detection),-23.875,0.0237
+VV,flood (change detection),-23.625,0.03452
+VV,flood (change detection),-23.375,0.0479
+VV,flood (change detection),-23.125,0.06196
+VV,flood (change detection),-22.875,0.07788
+VV,flood (change detection),-22.625,0.09506
+VV,flood (change detection),-22.375,0.10664
+VV,flood (change detection),-22.125,0.12324
+VV,flood (change detection),-21.875,0.13874
+VV,flood (change detection),-21.625,0.15362
+VV,flood (change detection),-21.375,0.15856
+VV,flood (change detection),-21.125,0.16816
+VV,flood (change detection),-20.875,0.17046
+VV,flood (change detection),-20.625,0.16778
+VV,flood (change detection),-20.375,0.1603
+VV,flood (change detection),-20.125,0.15338
+VV,flood (change detection),-19.875,0.14396
+VV,flood (change detection),-19.625,0.13552
+VV,flood (change detection),-19.375,0.12318
+VV,flood (change detection),-19.125,0.11382
+VV,flood (change detection),-18.875,0.10876
+VV,flood (change detection),-18.625,0.10346
+VV,flood (change detection),-18.375,0.09698
+VV,flood (change detection),-18.125,0.09364
+VV,flood (change detection),-17.875,0.0939
+VV,flood (change detection),-17.625,0.09248
+VV,flood (change detection),-17.375,0.0874
+VV,flood (change detection),-17.125,0.08158
+VV,flood (change detection),-16.875,0.0801
+VV,flood (change detection),-16.625,0.07604
+VV,flood (change detection),-16.375,0.07228
+VV,flood (change detection),-16.125,0.06856
+VV,flood (change detection),-15.875,0.06826
+VV,flood (change detection),-15.625,0.06792
+VV,flood (change detection),-15.375,0.06586
+VV,flood (change detection),-15.125,0.06924
+VV,flood (change detection),-14.875,0.06864
+VV,flood (change detection),-14.625,0.06844
+VV,flood (change detection),-14.375,0.06908
+VV,flood (change detection),-14.125,0.069
+VV,flood (change detection),-13.875,0.00302
+VV,flood (change detection),-13.625,0.0
+VV,flood (change detection),-13.375,0.0
+VV,flood (change detection),-13.125,0.0
+VV,flood (change detection),-12.875,0.0
+VV,flood (change detection),-12.625,0.0
+VV,flood (change detection),-12.375,0.0
+VV,flood (change detection),-12.125,0.0
+VV,flood (change detection),-11.875,0.0
+VV,flood (change detection),-11.625,0.0
+VV,flood (change detection),-11.375,0.0
+VV,flood (change detection),-11.125,0.0
+VV,flood (change detection),-10.875,0.0
+VV,flood (change detection),-10.625,0.0
+VV,flood (change detection),-10.375,0.0
+VV,flood (change detection),-10.125,0.0
+VV,flood (change detection),-9.875,0.0
+VV,flood (change detection),-9.625,0.0
+VV,flood (change detection),-9.375,0.0
+VV,flood (change detection),-9.125,0.0
+VV,flood (change detection),-8.875,0.0
+VV,flood (change detection),-8.625,0.0
+VV,flood (change detection),-8.375,0.0
+VV,flood (change detection),-8.125,0.0
+VV,flood (change detection),-7.875,0.0
+VV,flood (change detection),-7.625,0.0
+VV,flood (change detection),-7.375,0.0
+VV,flood (change detection),-7.125,0.0
+VV,flood (change detection),-6.875,0.0
+VV,flood (change detection),-6.625,0.0
+VV,flood (change detection),-6.375,0.0
+VV,flood (change detection),-6.125,0.0
+VV,flood (change detection),-5.875,0.0
+VV,flood (change detection),-5.625,0.0
+VV,flood (change detection),-5.375,0.0
+VV,flood (change detection),-5.125,0.0
+VV,flood (change detection),-4.875,0.0
+VV,flood (change detection),-4.625,0.0
+VV,flood (change detection),-4.375,0.0
+VV,flood (change detection),-4.125,0.0
+VV,flood (change detection),-3.875,0.0
+VV,flood (change detection),-3.625,0.0
+VV,flood (change detection),-3.375,0.0
+VV,flood (change detection),-3.125,0.0
+VV,flood (change detection),-2.875,0.0
+VV,flood (change detection),-2.625,0.0
+VV,flood (change detection),-2.375,0.0
+VV,flood (change detection),-2.125,0.0
+VV,flood (change detection),-1.875,0.0
+VV,flood (change detection),-1.625,0.0
+VV,flood (change detection),-1.375,0.0
+VV,flood (change detection),-1.125,0.0
+VV,flood (change detection),-0.875,0.0
+VV,flood (change detection),-0.625,0.0
+VV,flood (change detection),-0.375,0.0
+VV,flood (change detection),-0.125,0.0
+VV,flood (change detection),0.125,0.0
+VV,flood (change detection),0.375,0.0
+VV,flood (change detection),0.625,0.0
+VV,flood (change detection),0.875,0.0
+VV,flood (change detection),1.125,0.0
+VV,flood (change detection),1.375,0.0
+VV,flood (change detection),1.625,0.0
+VV,flood (change detection),1.875,0.0
+VV,flood (change detection),2.125,0.0
+VV,flood (change detection),2.375,0.0
+VV,flood (change detection),2.625,0.0
+VV,flood (change detection),2.875,0.0
+VV,flood (change detection),3.125,0.0
+VV,flood (change detection),3.375,0.0
+VV,flood (change detection),3.625,0.0
+VV,flood (change detection),3.875,0.0
+VV,flood (change detection),4.125,0.0
+VV,flood (change detection),4.375,0.0
+VV,flood (change detection),4.625,0.0
+VV,flood (change detection),4.875,0.0
+VV,flood (change detection),5.125,0.0
+VV,flood (change detection),5.375,0.0
+VV,flood (change detection),5.625,0.0
+VV,flood (change detection),5.875,0.0
+VV,flood (change detection),6.125,0.0
+VV,flood (change detection),6.375,0.0
+VV,flood (change detection),6.625,0.0
+VV,flood (change detection),6.875,0.0
+VV,flood (change detection),7.125,0.0
+VV,flood (change detection),7.375,0.0
+VV,flood (change detection),7.625,0.0
+VV,flood (change detection),7.875,0.0
+VV,flood (change detection),8.125,0.0
+VV,flood (change detection),8.375,0.0
+VV,flood (change detection),8.625,0.0
+VV,flood (change detection),8.875,0.0
+VV,flood (change detection),9.125,0.0
+VV,flood (change detection),9.375,0.0
+VV,flood (change detection),9.625,0.0
+VV,flood (change detection),9.875,0.0
+VV,non-flooded land,-34.875,0.0
+VV,non-flooded land,-34.625,0.0
+VV,non-flooded land,-34.375,0.0
+VV,non-flooded land,-34.125,0.0
+VV,non-flooded land,-33.875,0.0
+VV,non-flooded land,-33.625,0.0
+VV,non-flooded land,-33.375,0.0
+VV,non-flooded land,-33.125,0.0
+VV,non-flooded land,-32.875,0.0
+VV,non-flooded land,-32.625,0.0
+VV,non-flooded land,-32.375,0.0
+VV,non-flooded land,-32.125,0.0
+VV,non-flooded land,-31.875,0.0
+VV,non-flooded land,-31.625,0.0
+VV,non-flooded land,-31.375,0.0
+VV,non-flooded land,-31.125,0.0
+VV,non-flooded land,-30.875,0.0
+VV,non-flooded land,-30.625,0.0
+VV,non-flooded land,-30.375,0.0
+VV,non-flooded land,-30.125,0.0
+VV,non-flooded land,-29.875,0.0
+VV,non-flooded land,-29.625,0.0
+VV,non-flooded land,-29.375,0.0
+VV,non-flooded land,-29.125,0.0
+VV,non-flooded land,-28.875,0.0
+VV,non-flooded land,-28.625,0.0
+VV,non-flooded land,-28.375,0.0
+VV,non-flooded land,-28.125,0.0
+VV,non-flooded land,-27.875,0.0
+VV,non-flooded land,-27.625,0.0
+VV,non-flooded land,-27.375,0.0
+VV,non-flooded land,-27.125,0.0
+VV,non-flooded land,-26.875,0.0
+VV,non-flooded land,-26.625,0.0
+VV,non-flooded land,-26.375,0.0
+VV,non-flooded land,-26.125,0.0
+VV,non-flooded land,-25.875,0.0
+VV,non-flooded land,-25.625,0.0
+VV,non-flooded land,-25.375,0.0
+VV,non-flooded land,-25.125,0.0
+VV,non-flooded land,-24.875,0.0
+VV,non-flooded land,-24.625,0.0
+VV,non-flooded land,-24.375,4.000160006400256e-05
+VV,non-flooded land,-24.125,6.000240009600384e-05
+VV,non-flooded land,-23.875,0.0001000040001600064
+VV,non-flooded land,-23.625,0.0001000040001600064
+VV,non-flooded land,-23.375,6.000240009600384e-05
+VV,non-flooded land,-23.125,0.00018000720028801153
+VV,non-flooded land,-22.875,0.00034001360054402175
+VV,non-flooded land,-22.625,0.00022000880035201407
+VV,non-flooded land,-22.375,0.00046001840073602946
+VV,non-flooded land,-22.125,0.0005600224008960358
+VV,non-flooded land,-21.875,0.0005400216008640345
+VV,non-flooded land,-21.625,0.0005200208008320333
+VV,non-flooded land,-21.375,0.0007600304012160486
+VV,non-flooded land,-21.125,0.0009800392015680626
+VV,non-flooded land,-20.875,0.0009400376015040601
+VV,non-flooded land,-20.625,0.0009200368014720589
+VV,non-flooded land,-20.375,0.0007600304012160486
+VV,non-flooded land,-20.125,0.0011200448017920717
+VV,non-flooded land,-19.875,0.0009000360014400576
+VV,non-flooded land,-19.625,0.0007200288011520461
+VV,non-flooded land,-19.375,0.001080043201728069
+VV,non-flooded land,-19.125,0.000640025601024041
+VV,non-flooded land,-18.875,0.000640025601024041
+VV,non-flooded land,-18.625,0.00044001760070402814
+VV,non-flooded land,-18.375,0.00046001840073602946
+VV,non-flooded land,-18.125,0.0006800272010880435
+VV,non-flooded land,-17.875,0.0006000240009600384
+VV,non-flooded land,-17.625,0.0004800192007680307
+VV,non-flooded land,-17.375,0.0007200288011520461
+VV,non-flooded land,-17.125,0.0005200208008320333
+VV,non-flooded land,-16.875,0.0004800192007680307
+VV,non-flooded land,-16.625,0.0005200208008320333
+VV,non-flooded land,-16.375,0.0005200208008320333
+VV,non-flooded land,-16.125,0.0005600224008960358
+VV,non-flooded land,-15.875,0.00046001840073602946
+VV,non-flooded land,-15.625,0.00046001840073602946
+VV,non-flooded land,-15.375,0.0005600224008960358
+VV,non-flooded land,-15.125,0.00034001360054402175
+VV,non-flooded land,-14.875,0.000640025601024041
+VV,non-flooded land,-14.625,0.0005400216008640345
+VV,non-flooded land,-14.375,0.000640025601024041
+VV,non-flooded land,-14.125,0.0006000240009600384
+VV,non-flooded land,-13.875,0.0009400376015040601
+VV,non-flooded land,-13.625,0.0012600504020160806
+VV,non-flooded land,-13.375,0.0036001440057602304
+VV,non-flooded land,-13.125,0.005060202408096324
+VV,non-flooded land,-12.875,0.0062402496099844
+VV,non-flooded land,-12.625,0.00844033761350454
+VV,non-flooded land,-12.375,0.010760430417216688
+VV,non-flooded land,-12.125,0.01344053762150486
+VV,non-flooded land,-11.875,0.016840673626945076
+VV,non-flooded land,-11.625,0.02358094323772951
+VV,non-flooded land,-11.375,0.02722108884355374
+VV,non-flooded land,-11.125,0.03804152166086643
+VV,non-flooded land,-10.875,0.04500180007200288
+VV,non-flooded land,-10.625,0.0562822512900516
+VV,non-flooded land,-10.375,0.0701828073122925
+VV,non-flooded land,-10.125,0.08150326013040522
+VV,non-flooded land,-9.875,0.09860394415776631
+VV,non-flooded land,-9.625,0.11810472418896756
+VV,non-flooded land,-9.375,0.13376535061402456
+VV,non-flooded land,-9.125,0.15270610824432979
+VV,non-flooded land,-8.875,0.171826873074923
+VV,non-flooded land,-8.625,0.18536741469658785
+VV,non-flooded land,-8.375,0.20204808192327692
+VV,non-flooded land,-8.125,0.2174286971478859
+VV,non-flooded land,-7.875,0.22608904356174248
+VV,non-flooded land,-7.625,0.2281091243649746
+VV,non-flooded land,-7.375,0.23066922676907076
+VV,non-flooded land,-7.125,0.22404896195847834
+VV,non-flooded land,-6.875,0.2107084283371335
+VV,non-flooded land,-6.625,0.2003080123204928
+VV,non-flooded land,-6.375,0.18100724028961157
+VV,non-flooded land,-6.125,0.15620624824992999
+VV,non-flooded land,-5.875,0.1330053202128085
+VV,non-flooded land,-5.625,0.11004440177607104
+VV,non-flooded land,-5.375,0.08782351294051761
+VV,non-flooded land,-5.125,0.06992279691187647
+VV,non-flooded land,-4.875,0.054302172086883475
+VV,non-flooded land,-4.625,0.0406816272650906
+VV,non-flooded land,-4.375,0.030581223248929958
+VV,non-flooded land,-4.125,0.022440897635905437
+VV,non-flooded land,-3.875,0.01626065042601704
+VV,non-flooded land,-3.625,0.012540501620064802
+VV,non-flooded land,-3.375,0.009900396015840633
+VV,non-flooded land,-3.125,0.007440297611904476
+VV,non-flooded land,-2.875,0.006160246409856394
+VV,non-flooded land,-2.625,0.004520180807232289
+VV,non-flooded land,-2.375,0.003780151206048242
+VV,non-flooded land,-2.125,0.0026801072042881716
+VV,non-flooded land,-1.875,0.002560102404096164
+VV,non-flooded land,-1.625,0.0019000760030401216
+VV,non-flooded land,-1.375,0.0018400736029441178
+VV,non-flooded land,-1.125,0.0014000560022400896
+VV,non-flooded land,-0.875,0.0010400416016640667
+VV,non-flooded land,-0.625,0.0009000360014400576
+VV,non-flooded land,-0.375,0.0010400416016640667
+VV,non-flooded land,-0.125,0.0006800272010880435
+VV,non-flooded land,0.125,0.0007400296011840473
+VV,non-flooded land,0.375,0.0006600264010560422
+VV,non-flooded land,0.625,0.0007400296011840473
+VV,non-flooded land,0.875,0.0007400296011840473
+VV,non-flooded land,1.125,0.000500020000800032
+VV,non-flooded land,1.375,0.00046001840073602946
+VV,non-flooded land,1.625,0.00044001760070402814
+VV,non-flooded land,1.875,0.00036001440057602306
+VV,non-flooded land,2.125,0.0002800112004480179
+VV,non-flooded land,2.375,0.0003200128005120205
+VV,non-flooded land,2.625,0.00022000880035201407
+VV,non-flooded land,2.875,0.0002000080003200128
+VV,non-flooded land,3.125,0.00022000880035201407
+VV,non-flooded land,3.375,0.00016000640025601025
+VV,non-flooded land,3.625,0.00024000960038401536
+VV,non-flooded land,3.875,0.00014000560022400896
+VV,non-flooded land,4.125,0.0002800112004480179
+VV,non-flooded land,4.375,0.00022000880035201407
+VV,non-flooded land,4.625,0.00016000640025601025
+VV,non-flooded land,4.875,0.00012000480019200768
+VV,non-flooded land,5.125,0.00012000480019200768
+VV,non-flooded land,5.375,0.00014000560022400896
+VV,non-flooded land,5.625,0.00012000480019200768
+VV,non-flooded land,5.875,8.000320012800512e-05
+VV,non-flooded land,6.125,0.0001000040001600064
+VV,non-flooded land,6.375,4.000160006400256e-05
+VV,non-flooded land,6.625,4.000160006400256e-05
+VV,non-flooded land,6.875,2.000080003200128e-05
+VV,non-flooded land,7.125,8.000320012800512e-05
+VV,non-flooded land,7.375,6.000240009600384e-05
+VV,non-flooded land,7.625,8.000320012800512e-05
+VV,non-flooded land,7.875,0.0
+VV,non-flooded land,8.125,6.000240009600384e-05
+VV,non-flooded land,8.375,2.000080003200128e-05
+VV,non-flooded land,8.625,0.0
+VV,non-flooded land,8.875,2.000080003200128e-05
+VV,non-flooded land,9.125,2.000080003200128e-05
+VV,non-flooded land,9.375,8.000320012800512e-05
+VV,non-flooded land,9.625,2.000080003200128e-05
+VV,non-flooded land,9.875,0.0
+VH,permanent water,-34.875,0.0
+VH,permanent water,-34.625,0.0
+VH,permanent water,-34.375,0.0
+VH,permanent water,-34.125,0.0
+VH,permanent water,-33.875,0.0
+VH,permanent water,-33.625,0.0
+VH,permanent water,-33.375,0.0
+VH,permanent water,-33.125,0.0
+VH,permanent water,-32.875,0.0
+VH,permanent water,-32.625,0.0
+VH,permanent water,-32.375,0.0
+VH,permanent water,-32.125,0.0
+VH,permanent water,-31.875,0.0
+VH,permanent water,-31.625,0.0
+VH,permanent water,-31.375,0.0
+VH,permanent water,-31.125,0.0
+VH,permanent water,-30.875,0.0
+VH,permanent water,-30.625,0.0
+VH,permanent water,-30.375,0.0
+VH,permanent water,-30.125,2e-05
+VH,permanent water,-29.875,0.0
+VH,permanent water,-29.625,0.0
+VH,permanent water,-29.375,0.0
+VH,permanent water,-29.125,2e-05
+VH,permanent water,-28.875,2e-05
+VH,permanent water,-28.625,0.0
+VH,permanent water,-28.375,2e-05
+VH,permanent water,-28.125,6e-05
+VH,permanent water,-27.875,0.00014
+VH,permanent water,-27.625,0.0003
+VH,permanent water,-27.375,0.0006
+VH,permanent water,-27.125,0.00146
+VH,permanent water,-26.875,0.00318
+VH,permanent water,-26.625,0.00508
+VH,permanent water,-26.375,0.0108
+VH,permanent water,-26.125,0.02064
+VH,permanent water,-25.875,0.03266
+VH,permanent water,-25.625,0.05242
+VH,permanent water,-25.375,0.08056
+VH,permanent water,-25.125,0.11052
+VH,permanent water,-24.875,0.14662
+VH,permanent water,-24.625,0.18326
+VH,permanent water,-24.375,0.2099
+VH,permanent water,-24.125,0.23002
+VH,permanent water,-23.875,0.2501
+VH,permanent water,-23.625,0.25788
+VH,permanent water,-23.375,0.26998
+VH,permanent water,-23.125,0.2751
+VH,permanent water,-22.875,0.27234
+VH,permanent water,-22.625,0.26378
+VH,permanent water,-22.375,0.25328
+VH,permanent water,-22.125,0.22812
+VH,permanent water,-21.875,0.19914
+VH,permanent water,-21.625,0.15754
+VH,permanent water,-21.375,0.1235
+VH,permanent water,-21.125,0.09172
+VH,permanent water,-20.875,0.06534
+VH,permanent water,-20.625,0.04164
+VH,permanent water,-20.375,0.02818
+VH,permanent water,-20.125,0.01682
+VH,permanent water,-19.875,0.01106
+VH,permanent water,-19.625,0.00776
+VH,permanent water,-19.375,0.00562
+VH,permanent water,-19.125,0.00522
+VH,permanent water,-18.875,0.00406
+VH,permanent water,-18.625,0.00388
+VH,permanent water,-18.375,0.00398
+VH,permanent water,-18.125,0.00292
+VH,permanent water,-17.875,0.00294
+VH,permanent water,-17.625,0.0027
+VH,permanent water,-17.375,0.00286
+VH,permanent water,-17.125,0.00238
+VH,permanent water,-16.875,0.00248
+VH,permanent water,-16.625,0.00262
+VH,permanent water,-16.375,0.00244
+VH,permanent water,-16.125,0.00232
+VH,permanent water,-15.875,0.00228
+VH,permanent water,-15.625,0.0024
+VH,permanent water,-15.375,0.00258
+VH,permanent water,-15.125,0.00242
+VH,permanent water,-14.875,0.00206
+VH,permanent water,-14.625,0.00216
+VH,permanent water,-14.375,0.00198
+VH,permanent water,-14.125,0.0023
+VH,permanent water,-13.875,0.002
+VH,permanent water,-13.625,0.00248
+VH,permanent water,-13.375,0.00252
+VH,permanent water,-13.125,0.00184
+VH,permanent water,-12.875,0.0023
+VH,permanent water,-12.625,0.00244
+VH,permanent water,-12.375,0.0023
+VH,permanent water,-12.125,0.00202
+VH,permanent water,-11.875,0.00182
+VH,permanent water,-11.625,0.00238
+VH,permanent water,-11.375,0.00168
+VH,permanent water,-11.125,0.00152
+VH,permanent water,-10.875,0.0015
+VH,permanent water,-10.625,0.00138
+VH,permanent water,-10.375,0.00084
+VH,permanent water,-10.125,0.00068
+VH,permanent water,-9.875,0.00102
+VH,permanent water,-9.625,0.0007
+VH,permanent water,-9.375,0.00048
+VH,permanent water,-9.125,0.0004
+VH,permanent water,-8.875,0.00026
+VH,permanent water,-8.625,0.0004
+VH,permanent water,-8.375,0.0002
+VH,permanent water,-8.125,0.00016
+VH,permanent water,-7.875,0.00022
+VH,permanent water,-7.625,8e-05
+VH,permanent water,-7.375,8e-05
+VH,permanent water,-7.125,0.00012
+VH,permanent water,-6.875,0.0
+VH,permanent water,-6.625,0.0
+VH,permanent water,-6.375,0.0
+VH,permanent water,-6.125,0.0
+VH,permanent water,-5.875,0.0
+VH,permanent water,-5.625,0.0
+VH,permanent water,-5.375,0.0
+VH,permanent water,-5.125,0.0
+VH,permanent water,-4.875,0.0
+VH,permanent water,-4.625,0.0
+VH,permanent water,-4.375,0.0
+VH,permanent water,-4.125,0.0
+VH,permanent water,-3.875,0.0
+VH,permanent water,-3.625,0.0
+VH,permanent water,-3.375,0.0
+VH,permanent water,-3.125,0.0
+VH,permanent water,-2.875,0.0
+VH,permanent water,-2.625,0.0
+VH,permanent water,-2.375,0.0
+VH,permanent water,-2.125,0.0
+VH,permanent water,-1.875,0.0
+VH,permanent water,-1.625,0.0
+VH,permanent water,-1.375,0.0
+VH,permanent water,-1.125,0.0
+VH,permanent water,-0.875,0.0
+VH,permanent water,-0.625,0.0
+VH,permanent water,-0.375,0.0
+VH,permanent water,-0.125,0.0
+VH,permanent water,0.125,0.0
+VH,permanent water,0.375,0.0
+VH,permanent water,0.625,0.0
+VH,permanent water,0.875,0.0
+VH,permanent water,1.125,0.0
+VH,permanent water,1.375,0.0
+VH,permanent water,1.625,0.0
+VH,permanent water,1.875,0.0
+VH,permanent water,2.125,0.0
+VH,permanent water,2.375,0.0
+VH,permanent water,2.625,0.0
+VH,permanent water,2.875,0.0
+VH,permanent water,3.125,0.0
+VH,permanent water,3.375,0.0
+VH,permanent water,3.625,0.0
+VH,permanent water,3.875,0.0
+VH,permanent water,4.125,0.0
+VH,permanent water,4.375,0.0
+VH,permanent water,4.625,0.0
+VH,permanent water,4.875,0.0
+VH,permanent water,5.125,0.0
+VH,permanent water,5.375,0.0
+VH,permanent water,5.625,0.0
+VH,permanent water,5.875,0.0
+VH,permanent water,6.125,0.0
+VH,permanent water,6.375,0.0
+VH,permanent water,6.625,0.0
+VH,permanent water,6.875,0.0
+VH,permanent water,7.125,0.0
+VH,permanent water,7.375,0.0
+VH,permanent water,7.625,0.0
+VH,permanent water,7.875,0.0
+VH,permanent water,8.125,0.0
+VH,permanent water,8.375,0.0
+VH,permanent water,8.625,0.0
+VH,permanent water,8.875,0.0
+VH,permanent water,9.125,0.0
+VH,permanent water,9.375,0.0
+VH,permanent water,9.625,0.0
+VH,permanent water,9.875,0.0
+VH,flood (change detection),-34.875,0.0
+VH,flood (change detection),-34.625,0.0
+VH,flood (change detection),-34.375,0.0
+VH,flood (change detection),-34.125,0.0
+VH,flood (change detection),-33.875,0.0
+VH,flood (change detection),-33.625,0.0
+VH,flood (change detection),-33.375,0.0
+VH,flood (change detection),-33.125,0.0
+VH,flood (change detection),-32.875,0.0
+VH,flood (change detection),-32.625,0.0
+VH,flood (change detection),-32.375,0.0
+VH,flood (change detection),-32.125,0.0
+VH,flood (change detection),-31.875,0.0
+VH,flood (change detection),-31.625,0.0
+VH,flood (change detection),-31.375,0.0
+VH,flood (change detection),-31.125,0.0
+VH,flood (change detection),-30.875,0.0
+VH,flood (change detection),-30.625,0.0
+VH,flood (change detection),-30.375,0.0
+VH,flood (change detection),-30.125,0.0
+VH,flood (change detection),-29.875,0.0
+VH,flood (change detection),-29.625,0.0
+VH,flood (change detection),-29.375,0.0
+VH,flood (change detection),-29.125,0.0
+VH,flood (change detection),-28.875,4e-05
+VH,flood (change detection),-28.625,0.0
+VH,flood (change detection),-28.375,4e-05
+VH,flood (change detection),-28.125,4e-05
+VH,flood (change detection),-27.875,0.00018
+VH,flood (change detection),-27.625,0.00032
+VH,flood (change detection),-27.375,0.00044
+VH,flood (change detection),-27.125,0.0011
+VH,flood (change detection),-26.875,0.0025
+VH,flood (change detection),-26.625,0.0057
+VH,flood (change detection),-26.375,0.0095
+VH,flood (change detection),-26.125,0.01614
+VH,flood (change detection),-25.875,0.02868
+VH,flood (change detection),-25.625,0.0463
+VH,flood (change detection),-25.375,0.06614
+VH,flood (change detection),-25.125,0.0963
+VH,flood (change detection),-24.875,0.1277
+VH,flood (change detection),-24.625,0.15824
+VH,flood (change detection),-24.375,0.18594
+VH,flood (change detection),-24.125,0.20662
+VH,flood (change detection),-23.875,0.21738
+VH,flood (change detection),-23.625,0.23106
+VH,flood (change detection),-23.375,0.2369
+VH,flood (change detection),-23.125,0.23702
+VH,flood (change detection),-22.875,0.23376
+VH,flood (change detection),-22.625,0.2299
+VH,flood (change detection),-22.375,0.2231
+VH,flood (change detection),-22.125,0.21044
+VH,flood (change detection),-21.875,0.1872
+VH,flood (change detection),-21.625,0.16628
+VH,flood (change detection),-21.375,0.14574
+VH,flood (change detection),-21.125,0.1236
+VH,flood (change detection),-20.875,0.10262
+VH,flood (change detection),-20.625,0.09016
+VH,flood (change detection),-20.375,0.07398
+VH,flood (change detection),-20.125,0.06388
+VH,flood (change detection),-19.875,0.05398
+VH,flood (change detection),-19.625,0.04592
+VH,flood (change detection),-19.375,0.03632
+VH,flood (change detection),-19.125,0.03052
+VH,flood (change detection),-18.875,0.02428
+VH,flood (change detection),-18.625,0.01948
+VH,flood (change detection),-18.375,0.01444
+VH,flood (change detection),-18.125,0.0115
+VH,flood (change detection),-17.875,0.00922
+VH,flood (change detection),-17.625,0.00718
+VH,flood (change detection),-17.375,0.0053
+VH,flood (change detection),-17.125,0.00444
+VH,flood (change detection),-16.875,0.00312
+VH,flood (change detection),-16.625,0.00252
+VH,flood (change detection),-16.375,0.00162
+VH,flood (change detection),-16.125,0.0017
+VH,flood (change detection),-15.875,0.00108
+VH,flood (change detection),-15.625,0.00078
+VH,flood (change detection),-15.375,0.00058
+VH,flood (change detection),-15.125,0.00028
+VH,flood (change detection),-14.875,0.00028
+VH,flood (change detection),-14.625,0.00022
+VH,flood (change detection),-14.375,6e-05
+VH,flood (change detection),-14.125,6e-05
+VH,flood (change detection),-13.875,4e-05
+VH,flood (change detection),-13.625,6e-05
+VH,flood (change detection),-13.375,8e-05
+VH,flood (change detection),-13.125,0.0
+VH,flood (change detection),-12.875,0.0
+VH,flood (change detection),-12.625,0.0
+VH,flood (change detection),-12.375,0.0
+VH,flood (change detection),-12.125,0.0
+VH,flood (change detection),-11.875,0.0
+VH,flood (change detection),-11.625,0.0
+VH,flood (change detection),-11.375,0.0
+VH,flood (change detection),-11.125,0.0
+VH,flood (change detection),-10.875,0.0
+VH,flood (change detection),-10.625,0.0
+VH,flood (change detection),-10.375,0.0
+VH,flood (change detection),-10.125,0.0
+VH,flood (change detection),-9.875,0.0
+VH,flood (change detection),-9.625,0.0
+VH,flood (change detection),-9.375,0.0
+VH,flood (change detection),-9.125,0.0
+VH,flood (change detection),-8.875,0.0
+VH,flood (change detection),-8.625,0.0
+VH,flood (change detection),-8.375,0.0
+VH,flood (change detection),-8.125,0.0
+VH,flood (change detection),-7.875,0.0
+VH,flood (change detection),-7.625,0.0
+VH,flood (change detection),-7.375,0.0
+VH,flood (change detection),-7.125,0.0
+VH,flood (change detection),-6.875,0.0
+VH,flood (change detection),-6.625,0.0
+VH,flood (change detection),-6.375,0.0
+VH,flood (change detection),-6.125,0.0
+VH,flood (change detection),-5.875,0.0
+VH,flood (change detection),-5.625,0.0
+VH,flood (change detection),-5.375,0.0
+VH,flood (change detection),-5.125,0.0
+VH,flood (change detection),-4.875,0.0
+VH,flood (change detection),-4.625,0.0
+VH,flood (change detection),-4.375,0.0
+VH,flood (change detection),-4.125,0.0
+VH,flood (change detection),-3.875,0.0
+VH,flood (change detection),-3.625,0.0
+VH,flood (change detection),-3.375,0.0
+VH,flood (change detection),-3.125,0.0
+VH,flood (change detection),-2.875,0.0
+VH,flood (change detection),-2.625,0.0
+VH,flood (change detection),-2.375,0.0
+VH,flood (change detection),-2.125,0.0
+VH,flood (change detection),-1.875,0.0
+VH,flood (change detection),-1.625,0.0
+VH,flood (change detection),-1.375,0.0
+VH,flood (change detection),-1.125,0.0
+VH,flood (change detection),-0.875,0.0
+VH,flood (change detection),-0.625,0.0
+VH,flood (change detection),-0.375,0.0
+VH,flood (change detection),-0.125,0.0
+VH,flood (change detection),0.125,0.0
+VH,flood (change detection),0.375,0.0
+VH,flood (change detection),0.625,0.0
+VH,flood (change detection),0.875,0.0
+VH,flood (change detection),1.125,0.0
+VH,flood (change detection),1.375,0.0
+VH,flood (change detection),1.625,0.0
+VH,flood (change detection),1.875,0.0
+VH,flood (change detection),2.125,0.0
+VH,flood (change detection),2.375,0.0
+VH,flood (change detection),2.625,0.0
+VH,flood (change detection),2.875,0.0
+VH,flood (change detection),3.125,0.0
+VH,flood (change detection),3.375,0.0
+VH,flood (change detection),3.625,0.0
+VH,flood (change detection),3.875,0.0
+VH,flood (change detection),4.125,0.0
+VH,flood (change detection),4.375,0.0
+VH,flood (change detection),4.625,0.0
+VH,flood (change detection),4.875,0.0
+VH,flood (change detection),5.125,0.0
+VH,flood (change detection),5.375,0.0
+VH,flood (change detection),5.625,0.0
+VH,flood (change detection),5.875,0.0
+VH,flood (change detection),6.125,0.0
+VH,flood (change detection),6.375,0.0
+VH,flood (change detection),6.625,0.0
+VH,flood (change detection),6.875,0.0
+VH,flood (change detection),7.125,0.0
+VH,flood (change detection),7.375,0.0
+VH,flood (change detection),7.625,0.0
+VH,flood (change detection),7.875,0.0
+VH,flood (change detection),8.125,0.0
+VH,flood (change detection),8.375,0.0
+VH,flood (change detection),8.625,0.0
+VH,flood (change detection),8.875,0.0
+VH,flood (change detection),9.125,0.0
+VH,flood (change detection),9.375,0.0
+VH,flood (change detection),9.625,0.0
+VH,flood (change detection),9.875,0.0
+VH,non-flooded land,-34.875,0.0
+VH,non-flooded land,-34.625,0.0
+VH,non-flooded land,-34.375,0.0
+VH,non-flooded land,-34.125,0.0
+VH,non-flooded land,-33.875,0.0
+VH,non-flooded land,-33.625,0.0
+VH,non-flooded land,-33.375,0.0
+VH,non-flooded land,-33.125,0.0
+VH,non-flooded land,-32.875,0.0
+VH,non-flooded land,-32.625,0.0
+VH,non-flooded land,-32.375,0.0
+VH,non-flooded land,-32.125,0.0
+VH,non-flooded land,-31.875,0.0
+VH,non-flooded land,-31.625,0.0
+VH,non-flooded land,-31.375,0.0
+VH,non-flooded land,-31.125,0.0
+VH,non-flooded land,-30.875,0.0
+VH,non-flooded land,-30.625,0.0
+VH,non-flooded land,-30.375,0.0
+VH,non-flooded land,-30.125,0.0
+VH,non-flooded land,-29.875,0.0
+VH,non-flooded land,-29.625,0.0
+VH,non-flooded land,-29.375,0.0
+VH,non-flooded land,-29.125,0.0
+VH,non-flooded land,-28.875,0.0
+VH,non-flooded land,-28.625,0.0
+VH,non-flooded land,-28.375,0.0
+VH,non-flooded land,-28.125,0.0
+VH,non-flooded land,-27.875,0.0
+VH,non-flooded land,-27.625,0.0
+VH,non-flooded land,-27.375,0.0
+VH,non-flooded land,-27.125,0.0
+VH,non-flooded land,-26.875,0.0
+VH,non-flooded land,-26.625,0.0
+VH,non-flooded land,-26.375,8e-05
+VH,non-flooded land,-26.125,6e-05
+VH,non-flooded land,-25.875,6e-05
+VH,non-flooded land,-25.625,8e-05
+VH,non-flooded land,-25.375,0.00032
+VH,non-flooded land,-25.125,0.00032
+VH,non-flooded land,-24.875,0.00056
+VH,non-flooded land,-24.625,0.00056
+VH,non-flooded land,-24.375,0.00104
+VH,non-flooded land,-24.125,0.00094
+VH,non-flooded land,-23.875,0.00132
+VH,non-flooded land,-23.625,0.00106
+VH,non-flooded land,-23.375,0.00136
+VH,non-flooded land,-23.125,0.00136
+VH,non-flooded land,-22.875,0.00182
+VH,non-flooded land,-22.625,0.00168
+VH,non-flooded land,-22.375,0.0015
+VH,non-flooded land,-22.125,0.00132
+VH,non-flooded land,-21.875,0.0014
+VH,non-flooded land,-21.625,0.00108
+VH,non-flooded land,-21.375,0.00114
+VH,non-flooded land,-21.125,0.00104
+VH,non-flooded land,-20.875,0.00072
+VH,non-flooded land,-20.625,0.00094
+VH,non-flooded land,-20.375,0.00082
+VH,non-flooded land,-20.125,0.00086
+VH,non-flooded land,-19.875,0.00072
+VH,non-flooded land,-19.625,0.00076
+VH,non-flooded land,-19.375,0.00086
+VH,non-flooded land,-19.125,0.00114
+VH,non-flooded land,-18.875,0.00126
+VH,non-flooded land,-18.625,0.00148
+VH,non-flooded land,-18.375,0.00192
+VH,non-flooded land,-18.125,0.00346
+VH,non-flooded land,-17.875,0.02362
+VH,non-flooded land,-17.625,0.05374
+VH,non-flooded land,-17.375,0.0597
+VH,non-flooded land,-17.125,0.06506
+VH,non-flooded land,-16.875,0.06966
+VH,non-flooded land,-16.625,0.07728
+VH,non-flooded land,-16.375,0.0844
+VH,non-flooded land,-16.125,0.09204
+VH,non-flooded land,-15.875,0.10156
+VH,non-flooded land,-15.625,0.11114
+VH,non-flooded land,-15.375,0.1287
+VH,non-flooded land,-15.125,0.13854
+VH,non-flooded land,-14.875,0.15432
+VH,non-flooded land,-14.625,0.1702
+VH,non-flooded land,-14.375,0.18742
+VH,non-flooded land,-14.125,0.20624
+VH,non-flooded land,-13.875,0.21794
+VH,non-flooded land,-13.625,0.22812
+VH,non-flooded land,-13.375,0.23572
+VH,non-flooded land,-13.125,0.23218
+VH,non-flooded land,-12.875,0.22514
+VH,non-flooded land,-12.625,0.2125
+VH,non-flooded land,-12.375,0.1869
+VH,non-flooded land,-12.125,0.16574
+VH,non-flooded land,-11.875,0.13744
+VH,non-flooded land,-11.625,0.10866
+VH,non-flooded land,-11.375,0.08312
+VH,non-flooded land,-11.125,0.06272
+VH,non-flooded land,-10.875,0.04556
+VH,non-flooded land,-10.625,0.03184
+VH,non-flooded land,-10.375,0.02082
+VH,non-flooded land,-10.125,0.01396
+VH,non-flooded land,-9.875,0.00936
+VH,non-flooded land,-9.625,0.00602
+VH,non-flooded land,-9.375,0.00414
+VH,non-flooded land,-9.125,0.00322
+VH,non-flooded land,-8.875,0.00196
+VH,non-flooded land,-8.625,0.00096
+VH,non-flooded land,-8.375,0.00106
+VH,non-flooded land,-8.125,0.00088
+VH,non-flooded land,-7.875,0.00054
+VH,non-flooded land,-7.625,0.00044
+VH,non-flooded land,-7.375,0.00036
+VH,non-flooded land,-7.125,0.00032
+VH,non-flooded land,-6.875,0.00042
+VH,non-flooded land,-6.625,0.00036
+VH,non-flooded land,-6.375,0.00024
+VH,non-flooded land,-6.125,0.0003
+VH,non-flooded land,-5.875,0.0002
+VH,non-flooded land,-5.625,0.00018
+VH,non-flooded land,-5.375,0.0002
+VH,non-flooded land,-5.125,0.00026
+VH,non-flooded land,-4.875,2e-05
+VH,non-flooded land,-4.625,8e-05
+VH,non-flooded land,-4.375,0.0002
+VH,non-flooded land,-4.125,8e-05
+VH,non-flooded land,-3.875,0.00014
+VH,non-flooded land,-3.625,0.00012
+VH,non-flooded land,-3.375,6e-05
+VH,non-flooded land,-3.125,0.0
+VH,non-flooded land,-2.875,6e-05
+VH,non-flooded land,-2.625,4e-05
+VH,non-flooded land,-2.375,0.0001
+VH,non-flooded land,-2.125,6e-05
+VH,non-flooded land,-1.875,4e-05
+VH,non-flooded land,-1.625,2e-05
+VH,non-flooded land,-1.375,4e-05
+VH,non-flooded land,-1.125,4e-05
+VH,non-flooded land,-0.875,0.0
+VH,non-flooded land,-0.625,8e-05
+VH,non-flooded land,-0.375,2e-05
+VH,non-flooded land,-0.125,0.0
+VH,non-flooded land,0.125,4e-05
+VH,non-flooded land,0.375,0.0
+VH,non-flooded land,0.625,2e-05
+VH,non-flooded land,0.875,0.0
+VH,non-flooded land,1.125,4e-05
+VH,non-flooded land,1.375,2e-05
+VH,non-flooded land,1.625,0.0
+VH,non-flooded land,1.875,2e-05
+VH,non-flooded land,2.125,0.0
+VH,non-flooded land,2.375,4e-05
+VH,non-flooded land,2.625,2e-05
+VH,non-flooded land,2.875,2e-05
+VH,non-flooded land,3.125,0.0
+VH,non-flooded land,3.375,2e-05
+VH,non-flooded land,3.625,2e-05
+VH,non-flooded land,3.875,4e-05
+VH,non-flooded land,4.125,0.0
+VH,non-flooded land,4.375,0.0
+VH,non-flooded land,4.625,0.0
+VH,non-flooded land,4.875,4e-05
+VH,non-flooded land,5.125,0.0
+VH,non-flooded land,5.375,2e-05
+VH,non-flooded land,5.625,0.0
+VH,non-flooded land,5.875,0.0
+VH,non-flooded land,6.125,0.0
+VH,non-flooded land,6.375,0.0
+VH,non-flooded land,6.625,0.0
+VH,non-flooded land,6.875,0.0
+VH,non-flooded land,7.125,0.0
+VH,non-flooded land,7.375,0.0
+VH,non-flooded land,7.625,0.0
+VH,non-flooded land,7.875,0.0
+VH,non-flooded land,8.125,0.0
+VH,non-flooded land,8.375,0.0
+VH,non-flooded land,8.625,0.0
+VH,non-flooded land,8.875,0.0
+VH,non-flooded land,9.125,0.0
+VH,non-flooded land,9.375,0.0
+VH,non-flooded land,9.625,0.0
+VH,non-flooded land,9.875,0.0
+VV-VH,permanent water,-34.875,0.0
+VV-VH,permanent water,-34.625,0.0
+VV-VH,permanent water,-34.375,0.0
+VV-VH,permanent water,-34.125,0.0
+VV-VH,permanent water,-33.875,0.0
+VV-VH,permanent water,-33.625,0.0
+VV-VH,permanent water,-33.375,0.0
+VV-VH,permanent water,-33.125,0.0
+VV-VH,permanent water,-32.875,0.0
+VV-VH,permanent water,-32.625,0.0
+VV-VH,permanent water,-32.375,0.0
+VV-VH,permanent water,-32.125,0.0
+VV-VH,permanent water,-31.875,0.0
+VV-VH,permanent water,-31.625,0.0
+VV-VH,permanent water,-31.375,0.0
+VV-VH,permanent water,-31.125,0.0
+VV-VH,permanent water,-30.875,0.0
+VV-VH,permanent water,-30.625,0.0
+VV-VH,permanent water,-30.375,0.0
+VV-VH,permanent water,-30.125,0.0
+VV-VH,permanent water,-29.875,0.0
+VV-VH,permanent water,-29.625,0.0
+VV-VH,permanent water,-29.375,0.0
+VV-VH,permanent water,-29.125,0.0
+VV-VH,permanent water,-28.875,0.0
+VV-VH,permanent water,-28.625,0.0
+VV-VH,permanent water,-28.375,0.0
+VV-VH,permanent water,-28.125,0.0
+VV-VH,permanent water,-27.875,0.0
+VV-VH,permanent water,-27.625,0.0
+VV-VH,permanent water,-27.375,0.0
+VV-VH,permanent water,-27.125,0.0
+VV-VH,permanent water,-26.875,0.0
+VV-VH,permanent water,-26.625,0.0
+VV-VH,permanent water,-26.375,0.0
+VV-VH,permanent water,-26.125,0.0
+VV-VH,permanent water,-25.875,0.0
+VV-VH,permanent water,-25.625,0.0
+VV-VH,permanent water,-25.375,0.0
+VV-VH,permanent water,-25.125,0.0
+VV-VH,permanent water,-24.875,0.0
+VV-VH,permanent water,-24.625,0.0
+VV-VH,permanent water,-24.375,0.0
+VV-VH,permanent water,-24.125,0.0
+VV-VH,permanent water,-23.875,0.0
+VV-VH,permanent water,-23.625,0.0
+VV-VH,permanent water,-23.375,0.0
+VV-VH,permanent water,-23.125,0.0
+VV-VH,permanent water,-22.875,0.0
+VV-VH,permanent water,-22.625,0.0
+VV-VH,permanent water,-22.375,0.0
+VV-VH,permanent water,-22.125,0.0
+VV-VH,permanent water,-21.875,0.0
+VV-VH,permanent water,-21.625,0.0
+VV-VH,permanent water,-21.375,0.0
+VV-VH,permanent water,-21.125,0.0
+VV-VH,permanent water,-20.875,0.0
+VV-VH,permanent water,-20.625,0.0
+VV-VH,permanent water,-20.375,0.0
+VV-VH,permanent water,-20.125,0.0
+VV-VH,permanent water,-19.875,0.0
+VV-VH,permanent water,-19.625,0.0
+VV-VH,permanent water,-19.375,0.0
+VV-VH,permanent water,-19.125,0.0
+VV-VH,permanent water,-18.875,0.0
+VV-VH,permanent water,-18.625,0.0
+VV-VH,permanent water,-18.375,0.0
+VV-VH,permanent water,-18.125,0.0
+VV-VH,permanent water,-17.875,0.0
+VV-VH,permanent water,-17.625,0.0
+VV-VH,permanent water,-17.375,0.0
+VV-VH,permanent water,-17.125,0.0
+VV-VH,permanent water,-16.875,0.0
+VV-VH,permanent water,-16.625,0.0
+VV-VH,permanent water,-16.375,0.0
+VV-VH,permanent water,-16.125,0.0
+VV-VH,permanent water,-15.875,0.0
+VV-VH,permanent water,-15.625,0.0
+VV-VH,permanent water,-15.375,0.0
+VV-VH,permanent water,-15.125,0.0
+VV-VH,permanent water,-14.875,0.0
+VV-VH,permanent water,-14.625,0.0
+VV-VH,permanent water,-14.375,0.0
+VV-VH,permanent water,-14.125,0.0
+VV-VH,permanent water,-13.875,0.0
+VV-VH,permanent water,-13.625,0.0
+VV-VH,permanent water,-13.375,0.0
+VV-VH,permanent water,-13.125,0.0
+VV-VH,permanent water,-12.875,0.0
+VV-VH,permanent water,-12.625,0.0
+VV-VH,permanent water,-12.375,0.0
+VV-VH,permanent water,-12.125,0.0
+VV-VH,permanent water,-11.875,0.0
+VV-VH,permanent water,-11.625,0.0
+VV-VH,permanent water,-11.375,0.0
+VV-VH,permanent water,-11.125,0.0
+VV-VH,permanent water,-10.875,0.0
+VV-VH,permanent water,-10.625,0.0
+VV-VH,permanent water,-10.375,0.0
+VV-VH,permanent water,-10.125,0.0
+VV-VH,permanent water,-9.875,0.0
+VV-VH,permanent water,-9.625,0.0
+VV-VH,permanent water,-9.375,0.0
+VV-VH,permanent water,-9.125,0.0
+VV-VH,permanent water,-8.875,0.0
+VV-VH,permanent water,-8.625,0.0
+VV-VH,permanent water,-8.375,0.0
+VV-VH,permanent water,-8.125,0.0
+VV-VH,permanent water,-7.875,0.0
+VV-VH,permanent water,-7.625,0.0
+VV-VH,permanent water,-7.375,0.0
+VV-VH,permanent water,-7.125,0.0
+VV-VH,permanent water,-6.875,0.0
+VV-VH,permanent water,-6.625,0.0
+VV-VH,permanent water,-6.375,0.0
+VV-VH,permanent water,-6.125,0.0
+VV-VH,permanent water,-5.875,0.0
+VV-VH,permanent water,-5.625,0.0
+VV-VH,permanent water,-5.375,0.0
+VV-VH,permanent water,-5.125,0.0
+VV-VH,permanent water,-4.875,0.0
+VV-VH,permanent water,-4.625,0.0
+VV-VH,permanent water,-4.375,0.0
+VV-VH,permanent water,-4.125,0.0
+VV-VH,permanent water,-3.875,0.0
+VV-VH,permanent water,-3.625,2.028171299347943e-05
+VV-VH,permanent water,-3.375,2.028171299347943e-05
+VV-VH,permanent water,-3.125,6.084513898043829e-05
+VV-VH,permanent water,-2.875,6.084513898043829e-05
+VV-VH,permanent water,-2.625,0.00010140856496739714
+VV-VH,permanent water,-2.375,0.0002636622689152326
+VV-VH,permanent water,-2.125,0.0005070428248369857
+VV-VH,permanent water,-1.875,0.0010546490756609304
+VV-VH,permanent water,-1.625,0.0016833821784587926
+VV-VH,permanent water,-1.375,0.0036507083388262972
+VV-VH,permanent water,-1.125,0.0062062041760047055
+VV-VH,permanent water,-0.875,0.010059729644765796
+VV-VH,permanent water,-0.625,0.016955512062548802
+VV-VH,permanent water,-0.375,0.025311577815862327
+VV-VH,permanent water,-0.125,0.03883948038251311
+VV-VH,permanent water,0.125,0.05358428572877265
+VV-VH,permanent water,0.375,0.07333867418442161
+VV-VH,permanent water,0.625,0.09481700824451633
+VV-VH,permanent water,0.875,0.1164373142955654
+VV-VH,permanent water,1.125,0.14014663678494285
+VV-VH,permanent water,1.375,0.16363286043139202
+VV-VH,permanent water,1.625,0.1796148502702538
+VV-VH,permanent water,1.875,0.19156077922341322
+VV-VH,permanent water,2.125,0.19894332275303972
+VV-VH,permanent water,2.375,0.20342558132459868
+VV-VH,permanent water,2.625,0.20348642646357912
+VV-VH,permanent water,2.875,0.19519120584924604
+VV-VH,permanent water,3.125,0.18245429008934094
+VV-VH,permanent water,3.375,0.17393597063207958
+VV-VH,permanent water,3.625,0.1578322905152569
+VV-VH,permanent water,3.875,0.14781312429647808
+VV-VH,permanent water,4.125,0.14028860877589722
+VV-VH,permanent water,4.375,0.13051282311304013
+VV-VH,permanent water,4.625,0.11958097980955472
+VV-VH,permanent water,4.875,0.11386153674539351
+VV-VH,permanent water,5.125,0.10347729969273205
+VV-VH,permanent water,5.375,0.09319447120503797
+VV-VH,permanent water,5.625,0.08512234943363317
+VV-VH,permanent water,5.875,0.08068065428806118
+VV-VH,permanent water,6.125,0.07496121122389997
+VV-VH,permanent water,6.375,0.06480007301416678
+VV-VH,permanent water,6.625,0.0588575311070773
+VV-VH,permanent water,6.875,0.05368569429374005
+VV-VH,permanent water,7.125,0.047236109561813594
+VV-VH,permanent water,7.375,0.040908215107848006
+VV-VH,permanent water,7.625,0.03713581649106083
+VV-VH,permanent water,7.875,0.032146515094664894
+VV-VH,permanent water,8.125,0.027623693097118984
+VV-VH,permanent water,8.375,0.024338055592175317
+VV-VH,permanent water,8.625,0.02091044609627729
+VV-VH,permanent water,8.875,0.01847664053705976
+VV-VH,permanent water,9.125,0.0163673423857379
+VV-VH,permanent water,9.375,0.013304803723722506
+VV-VH,permanent water,9.625,0.01170254839723763
+VV-VH,permanent water,9.875,0.009816349088844043
+VV-VH,flood (change detection),-34.875,0.0
+VV-VH,flood (change detection),-34.625,0.0
+VV-VH,flood (change detection),-34.375,0.0
+VV-VH,flood (change detection),-34.125,0.0
+VV-VH,flood (change detection),-33.875,0.0
+VV-VH,flood (change detection),-33.625,0.0
+VV-VH,flood (change detection),-33.375,0.0
+VV-VH,flood (change detection),-33.125,0.0
+VV-VH,flood (change detection),-32.875,0.0
+VV-VH,flood (change detection),-32.625,0.0
+VV-VH,flood (change detection),-32.375,0.0
+VV-VH,flood (change detection),-32.125,0.0
+VV-VH,flood (change detection),-31.875,0.0
+VV-VH,flood (change detection),-31.625,0.0
+VV-VH,flood (change detection),-31.375,0.0
+VV-VH,flood (change detection),-31.125,0.0
+VV-VH,flood (change detection),-30.875,0.0
+VV-VH,flood (change detection),-30.625,0.0
+VV-VH,flood (change detection),-30.375,0.0
+VV-VH,flood (change detection),-30.125,0.0
+VV-VH,flood (change detection),-29.875,0.0
+VV-VH,flood (change detection),-29.625,0.0
+VV-VH,flood (change detection),-29.375,0.0
+VV-VH,flood (change detection),-29.125,0.0
+VV-VH,flood (change detection),-28.875,0.0
+VV-VH,flood (change detection),-28.625,0.0
+VV-VH,flood (change detection),-28.375,0.0
+VV-VH,flood (change detection),-28.125,0.0
+VV-VH,flood (change detection),-27.875,0.0
+VV-VH,flood (change detection),-27.625,0.0
+VV-VH,flood (change detection),-27.375,0.0
+VV-VH,flood (change detection),-27.125,0.0
+VV-VH,flood (change detection),-26.875,0.0
+VV-VH,flood (change detection),-26.625,0.0
+VV-VH,flood (change detection),-26.375,0.0
+VV-VH,flood (change detection),-26.125,0.0
+VV-VH,flood (change detection),-25.875,0.0
+VV-VH,flood (change detection),-25.625,0.0
+VV-VH,flood (change detection),-25.375,0.0
+VV-VH,flood (change detection),-25.125,0.0
+VV-VH,flood (change detection),-24.875,0.0
+VV-VH,flood (change detection),-24.625,0.0
+VV-VH,flood (change detection),-24.375,0.0
+VV-VH,flood (change detection),-24.125,0.0
+VV-VH,flood (change detection),-23.875,0.0
+VV-VH,flood (change detection),-23.625,0.0
+VV-VH,flood (change detection),-23.375,0.0
+VV-VH,flood (change detection),-23.125,0.0
+VV-VH,flood (change detection),-22.875,0.0
+VV-VH,flood (change detection),-22.625,0.0
+VV-VH,flood (change detection),-22.375,0.0
+VV-VH,flood (change detection),-22.125,0.0
+VV-VH,flood (change detection),-21.875,0.0
+VV-VH,flood (change detection),-21.625,0.0
+VV-VH,flood (change detection),-21.375,0.0
+VV-VH,flood (change detection),-21.125,0.0
+VV-VH,flood (change detection),-20.875,0.0
+VV-VH,flood (change detection),-20.625,0.0
+VV-VH,flood (change detection),-20.375,0.0
+VV-VH,flood (change detection),-20.125,0.0
+VV-VH,flood (change detection),-19.875,0.0
+VV-VH,flood (change detection),-19.625,0.0
+VV-VH,flood (change detection),-19.375,0.0
+VV-VH,flood (change detection),-19.125,0.0
+VV-VH,flood (change detection),-18.875,0.0
+VV-VH,flood (change detection),-18.625,0.0
+VV-VH,flood (change detection),-18.375,0.0
+VV-VH,flood (change detection),-18.125,0.0
+VV-VH,flood (change detection),-17.875,0.0
+VV-VH,flood (change detection),-17.625,0.0
+VV-VH,flood (change detection),-17.375,0.0
+VV-VH,flood (change detection),-17.125,0.0
+VV-VH,flood (change detection),-16.875,0.0
+VV-VH,flood (change detection),-16.625,0.0
+VV-VH,flood (change detection),-16.375,0.0
+VV-VH,flood (change detection),-16.125,0.0
+VV-VH,flood (change detection),-15.875,0.0
+VV-VH,flood (change detection),-15.625,0.0
+VV-VH,flood (change detection),-15.375,0.0
+VV-VH,flood (change detection),-15.125,0.0
+VV-VH,flood (change detection),-14.875,0.0
+VV-VH,flood (change detection),-14.625,0.0
+VV-VH,flood (change detection),-14.375,0.0
+VV-VH,flood (change detection),-14.125,0.0
+VV-VH,flood (change detection),-13.875,0.0
+VV-VH,flood (change detection),-13.625,0.0
+VV-VH,flood (change detection),-13.375,0.0
+VV-VH,flood (change detection),-13.125,0.0
+VV-VH,flood (change detection),-12.875,0.0
+VV-VH,flood (change detection),-12.625,0.0
+VV-VH,flood (change detection),-12.375,0.0
+VV-VH,flood (change detection),-12.125,0.0
+VV-VH,flood (change detection),-11.875,0.0
+VV-VH,flood (change detection),-11.625,0.0
+VV-VH,flood (change detection),-11.375,0.0
+VV-VH,flood (change detection),-11.125,0.0
+VV-VH,flood (change detection),-10.875,0.0
+VV-VH,flood (change detection),-10.625,0.0
+VV-VH,flood (change detection),-10.375,0.0
+VV-VH,flood (change detection),-10.125,0.0
+VV-VH,flood (change detection),-9.875,0.0
+VV-VH,flood (change detection),-9.625,0.0
+VV-VH,flood (change detection),-9.375,0.0
+VV-VH,flood (change detection),-9.125,0.0
+VV-VH,flood (change detection),-8.875,0.0
+VV-VH,flood (change detection),-8.625,0.0
+VV-VH,flood (change detection),-8.375,0.0
+VV-VH,flood (change detection),-8.125,0.0
+VV-VH,flood (change detection),-7.875,0.0
+VV-VH,flood (change detection),-7.625,0.0
+VV-VH,flood (change detection),-7.375,0.0
+VV-VH,flood (change detection),-7.125,0.0
+VV-VH,flood (change detection),-6.875,0.0
+VV-VH,flood (change detection),-6.625,0.0
+VV-VH,flood (change detection),-6.375,0.0
+VV-VH,flood (change detection),-6.125,0.0
+VV-VH,flood (change detection),-5.875,0.0
+VV-VH,flood (change detection),-5.625,0.0
+VV-VH,flood (change detection),-5.375,0.0
+VV-VH,flood (change detection),-5.125,0.0
+VV-VH,flood (change detection),-4.875,0.0
+VV-VH,flood (change detection),-4.625,0.0
+VV-VH,flood (change detection),-4.375,0.0
+VV-VH,flood (change detection),-4.125,0.0
+VV-VH,flood (change detection),-3.875,2.0004100840672337e-05
+VV-VH,flood (change detection),-3.625,0.0
+VV-VH,flood (change detection),-3.375,0.0
+VV-VH,flood (change detection),-3.125,8.001640336268935e-05
+VV-VH,flood (change detection),-2.875,0.0001600328067253787
+VV-VH,flood (change detection),-2.625,0.00014002870588470637
+VV-VH,flood (change detection),-2.375,0.00024004921008806805
+VV-VH,flood (change detection),-2.125,0.00040008201681344675
+VV-VH,flood (change detection),-1.875,0.0008801804369895829
+VV-VH,flood (change detection),-1.625,0.0018203731765011827
+VV-VH,flood (change detection),-1.375,0.002320475697517991
+VV-VH,flood (change detection),-1.125,0.005041033411849429
+VV-VH,flood (change detection),-0.875,0.007681574722818178
+VV-VH,flood (change detection),-0.625,0.014162903395196016
+VV-VH,flood (change detection),-0.375,0.019864072134787632
+VV-VH,flood (change detection),-0.125,0.03012617586605254
+VV-VH,flood (change detection),0.125,0.04182857485784586
+VV-VH,flood (change detection),0.375,0.05907210978250541
+VV-VH,flood (change detection),0.625,0.08233687906020734
+VV-VH,flood (change detection),0.875,0.10132077075800539
+VV-VH,flood (change detection),1.125,0.12752614285928615
+VV-VH,flood (change detection),1.375,0.14937062097730033
+VV-VH,flood (change detection),1.625,0.17053495966673168
+VV-VH,flood (change detection),1.875,0.18445781385183962
+VV-VH,flood (change detection),2.125,0.19812061472601883
+VV-VH,flood (change detection),2.375,0.20830270205392104
+VV-VH,flood (change detection),2.625,0.20664236168414524
+VV-VH,flood (change detection),2.875,0.21078321055816443
+VV-VH,flood (change detection),3.125,0.20758255442365686
+VV-VH,flood (change detection),3.375,0.20354172605384105
+VV-VH,flood (change detection),3.625,0.19381973304527428
+VV-VH,flood (change detection),3.875,0.18069704289379324
+VV-VH,flood (change detection),4.125,0.16993483664151152
+VV-VH,flood (change detection),4.375,0.1557519291454748
+VV-VH,flood (change detection),4.625,0.14512975159907782
+VV-VH,flood (change detection),4.875,0.13412749613670802
+VV-VH,flood (change detection),5.125,0.1250456343550428
+VV-VH,flood (change detection),5.375,0.11182292369935837
+VV-VH,flood (change detection),5.625,0.09976045089243295
+VV-VH,flood (change detection),5.875,0.08787801499307359
+VV-VH,flood (change detection),6.125,0.07829605069039153
+VV-VH,flood (change detection),6.375,0.0663135942868288
+VV-VH,flood (change detection),6.625,0.052130686790792115
+VV-VH,flood (change detection),6.875,0.04386899314359444
+VV-VH,flood (change detection),7.125,0.034407053445956425
+VV-VH,flood (change detection),7.375,0.026085347496236727
+VV-VH,flood (change detection),7.625,0.019403977815452167
+VV-VH,flood (change detection),7.875,0.013502768067453827
+VV-VH,flood (change detection),8.125,0.009021849479143224
+VV-VH,flood (change detection),8.375,0.0067813901849879225
+VV-VH,flood (change detection),8.625,0.00462094729419531
+VV-VH,flood (change detection),8.875,0.00308063152946354
+VV-VH,flood (change detection),9.125,0.002080426487429923
+VV-VH,flood (change detection),9.375,0.0008801804369895829
+VV-VH,flood (change detection),9.625,0.0006201271260608425
+VV-VH,flood (change detection),9.875,0.0005801189243794978
+VV-VH,non-flooded land,-34.875,0.0
+VV-VH,non-flooded land,-34.625,0.0
+VV-VH,non-flooded land,-34.375,0.0
+VV-VH,non-flooded land,-34.125,0.0
+VV-VH,non-flooded land,-33.875,0.0
+VV-VH,non-flooded land,-33.625,0.0
+VV-VH,non-flooded land,-33.375,0.0
+VV-VH,non-flooded land,-33.125,0.0
+VV-VH,non-flooded land,-32.875,0.0
+VV-VH,non-flooded land,-32.625,0.0
+VV-VH,non-flooded land,-32.375,0.0
+VV-VH,non-flooded land,-32.125,0.0
+VV-VH,non-flooded land,-31.875,0.0
+VV-VH,non-flooded land,-31.625,0.0
+VV-VH,non-flooded land,-31.375,0.0
+VV-VH,non-flooded land,-31.125,0.0
+VV-VH,non-flooded land,-30.875,0.0
+VV-VH,non-flooded land,-30.625,0.0
+VV-VH,non-flooded land,-30.375,0.0
+VV-VH,non-flooded land,-30.125,0.0
+VV-VH,non-flooded land,-29.875,0.0
+VV-VH,non-flooded land,-29.625,0.0
+VV-VH,non-flooded land,-29.375,0.0
+VV-VH,non-flooded land,-29.125,0.0
+VV-VH,non-flooded land,-28.875,0.0
+VV-VH,non-flooded land,-28.625,0.0
+VV-VH,non-flooded land,-28.375,0.0
+VV-VH,non-flooded land,-28.125,0.0
+VV-VH,non-flooded land,-27.875,0.0
+VV-VH,non-flooded land,-27.625,0.0
+VV-VH,non-flooded land,-27.375,0.0
+VV-VH,non-flooded land,-27.125,0.0
+VV-VH,non-flooded land,-26.875,0.0
+VV-VH,non-flooded land,-26.625,0.0
+VV-VH,non-flooded land,-26.375,0.0
+VV-VH,non-flooded land,-26.125,0.0
+VV-VH,non-flooded land,-25.875,0.0
+VV-VH,non-flooded land,-25.625,0.0
+VV-VH,non-flooded land,-25.375,0.0
+VV-VH,non-flooded land,-25.125,0.0
+VV-VH,non-flooded land,-24.875,0.0
+VV-VH,non-flooded land,-24.625,0.0
+VV-VH,non-flooded land,-24.375,0.0
+VV-VH,non-flooded land,-24.125,0.0
+VV-VH,non-flooded land,-23.875,0.0
+VV-VH,non-flooded land,-23.625,0.0
+VV-VH,non-flooded land,-23.375,0.0
+VV-VH,non-flooded land,-23.125,0.0
+VV-VH,non-flooded land,-22.875,0.0
+VV-VH,non-flooded land,-22.625,0.0
+VV-VH,non-flooded land,-22.375,0.0
+VV-VH,non-flooded land,-22.125,0.0
+VV-VH,non-flooded land,-21.875,0.0
+VV-VH,non-flooded land,-21.625,0.0
+VV-VH,non-flooded land,-21.375,0.0
+VV-VH,non-flooded land,-21.125,0.0
+VV-VH,non-flooded land,-20.875,0.0
+VV-VH,non-flooded land,-20.625,0.0
+VV-VH,non-flooded land,-20.375,0.0
+VV-VH,non-flooded land,-20.125,0.0
+VV-VH,non-flooded land,-19.875,0.0
+VV-VH,non-flooded land,-19.625,0.0
+VV-VH,non-flooded land,-19.375,0.0
+VV-VH,non-flooded land,-19.125,0.0
+VV-VH,non-flooded land,-18.875,0.0
+VV-VH,non-flooded land,-18.625,0.0
+VV-VH,non-flooded land,-18.375,0.0
+VV-VH,non-flooded land,-18.125,0.0
+VV-VH,non-flooded land,-17.875,0.0
+VV-VH,non-flooded land,-17.625,0.0
+VV-VH,non-flooded land,-17.375,0.0
+VV-VH,non-flooded land,-17.125,0.0
+VV-VH,non-flooded land,-16.875,0.0
+VV-VH,non-flooded land,-16.625,0.0
+VV-VH,non-flooded land,-16.375,0.0
+VV-VH,non-flooded land,-16.125,0.0
+VV-VH,non-flooded land,-15.875,0.0
+VV-VH,non-flooded land,-15.625,0.0
+VV-VH,non-flooded land,-15.375,0.0
+VV-VH,non-flooded land,-15.125,0.0
+VV-VH,non-flooded land,-14.875,0.0
+VV-VH,non-flooded land,-14.625,0.0
+VV-VH,non-flooded land,-14.375,0.0
+VV-VH,non-flooded land,-14.125,0.0
+VV-VH,non-flooded land,-13.875,0.0
+VV-VH,non-flooded land,-13.625,0.0
+VV-VH,non-flooded land,-13.375,0.0
+VV-VH,non-flooded land,-13.125,0.0
+VV-VH,non-flooded land,-12.875,0.0
+VV-VH,non-flooded land,-12.625,0.0
+VV-VH,non-flooded land,-12.375,0.0
+VV-VH,non-flooded land,-12.125,0.0
+VV-VH,non-flooded land,-11.875,0.0
+VV-VH,non-flooded land,-11.625,0.0
+VV-VH,non-flooded land,-11.375,0.0
+VV-VH,non-flooded land,-11.125,0.0
+VV-VH,non-flooded land,-10.875,0.0
+VV-VH,non-flooded land,-10.625,0.0
+VV-VH,non-flooded land,-10.375,0.0
+VV-VH,non-flooded land,-10.125,0.0
+VV-VH,non-flooded land,-9.875,0.0
+VV-VH,non-flooded land,-9.625,0.0
+VV-VH,non-flooded land,-9.375,0.0
+VV-VH,non-flooded land,-9.125,0.0
+VV-VH,non-flooded land,-8.875,0.0
+VV-VH,non-flooded land,-8.625,0.0
+VV-VH,non-flooded land,-8.375,0.0
+VV-VH,non-flooded land,-8.125,0.0
+VV-VH,non-flooded land,-7.875,0.0
+VV-VH,non-flooded land,-7.625,0.0
+VV-VH,non-flooded land,-7.375,0.0
+VV-VH,non-flooded land,-7.125,0.0
+VV-VH,non-flooded land,-6.875,0.0
+VV-VH,non-flooded land,-6.625,0.0
+VV-VH,non-flooded land,-6.375,0.0
+VV-VH,non-flooded land,-6.125,0.0
+VV-VH,non-flooded land,-5.875,0.0
+VV-VH,non-flooded land,-5.625,0.0
+VV-VH,non-flooded land,-5.375,0.0
+VV-VH,non-flooded land,-5.125,0.0
+VV-VH,non-flooded land,-4.875,0.0
+VV-VH,non-flooded land,-4.625,0.0
+VV-VH,non-flooded land,-4.375,0.0
+VV-VH,non-flooded land,-4.125,0.0
+VV-VH,non-flooded land,-3.875,2.0280581849893274e-05
+VV-VH,non-flooded land,-3.625,0.0
+VV-VH,non-flooded land,-3.375,0.0
+VV-VH,non-flooded land,-3.125,2.0280581849893274e-05
+VV-VH,non-flooded land,-2.875,4.056116369978655e-05
+VV-VH,non-flooded land,-2.625,4.056116369978655e-05
+VV-VH,non-flooded land,-2.375,0.0
+VV-VH,non-flooded land,-2.125,0.0
+VV-VH,non-flooded land,-1.875,0.0
+VV-VH,non-flooded land,-1.625,4.056116369978655e-05
+VV-VH,non-flooded land,-1.375,4.056116369978655e-05
+VV-VH,non-flooded land,-1.125,0.0001419640729492529
+VV-VH,non-flooded land,-0.875,0.00010140290924946637
+VV-VH,non-flooded land,-0.625,0.0001622446547991462
+VV-VH,non-flooded land,-0.375,0.0001419640729492529
+VV-VH,non-flooded land,-0.125,0.0002433669821987193
+VV-VH,non-flooded land,0.125,0.0005070145462473318
+VV-VH,non-flooded land,0.375,0.0005475757099471184
+VV-VH,non-flooded land,0.625,0.0009937485106447704
+VV-VH,non-flooded land,0.875,0.0018049717846405013
+VV-VH,non-flooded land,1.125,0.002595914476786339
+VV-VH,non-flooded land,1.375,0.0036707853148306826
+VV-VH,non-flooded land,1.625,0.005191828953572678
+VV-VH,non-flooded land,1.875,0.007483534702610618
+VV-VH,non-flooded land,2.125,0.011255722926690767
+VV-VH,non-flooded land,2.375,0.01592025675216622
+VV-VH,non-flooded land,2.625,0.02167994199753591
+VV-VH,non-flooded land,2.875,0.031333498958085106
+VV-VH,non-flooded land,3.125,0.041534631628581425
+VV-VH,non-flooded land,3.375,0.0566842262704517
+VV-VH,non-flooded land,3.625,0.07165129567567294
+VV-VH,non-flooded land,3.875,0.09410189978350479
+VV-VH,non-flooded land,4.125,0.11588324469029017
+VV-VH,non-flooded land,4.375,0.1399360147642636
+VV-VH,non-flooded land,4.625,0.16177820141659865
+VV-VH,non-flooded land,4.875,0.18862969178585734
+VV-VH,non-flooded land,5.125,0.21284470651462992
+VV-VH,non-flooded land,5.375,0.23282107963677479
+VV-VH,non-flooded land,5.625,0.24557756562035765
+VV-VH,non-flooded land,5.875,0.2520267906486237
+VV-VH,non-flooded land,6.125,0.25273661101336997
+VV-VH,non-flooded land,6.375,0.24920778977148855
+VV-VH,non-flooded land,6.625,0.24040601724863486
+VV-VH,non-flooded land,6.875,0.2204093635446401
+VV-VH,non-flooded land,7.125,0.2040632145736261
+VV-VH,non-flooded land,7.375,0.17919922122565696
+VV-VH,non-flooded land,7.625,0.15321979587594367
+VV-VH,non-flooded land,7.875,0.12959291802081802
+VV-VH,non-flooded land,8.125,0.10957598373497336
+VV-VH,non-flooded land,8.375,0.09097869017862123
+VV-VH,non-flooded land,8.625,0.07361851211511258
+VV-VH,non-flooded land,8.875,0.05571075834165682
+VV-VH,non-flooded land,9.125,0.043948020868718726
+VV-VH,non-flooded land,9.375,0.03334127656122454
+VV-VH,non-flooded land,9.625,0.027155699097007092
+VV-VH,non-flooded land,9.875,0.01938823624849797

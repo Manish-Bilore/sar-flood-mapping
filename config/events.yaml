@@ -45,6 +45,12 @@ rural:
     compare: "DeepSARFlood 10 Aug 2022 vs S2 labels (same AOI)"
     districts: auto                                   # every ADM2 polygon intersecting the bbox
     # zooms: omitted -> windows are centred on the largest flood clusters
+    coherence:                                        # HyP3 burst InSAR on the 10 Aug (p143) scene
+      path: 143
+      bbox: [93.00, 26.60, 94.00, 26.90]
+      dry: [2022-02-11, 2022-02-23]                   # non-monsoon anchor (the lesson from Kerala)
+      pre: [2022-07-17, 2022-07-29]
+      co: [2022-07-29, 2022-08-10]
     published:
       - {source: "DeepSARFlood (2025), S2-derived labels", metric: "IoU", value: 0.72, date: 2022-08-10, area: "same AOI"}
   bihar_2020:
@@ -58,8 +64,24 @@ urban:
     bbox: [77.45, 12.80, 77.80, 13.15]
     co: [{date: 2022-09-05, path: 165, dir: DESCENDING}]       # ~06:00 IST, hours after the 4 Sep night storm
     dry: [2022-01-01, 2022-04-30]
-    coherence: true
     compare: "none peer-reviewed -> GFM + reported locations (ORR, Bellandur, Yemalur, Mahadevapura)"
+    districts: auto
+    zooms:                                            # locations reported flooded on 5 Sep 2022 [lon, lat, size_km]
+      bellandur_varthur: [77.680, 12.940, 6]
+      mahadevapura_orr: [77.700, 12.990, 5]
+      sai_layout_horamavu: [77.660, 13.030, 4]
+      sarjapur_rainbow: [77.720, 12.890, 4]
+    zoom_labels:
+      bellandur_varthur: Bellandur — Varthur
+      mahadevapura_orr: Mahadevapura — ORR
+      sai_layout_horamavu: Sai Layout — Horamavu
+      sarjapur_rainbow: Sarjapur — Rainbow Drive
+    coherence:                                        # p165 DESC; dry anchor + pre + co, 12-day steps
+      path: 165
+      bbox: [77.45, 12.80, 77.80, 13.15]
+      dry_window: [2022-01-01, 2022-04-30]            # auto -> 2022-01-08 / 2022-01-20 (12 d)
+      pre: [2022-07-31, 2022-08-12]                   # 12 d, the last clean pair before the storm
+      co: [2022-08-12, 2022-09-05]                    # 24 d: p165 skipped the 24 Aug cycle, so the co pair spans two cycles
   delhi_2023:
     bbox: [77.10, 28.45, 77.40, 28.90]
     co: [{date: 2023-07-16, path: 27, dir: ASCENDING}]         # peak
@@ -76,10 +98,40 @@ urban:
     compare: "HEC-RAS modelled extent (Curr Sci 2021) -> residual-inundation / detectability case"
   mumbai_2024:
     bbox: [72.77, 18.88, 73.05, 19.30]
-    co: [{date: 2024-07-11, path: 34, dir: DESCENDING}]        # PROVISIONAL: +2 d after 8 Jul rain; pluvial water drains in hours
+    # No near-peak acquisition exists: path 34 DESC is the ONLY orbit over Mumbai in 2024, at a strict 12-day repeat.
+    # The 8 Jul and 26 Sep episodes fall +3 d and -5 d from the nearest passes, so this event is run as a
+    # DETECTABILITY case: the same rule on every pass of the season, to see whether 11 Jul is separable at all.
+    co:
+      - {date: 2024-07-11, path: 34, dir: DESCENDING}         # +3 d after the 8 Jul cloudburst — the event candidate
+      - {date: 2024-06-17, path: 34, dir: DESCENDING}
+      - {date: 2024-06-29, path: 34, dir: DESCENDING}
+      - {date: 2024-07-23, path: 34, dir: DESCENDING}
+      - {date: 2024-08-16, path: 34, dir: DESCENDING}
+      - {date: 2024-08-28, path: 34, dir: DESCENDING}
+      - {date: 2024-09-09, path: 34, dir: DESCENDING}
+      - {date: 2024-09-21, path: 34, dir: DESCENDING}         # -5 d before the 26 Sep deluge
+      - {date: 2024-10-03, path: 34, dir: DESCENDING}
+    event_date: 2024-07-11                                    # the pass under test in the detectability series
     dry: [2024-01-01, 2024-04-30]
-    coherence: true
     compare: "Mumbai S1 2018-25 study (VV vs VH extents, ward-level)"
+    districts: auto
+    intertidal: [10, 90]                              # GSW occurrence band: creeks, mudflats and salt pans that move with the tide
+    zooms:                                            # recurring flooding hotspots [lon, lat, size_km]
+      mithi_kurla: [72.885, 19.070, 5]
+      andheri_subway: [72.848, 19.119, 4]
+      sion_dharavi: [72.862, 19.042, 4]
+      hindmata_dadar: [72.840, 19.015, 4]
+    zoom_labels:
+      mithi_kurla: Mithi River — Kurla
+      andheri_subway: Andheri Subway
+      sion_dharavi: Sion — Dharavi
+      hindmata_dadar: Hindmata — Dadar
+    coherence:                                        # p34 DESC, 12-day steps around the co-event date (re-check after the audit)
+      path: 34
+      bbox: [72.77, 18.88, 73.05, 19.30]
+      dry: [2024-02-06, 2024-02-18]
+      pre: [2024-06-17, 2024-06-29]
+      co: [2024-06-29, 2024-07-11]
 dropped:
   chennai_2023: "no S1 IW acquisition 1-18 Dec 2023 -> EOS-04 only (Bhoonidhi, manual); qualitative panel at most"
   wayanad_2024: "landslide/debris flow, not inundation"

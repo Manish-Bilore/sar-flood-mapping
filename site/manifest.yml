@@ -1,0 +1,105 @@
+# Landing page content for the GitHub Pages site. Numbers come from outputs/*/summary.json where they exist;
+# this file supplies the ordering, the status and the one-line reading of each event.
+# status: published | in-progress | planned | dropped
+title: SAR flood mapping without Earth Engine
+tagline: >
+  Sentinel-1 flood mapping for Indian events, rebuilt from public archives on a single laptop — classical
+  thresholding and change detection, five segmentation networks trained on Sen1Floods11, InSAR coherence from
+  HyP3, and a parameterised report that regenerates end to end for every event.
+repo: https://github.com/Manish-Bilore/sar-flood-mapping
+
+findings:
+  - >
+    Benchmark IoU does not predict transfer — five networks within 0.663–0.681 test IoU on Sen1Floods11 map flood
+    extents differing by 3–3.5× on the same scene, in both rural events.
+  - >
+    A ratio of decibel values is not a flood rule. The 2024 Earth Engine logic it replaces puts 79 % of its
+    detections in tree cover, because the drop it demands scales with a pixel's own brightness.
+  - >
+    Global thresholding fails in dense cities. Over Bengaluru, Otsu lands at −2.6 dB, separating built-up from
+    vegetation rather than water from land, while change detection against a dry-season median still works.
+  - >
+    Revisit, not method, is the binding constraint for urban pluvial floods. Mumbai 2024 has one orbit at a
+    12-day repeat and no pass within three days of the cloudburst.
+  - >
+    Urban flood extent is a lower bound everywhere: intensity rules look for a backscatter drop, while flooded
+    streets get brighter through double bounce.
+
+events:
+  - id: kerala_2018
+    name: Kerala 2018
+    setting: Rural + peri-urban · Periyar / Kuttanad
+    date: 21 Aug 2018
+    report: kerala_2018.html
+    status: published
+    note: >
+      The anchor event, recreating an earlier Earth Engine workflow — and auditing what that rule got wrong.
+      Five networks, InSAR coherence on three pairs, a georeferenced NRSC sheet for comparison, and a
+      sensitivity analysis of every ensemble choice.
+
+  - id: assam_2022
+    name: Assam 2022
+    setting: Rural riverine · Brahmaputra
+    date: 10 Aug 2022
+    report: assam_2022_20220810.html
+    status: published
+    note: >
+      Second rural case on a different river system and orbit. The deep-learning ordering repeats exactly,
+      while the classical methods disagree by a factor of 1.8 — so here the ensemble's vote rule genuinely
+      changes the answer, unlike Kerala.
+
+  - id: mumbai_2024
+    name: Mumbai 2024
+    setting: Urban pluvial + coastal
+    date: 11 Jul 2024 (+3 d)
+    report: mumbai_2024_detectability.html
+    status: published
+    kind: detectability
+    note: >
+      No acquisition near the flood peak, so a single map would prove nothing. The same rule is run over all
+      nine passes of the season instead: the event date is not separable from the rest, and the seasonal
+      scatter sets a detection floor for how large a flood would have to be.
+
+  - id: bengaluru_2022
+    name: Bengaluru 2022
+    setting: Urban pluvial · tech corridor
+    date: 5 Sep 2022
+    status: in-progress
+    note: >
+      The one urban event with a near-peak pass — hours after the night storm. Global thresholds are rejected
+      as implausible; change detection and the UrbanSARFloods models carry the result. Waiting on a model
+      trained for the band subset open processing can actually supply.
+
+  - id: delhi_2023
+    name: Delhi 2023
+    setting: Urban riverine · Yamuna
+    date: 16 Jul 2023
+    status: planned
+    note: Peak-window acquisition plus a four-scene time series through onset, peak and recession.
+
+  - id: hyderabad_2020
+    name: Hyderabad 2020
+    setting: Urban pluvial
+    date: 21 Oct 2020
+    status: planned
+    note: Residual-inundation case — the pass falls days after the peak, so it tests what survives to be seen.
+
+  - id: bihar_2020
+    name: Bihar 2020
+    setting: Rural riverine · Kosi
+    date: 26 Jul 2020
+    status: planned
+    note: Third rural case, with a published accuracy figure to compare against.
+
+  - id: assam_2020
+    name: Assam 2020
+    setting: Rural riverine · Brahmaputra
+    date: 15 Jul 2020
+    status: planned
+    note: Six-day revisit era — the same AOI as 2022 with twice the sampling.
+
+dropped:
+  - name: Chennai 2023
+    why: No Sentinel-1 IW acquisition at all between 1 and 18 Dec 2023.
+  - name: Wayanad 2024
+    why: Landslide and debris flow, not inundation — the target class is not floodwater.

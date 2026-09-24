@@ -1,8 +1,14 @@
 # SAR flood mapping without Earth Engine
 
+**[Read the reports →](https://manish-bilore.github.io/sar-flood-mapping/)**
+
 Sentinel-1 flood mapping for Indian events, rebuilt from public archives on a single laptop: classical thresholding and
 change detection, five segmentation networks trained on Sen1Floods11, InSAR coherence from HyP3, and a parameterised
 Quarto report that regenerates end to end for any configured event.
+
+Published so far: [Kerala 2018](https://manish-bilore.github.io/sar-flood-mapping/kerala_2018.html) ·
+[Assam 2022](https://manish-bilore.github.io/sar-flood-mapping/assam_2022_20220810.html) ·
+[Mumbai 2024 — detectability](https://manish-bilore.github.io/sar-flood-mapping/mumbai_2024_detectability.html).
 
 The anchor event is the **Kerala flood of August 2018**, a recreation of an earlier Google Earth Engine workflow by the
 same author — including an audit of what that earlier rule got wrong.

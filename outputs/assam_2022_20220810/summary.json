@@ -1,0 +1,98 @@
+{
+ "event": "assam_2022",
+ "tag": "assam_2022_20220810",
+ "co_file": "co_20220810_p143.tif",
+ "path": 143,
+ "bbox": [
+  93.0,
+  26.6,
+  94.0,
+  26.9
+ ],
+ "factor": 5,
+ "pre_file": "pre_20220729_p143.tif",
+ "display_layers": [
+  "co_vh_db",
+  "co_vv_db",
+  "coh_co_coh",
+  "coh_dry_coh",
+  "coh_pre_coh",
+  "dem",
+  "dl_deeplab_r34_flood_frac",
+  "dl_deeplab_r34_prob",
+  "dl_segformer_b0_flood_frac",
+  "dl_segformer_b0_prob",
+  "dl_segformer_b2_flood_frac",
+  "dl_segformer_b2_prob",
+  "dl_unet_r18_flood_frac",
+  "dl_unet_r18_prob",
+  "dl_unet_r34_flood_frac",
+  "dl_unet_r34_prob",
+  "dry_vh_db",
+  "dry_vv_db",
+  "flood_cd_vv_frac",
+  "flood_otsu_vh_frac",
+  "flood_otsu_vv_frac",
+  "flood_split_vv_frac",
+  "flood_urban_incr_frac",
+  "gsw_occ",
+  "gsw_seas",
+  "hand",
+  "logratio_vv_db",
+  "pre_vv_db",
+  "slope",
+  "worldcover"
+ ],
+ "excluded_methods": [],
+ "builtup_km2": 35.8618,
+ "dl_voting_models": [
+  "dl_deeplab_r34",
+  "dl_segformer_b0",
+  "dl_segformer_b2",
+  "dl_unet_r18",
+  "dl_unet_r34"
+ ],
+ "dl_excluded": {},
+ "dl_gate_test_iou": 0.6,
+ "final_voters": [
+  "cd_vv",
+  "otsu_vv",
+  "split_vv",
+  "dl_ensemble"
+ ],
+ "final_km2": 319.5915,
+ "zooms_auto": true,
+ "zooms": {
+  "flood_cluster_1": [
+   93.9314,
+   26.8247,
+   6
+  ],
+  "flood_cluster_2": [
+   93.8072,
+   26.8102,
+   6
+  ],
+  "flood_cluster_3": [
+   93.3082,
+   26.6891,
+   6
+  ]
+ },
+ "valid_km2": 3348.5391,
+ "published": [
+  {
+   "source": "DeepSARFlood (2025), S2-derived labels",
+   "metric": "IoU",
+   "value": 0.72,
+   "date": "2022-08-10",
+   "area": "same AOI"
+  }
+ ],
+ "zoom_labels": {},
+ "setting": "",
+ "co_dates": [
+  "2022-06-16",
+  "2022-08-10"
+ ]
+}

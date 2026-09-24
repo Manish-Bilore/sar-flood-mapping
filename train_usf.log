@@ -65,3 +65,25 @@ Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
   ep  21 loss 0.671  IoU open 0.749  urban 0.173  (urban->open 0.01)  1835s *
   ep  22 loss 0.668  IoU open 0.758  urban 0.185  (urban->open 0.01)  1476s *
   ep  23 loss 0.675  IoU open 0.750  urban 0.171  (urban->open 0.01)  1836s
+  ep  24 loss 0.666  IoU open 0.743  urban 0.163  (urban->open 0.01)  1623s
+  ep  25 loss 0.671  IoU open 0.746  urban 0.153  (urban->open 0.01)  1753s
+  FULL VALID  open IoU 0.7572 F1 0.8619 | urban IoU 0.1786 F1 0.3031 R 0.408 | any-flood IoU 0.7332
+/home/manish-bilore/anaconda3/envs/sarflood/lib/python3.11/site-packages/torch/cuda/__init__.py:174: UserWarning: CUDA initialization: CUDA unknown error - this may be due to an incorrectly set up environment, e.g. changing env variable CUDA_VISIBLE_DEVICES after program start. Setting the available devices to be zero. (Triggered internally at /pytorch/c10/cuda/CUDAFunctions.cpp:109.)
+  return torch._C._cuda_getDeviceCount() > 0
+### unet_r34_all: in_ch 8, 2281 train chips, 3000 crops/epoch, fast-val 781 chips, class weights [1.0, 2.0, 10.0]
+  ep   1 loss 1.105  IoU open 0.543  urban 0.170  (urban->open 0.02)  2048s *
+  ep   2 loss 0.831  IoU open 0.634  urban 0.240  (urban->open 0.01)  2155s *
+  ep   3 loss 0.785  IoU open 0.637  urban 0.134  (urban->open 0.01)  1661s
+  ep   4 loss 0.738  IoU open 0.613  urban 0.076  (urban->open 0.01)  1564s
+  ep   5 loss 0.750  IoU open 0.695  urban 0.034  (urban->open 0.01)  1554s
+  ep   6 loss 0.715  IoU open 0.650  urban 0.145  (urban->open 0.01)  1573s
+  ep   7 loss 0.721  IoU open 0.704  urban 0.268  (urban->open 0.01)  1557s *
+  ep   8 loss 0.704  IoU open 0.668  urban 0.239  (urban->open 0.01)  31079s
+  ep   9 loss 0.657  IoU open 0.680  urban 0.273  (urban->open 0.01)  1941s
+  ep  10 loss 0.659  IoU open 0.619  urban 0.277  (urban->open 0.01)  1724s
+  ep  11 loss 0.634  IoU open 0.716  urban 0.121  (urban->open 0.01)  1941s
+  ep  12 loss 0.642  IoU open 0.737  urban 0.297  (urban->open 0.01)  1825s *
+  ep  13 loss 0.615  IoU open 0.732  urban 0.244  (urban->open 0.01)  1809s
+  ep  14 loss 0.625  IoU open 0.703  urban 0.164  (urban->open 0.01)  2140s
+Terminated
+[17:33:06] urban queue done

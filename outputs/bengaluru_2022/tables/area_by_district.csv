@@ -1,0 +1,37 @@
+method,district,km2,district_km2
+cd_vv,Bangalore Rural,8.9071,220.49370000000002
+cd_vv,Bangalore,7.4701,1276.3289
+cd_vv,Ramanagara,0.0043,5.7896
+cd_vv,Krishnagiri,0.005,0.7478
+urban_incr,Bangalore Rural,15.897400000000001,220.49370000000002
+urban_incr,Bangalore,219.2466,1276.3289
+urban_incr,Ramanagara,0.0071,5.7896
+urban_incr,Krishnagiri,0.0315,0.7478
+dl_deeplab_r34,Bangalore Rural,11.9975,220.49370000000002
+dl_deeplab_r34,Bangalore,8.786800000000001,1276.3289
+dl_deeplab_r34,Ramanagara,0.0119,5.7896
+dl_deeplab_r34,Krishnagiri,0.0,0.7478
+dl_segformer_b0,Bangalore Rural,14.333200000000001,220.49370000000002
+dl_segformer_b0,Bangalore,21.4477,1276.3289
+dl_segformer_b0,Ramanagara,0.0261,5.7896
+dl_segformer_b0,Krishnagiri,0.0058000000000000005,0.7478
+dl_segformer_b2,Bangalore Rural,15.8732,220.49370000000002
+dl_segformer_b2,Bangalore,16.0059,1276.3289
+dl_segformer_b2,Ramanagara,0.0148,5.7896
+dl_segformer_b2,Krishnagiri,0.001,0.7478
+dl_unet_r18,Bangalore Rural,7.9706,220.49370000000002
+dl_unet_r18,Bangalore,5.1404000000000005,1276.3289
+dl_unet_r18,Ramanagara,0.0175,5.7896
+dl_unet_r18,Krishnagiri,0.0019,0.7478
+dl_unet_r34,Bangalore Rural,6.4058,220.49370000000002
+dl_unet_r34,Bangalore,3.976,1276.3289
+dl_unet_r34,Ramanagara,0.015300000000000001,5.7896
+dl_unet_r34,Krishnagiri,0.0,0.7478
+dl_ensemble,Bangalore Rural,12.328700000000001,220.49370000000002
+dl_ensemble,Bangalore,8.7703,1276.3289
+dl_ensemble,Ramanagara,0.016800000000000002,5.7896
+dl_ensemble,Krishnagiri,0.0009000000000000001,0.7478
+final_majority,Bangalore Rural,6.8693,220.49370000000002
+final_majority,Bangalore,3.2128,1276.3289
+final_majority,Ramanagara,0.004200000000000001,5.7896
+final_majority,Krishnagiri,0.0009000000000000001,0.7478

@@ -1,0 +1,108 @@
+{
+ "event": "mumbai_2024",
+ "tag": "mumbai_2024_detectability",
+ "event_date": "2024-07-11",
+ "n_passes": 9,
+ "repeat_days": 12,
+ "path": 34,
+ "dates": [
+  "2024-06-17",
+  "2024-06-29",
+  "2024-07-11",
+  "2024-07-23",
+  "2024-08-16",
+  "2024-08-28",
+  "2024-09-09",
+  "2024-09-21",
+  "2024-10-03"
+ ],
+ "verdict": "not separable",
+ "methods": [
+  {
+   "method": "cd_vv",
+   "event_km2": 5.6897,
+   "others_mean_km2": 4.1004375,
+   "others_sd_km2": 1.368693319439593,
+   "others_max_km2": 6.2926,
+   "z_score": 1.1611531067096306,
+   "rank_of_season": 3,
+   "n_passes": 9,
+   "min_detectable_km2": 2.737386638879186,
+   "event_excess_km2": 1.5892625000000002,
+   "separable": false
+  },
+  {
+   "method": "otsu_vv",
+   "event_km2": 29.7144,
+   "others_mean_km2": 27.2181125,
+   "others_sd_km2": 14.006939720564795,
+   "others_max_km2": 48.1941,
+   "z_score": 0.17821790839400747,
+   "rank_of_season": 4,
+   "n_passes": 9,
+   "min_detectable_km2": 28.01387944112959,
+   "event_excess_km2": 2.496287500000001,
+   "separable": false
+  },
+  {
+   "method": "split_vv",
+   "event_km2": 24.684900000000003,
+   "others_mean_km2": 20.5777,
+   "others_sd_km2": 8.418500403448178,
+   "others_max_km2": 31.5761,
+   "z_score": 0.48787786460373783,
+   "rank_of_season": 4,
+   "n_passes": 9,
+   "min_detectable_km2": 16.837000806896356,
+   "event_excess_km2": 4.107200000000002,
+   "separable": false
+  },
+  {
+   "method": "urban_incr",
+   "event_km2": 42.0426,
+   "others_mean_km2": 27.542987500000002,
+   "others_sd_km2": 16.95273909957895,
+   "others_max_km2": 56.8725,
+   "z_score": 0.8552961509541618,
+   "rank_of_season": 3,
+   "n_passes": 9,
+   "min_detectable_km2": 33.9054781991579,
+   "event_excess_km2": 14.499612499999998,
+   "separable": false
+  }
+ ],
+ "bbox": [
+  72.77,
+  18.88,
+  73.05,
+  19.3
+ ],
+ "zooms": {
+  "mithi_kurla": [
+   72.885,
+   19.07,
+   5
+  ],
+  "andheri_subway": [
+   72.848,
+   19.119,
+   4
+  ],
+  "sion_dharavi": [
+   72.862,
+   19.042,
+   4
+  ],
+  "hindmata_dadar": [
+   72.84,
+   19.015,
+   4
+  ]
+ },
+ "zoom_labels": {
+  "mithi_kurla": "Mithi River \u2014 Kurla",
+  "andheri_subway": "Andheri Subway",
+  "sion_dharavi": "Sion \u2014 Dharavi",
+  "hindmata_dadar": "Hindmata \u2014 Dadar"
+ }
+}

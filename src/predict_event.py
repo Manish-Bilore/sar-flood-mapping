@@ -49,8 +49,10 @@ def predict(model, x, dev, tile, ov, amp):
 
 
 def main(a):
-    d = ROOT / f"data/events/{a.event}"; out = d / "dl"; out.mkdir(exist_ok=True)
-    co_f = sorted((d / "rtc").glob(f"co_{a.co or ''}*.tif"))[0]
+    d = ROOT / f"data/events/{a.event}"
+    from make_event_products import pick_co
+    co_f, sfx = pick_co(d, a.co)
+    out = d / f"dl{sfx}"; out.mkdir(exist_ok=True)
     co = rioxarray.open_rasterio(co_f, masked=True); ref = co.isel(band=0)
     x, valid = linear_to_input(co.values[0], co.values[1])
     anc = d / "anc"

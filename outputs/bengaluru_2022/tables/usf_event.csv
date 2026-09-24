@@ -1,0 +1,3 @@
+run,bands,zero_filled,km2_non_flood,km2_open_flood,km2_urban_flood,urban_flood_pct_of_builtup
+unet_r34_co_int,co_int,,1455.8433,27.3444,20.1723,3.395218419843782
+unet_r34_int,int,,1473.841,10.0775,19.4415,3.034732388525417

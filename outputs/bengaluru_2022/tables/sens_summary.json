@@ -1,0 +1,18 @@
+{
+ "default_area_km2": 10.087200000000001,
+ "default_voters": [
+  "cd_vv",
+  "dl_ensemble"
+ ],
+ "dl_gate": 0.6,
+ "dl_models_voting": [
+  "dl_deeplab_r34",
+  "dl_segformer_b0",
+  "dl_segformer_b2",
+  "dl_unet_r18",
+  "dl_unet_r34"
+ ],
+ "vote_area_min_km2": 10.0872,
+ "vote_area_max_km2": 27.416,
+ "vote_iou_min": 0.3679311351035891
+}

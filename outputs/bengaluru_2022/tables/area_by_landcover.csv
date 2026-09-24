@@ -1,0 +1,73 @@
+method,landcover,km2
+cd_vv,tree,2.5805000000000002
+cd_vv,shrub,2.3262
+cd_vv,grass,0.8316
+cd_vv,cropland,9.757900000000001
+cd_vv,built-up,0.28400000000000003
+cd_vv,bare,0.18860000000000002
+cd_vv,water,0.31520000000000004
+cd_vv,herb. wetland,0.10250000000000001
+urban_incr,tree,0.0
+urban_incr,shrub,0.0
+urban_incr,grass,0.0
+urban_incr,cropland,0.0
+urban_incr,built-up,235.1826
+urban_incr,bare,0.0
+urban_incr,water,0.0
+urban_incr,herb. wetland,0.0
+dl_deeplab_r34,tree,1.5985
+dl_deeplab_r34,shrub,3.2587
+dl_deeplab_r34,grass,1.6358000000000001
+dl_deeplab_r34,cropland,11.1357
+dl_deeplab_r34,built-up,0.20520000000000002
+dl_deeplab_r34,bare,0.35950000000000004
+dl_deeplab_r34,water,2.5629
+dl_deeplab_r34,herb. wetland,0.039900000000000005
+dl_segformer_b0,tree,3.2535000000000003
+dl_segformer_b0,shrub,5.0881
+dl_segformer_b0,grass,2.7118
+dl_segformer_b0,cropland,15.3709
+dl_segformer_b0,built-up,1.1215000000000002
+dl_segformer_b0,bare,0.7747
+dl_segformer_b0,water,7.2945
+dl_segformer_b0,herb. wetland,0.1978
+dl_segformer_b2,tree,2.2207
+dl_segformer_b2,shrub,5.2331
+dl_segformer_b2,grass,2.2442
+dl_segformer_b2,cropland,15.0876
+dl_segformer_b2,built-up,0.2549
+dl_segformer_b2,bare,0.4737
+dl_segformer_b2,water,6.1974
+dl_segformer_b2,herb. wetland,0.18330000000000002
+dl_unet_r18,tree,0.9490000000000001
+dl_unet_r18,shrub,1.9043
+dl_unet_r18,grass,0.8337
+dl_unet_r18,cropland,7.781000000000001
+dl_unet_r18,built-up,0.1374
+dl_unet_r18,bare,0.2802
+dl_unet_r18,water,1.2351
+dl_unet_r18,herb. wetland,0.0097
+dl_unet_r34,tree,0.7648
+dl_unet_r34,shrub,1.3069000000000002
+dl_unet_r34,grass,0.6617000000000001
+dl_unet_r34,cropland,6.1702
+dl_unet_r34,built-up,0.1159
+dl_unet_r34,bare,0.2565
+dl_unet_r34,water,1.1107
+dl_unet_r34,herb. wetland,0.010400000000000001
+dl_ensemble,tree,1.4752
+dl_ensemble,shrub,3.2897000000000003
+dl_ensemble,grass,1.6491
+dl_ensemble,cropland,11.5305
+dl_ensemble,built-up,0.1511
+dl_ensemble,bare,0.3648
+dl_ensemble,water,2.6167000000000002
+dl_ensemble,herb. wetland,0.0396
+final_majority,tree,1.0739
+final_majority,shrub,1.2231
+final_majority,grass,0.6007
+final_majority,cropland,6.9177
+final_majority,built-up,0.013000000000000001
+final_majority,bare,0.12380000000000001
+final_majority,water,0.11080000000000001
+final_majority,herb. wetland,0.024200000000000003

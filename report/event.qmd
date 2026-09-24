@@ -233,6 +233,27 @@ if (!is.null(bs)) kbl(bs %>% filter(!method %in% (S$excluded_methods %||% charac
                                   `tree` = km2_tree, `cropland` = km2_cropland, `built-up` = `km2_built-up`), 1)
 ```
 
+```{r rejected, results='asis'}
+rj <- S$rejected_methods
+if (length(rj)) {
+  nm <- setdiff(names(rj), "split_vv_support")
+  if (length(nm)) {
+    cat(sprintf(paste0("\n::: {.callout-warning appearance=\"simple\"}\n**%s rejected on this scene.** ",
+      "%s\n\nA global threshold is only a water threshold if the image histogram is bimodal in water/land. ",
+      "Where it is not — a dense city, a scene with little open water — the deepest valley separates something else ",
+      "(built-up from vegetation, say), and the resulting map is not a flood map. These methods are therefore dropped ",
+      "here rather than passed into the ensemble; the change-detection map, which compares against the dry-season ",
+      "median instead of trusting a histogram, is unaffected.\n:::\n\n"),
+      paste(mlab(nm), collapse = " and "),
+      paste(sprintf("%s put its threshold at **%.2f dB**, above the plausible open-water limit of %.0f dB", mlab(nm),
+                    sapply(rj[nm], function(x) x$threshold_db), sapply(rj[nm], function(x) x$limit_db)), collapse = "; ")))
+  }
+  sup <- rj$split_vv_support
+  if (!is.null(sup)) cat(sprintf("Split-based support: only %d of %d tiles were bimodal (%.1f %%).\n\n",
+                                 sup$bimodal_tiles, sup$tiles, 100 * sup$bimodal_tiles / max(sup$tiles, 1)))
+}
+```
+
 * **Otsu / split-based**: one global threshold on the co-event image — detects *all* dark surfaces, flood or not; permanent water must be masked afterwards.
 * **Change detection**: requires a ≥ 3 dB drop from the same-orbit dry-season median **and** a water-like co-event value — removes permanent water and naturally dark land by construction.
 * **Urban brightening**: built-up pixels ≥ 3 dB *brighter* than the dry season — a double-bounce *candidate*, reported separately, never merged.

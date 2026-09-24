@@ -1,0 +1,149 @@
+---
+title: "SAR flood detectability"
+subtitle: "When no Sentinel-1 pass falls near the flood peak: is the event date separable from the rest of the season?"
+author: "Manish Bilore"
+date: today
+params:
+  event: mumbai_2024
+---
+
+```{r setup}
+source("R/helpers.R")
+ev <- params$event
+P  <- ev_paths(paste0(ev, "_detectability"))
+S  <- fromJSON(file.path(P$out, "summary.json"))
+ts <- tb(P, "water_timeseries"); det <- tb(P, "detectability")
+D  <- file.path(ROOT, "data/events", ev)
+edate <- as.Date(S$event_date)
+fmt <- function(x, d = 1) ifelse(is.na(x), "–", format(round(x, d), big.mark = ","))
+```
+
+::: {.callout-important appearance="simple"}
+**`r gsub("_", " ", ev)` — no acquisition near the flood peak.**
+Relative orbit `r S$path` is the only track over this area, at a `r S$repeat_days`-day repeat: `r S$n_passes` passes in the season.
+The pass under test is **`r S$event_date`**. Verdict: the event date is **`r toupper(S$verdict)`** from the rest of the season.
+:::
+
+# Why this event gets a different report
+
+Every other event in this project had a Sentinel-1 acquisition inside the flood peak, so a map of that scene *is* a flood map.
+Here it does not. Urban pluvial flooding in Mumbai drains within hours of the rain stopping, while the satellite returns every
+`r S$repeat_days` days on a single track — so the question is not "how much flooding does the map show" but **"could this
+system have seen the flood at all?"**
+
+The test: apply the identical classical rule to **every** pass of the monsoon, and compare the event date against the others.
+If the flood left a detectable signature, the event date should stand out from the seasonal and tidal spread. If it does not,
+the extent measured on that date is indistinguishable from an ordinary wet-season scene — which is the answer, and a limit of
+the observing system rather than of the method.
+
+# Acquisitions
+
+```{r acq, fig.height=1.9, fig.width=10}
+dd <- data.frame(date = as.Date(unlist(S$dates)))
+dd$kind <- ifelse(dd$date == edate, "event pass", "other pass")
+ggplot(dd, aes(date, 1, colour = kind, shape = kind)) + geom_point(size = 3.4) +
+  scale_colour_manual(values = c(`event pass` = "#b2182b", `other pass` = "grey55"), name = NULL) +
+  scale_shape_manual(values = c(`event pass` = 17, `other pass` = 16), name = NULL) +
+  scale_x_date(date_breaks = "1 month", date_labels = "%d %b") +
+  labs(x = NULL, y = NULL, title = sprintf("Every Sentinel-1 pass over the AOI (path %s, %d-day repeat)", S$path, S$repeat_days)) +
+  theme_rep() + theme(axis.text.y = element_blank(), panel.grid.major.y = element_blank())
+```
+
+# Water extent across the season
+
+```{r series, fig.height=4.2, fig.width=10}
+if (!is.null(ts)) {
+  ts$date <- as.Date(ts$date)
+  d <- ts %>% filter(method %in% c("otsu_vv", "split_vv", "cd_vv")) %>% mutate(method = mlab(method))
+  ggplot(d, aes(date, area_km2, colour = method)) +
+    geom_line(linewidth = .5) + geom_point(size = 1.8) +
+    geom_vline(xintercept = edate, linetype = 2, colour = "#b2182b") +
+    annotate("text", x = edate, y = max(d$area_km2), label = " event pass", colour = "#b2182b", hjust = 0, size = 3) +
+    scale_x_date(date_breaks = "1 month", date_labels = "%d %b") +
+    labs(x = NULL, y = "mapped water extent [km²]", colour = NULL,
+         title = "The same rule applied to every pass of the season") + theme_rep()
+} else na_note("Time series", "python src/detectability.py <event>")
+```
+
+```{r series_builtup, fig.height=3.4, fig.width=10}
+if (!is.null(ts) && "builtup_km2" %in% names(ts)) {
+  d <- ts %>% filter(method %in% c("otsu_vv", "cd_vv", "urban_incr")) %>% mutate(method = mlab(method))
+  ggplot(d, aes(date, builtup_km2, colour = method)) + geom_line(linewidth = .5) + geom_point(size = 1.8) +
+    geom_vline(xintercept = edate, linetype = 2, colour = "#b2182b") +
+    scale_x_date(date_breaks = "1 month", date_labels = "%d %b") +
+    labs(x = NULL, y = "mapped water on built-up land [km²]", colour = NULL,
+         title = "Built-up fraction — where urban flooding would show up") + theme_rep()
+}
+```
+
+# Is the event date separable?
+
+```{r det_tab, results='asis'}
+if (!is.null(det)) {
+  print(kbl(det %>% transmute(method = mlab(method), `event km²` = event_km2, `season mean km²` = others_mean_km2,
+                              `season sd` = others_sd_km2, `season max km²` = others_max_km2,
+                              `z-score` = z_score, `rank in season` = rank_of_season,
+                              `min detectable km²` = min_detectable_km2, separable), 2))
+  s <- det %>% filter(method %in% c("otsu_vv", "split_vv", "cd_vv")) %>% rename(season_sd = others_sd_km2)
+  cat(sprintf(paste0(
+    "\n**z-score** is how many seasonal standard deviations the event pass sits above the mean of the other passes; ",
+    "**rank** is its position among all %d passes (1 = largest extent of the season). A flood that the sensor caught should ",
+    "score z ≥ 2 and rank 1 on every sound method.\n\n"), S$n_passes))
+  if (S$verdict == "not separable") {
+    cat(sprintf(paste0("Here it does neither: the classical methods put the event pass at z = %s and rank %s of %d. ",
+      "The extent mapped on %s is **inside the ordinary spread of the season** — what any single scene shows in this AOI is ",
+      "dominated by permanently wet ground, creeks and antecedent rainfall rather than by the flood. Whatever water the event ",
+      "left on the surface was either gone by the overpass or too small and too mixed with buildings to register at 10 m.\n\n"),
+      paste(sprintf("%.2f", s$z_score), collapse = " / "), paste(s$rank_of_season, collapse = " / "), S$n_passes, S$event_date))
+    cat(sprintf(paste0("The same table sets a **detection floor** for this AOI and sampling. Season-to-season scatter is %.1f–%.1f km² ",
+      "(1 sd), so a flood has to add **%.0f–%.0f km² of newly mapped water** before it clears z = 2 — against a seasonal mean of ",
+      "%.0f–%.0f km². The 11 July pass added %+.1f–%+.1f km². That floor, not the choice of threshold or model, is what decides ",
+      "whether an event of this kind is observable at all.\n\n"),
+      min(s$season_sd), max(s$season_sd), min(s$min_detectable_km2), max(s$min_detectable_km2),
+      min(s$others_mean_km2), max(s$others_mean_km2), min(s$event_excess_km2), max(s$event_excess_km2)))
+  } else {
+    cat(sprintf(paste0("The event pass scores z = %s and rank %s of %d — the flood signature survives the %d-day sampling. ",
+      "Note that the three methods share an input and a threshold family, so they are not independent evidence: treat this as one ",
+      "test passed three ways, not three confirmations.\n\n"),
+      paste(sprintf("%.2f", s$z_score), collapse = " / "), paste(s$rank_of_season, collapse = " / "), S$n_passes, S$repeat_days))
+  }
+}
+```
+
+# Event pass against its closest rival
+
+```{r maps, fig.height=5, fig.width=11}
+agg <- function(f, k = 5) { r <- tryCatch(rast(f), error = function(e) NULL); if (is.null(r)) NULL else aggregate(r, k, "mean", na.rm = TRUE) }
+if (!is.null(ts)) {
+  cd <- ts %>% filter(method == "cd_vv")
+  rival <- cd %>% filter(!is_event) %>% slice_max(area_km2, n = 1)
+  f1 <- file.path(D, "baseline", format(edate, "%Y%m%d"), "flood_cd_vv.tif")
+  f2 <- file.path(D, "baseline", format(as.Date(rival$date[1]), "%Y%m%d"), "flood_cd_vv.tif")
+  mapgrid(list(agg(f1), agg(f2)),
+          c(sprintf("event pass %s — %.1f km²", S$event_date, cd$area_km2[cd$is_event][1]),
+            sprintf("largest other pass %s — %.1f km²", as.Date(rival$date[1]), rival$area_km2[1])),
+          PAL$flood, c(0, 1), ncol = 2, leg = "flooded\nfraction")
+}
+```
+
+If the two panels look alike, that is the finding: the event pass is another wet-season scene.
+
+# What this means for monitoring
+
+- **Revisit, not method, is the binding constraint for urban pluvial floods.** A `r S$repeat_days`-day repeat on one track
+  cannot be expected to catch water that drains in hours. No amount of threshold tuning or deep learning changes that.
+- **Geometry matters as much as timing.** Only one relative orbit covers this AOI, so there is no second chance from an
+  ascending pass a few hours later on the same day.
+- **What would work**: a constellation with sub-daily revisit (Sentinel-1 C + D from 2026, or commercial X-band tasking),
+  or a different observable — rain-gauge and drainage-network data for the event itself, with SAR reserved for the
+  slower riverine and coastal flooding it does see well.
+- The rest of this project shows the method working where an acquisition exists (Kerala, Assam). This page is the honest
+  boundary of that claim.
+
+```{r caveats, results='asis'}
+cat(sprintf(paste0("\n::: {.callout-note appearance=\"simple\"}\n**Caveats.** The comparison uses one relative orbit (%s) and identical ",
+  "processing on every date, so the passes are directly comparable; the thresholds are re-estimated per scene, as they would be ",
+  "operationally. Tidal stage is not controlled — the intertidal band is masked, but creeks and mudflats still move between passes, ",
+  "which is part of the seasonal spread being measured. A flood too small or too brief to register at 10 m would also produce this ",
+  "result; separability is evidence about the observing system, not proof that no water was present.\n:::\n"), S$path))
+```

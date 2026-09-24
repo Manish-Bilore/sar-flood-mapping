@@ -13,6 +13,7 @@ Input configurations (--bands):
 
   python -u src/train_usf.py --bands int --model unet_r34
   python -u src/train_usf.py --bands all --model unet_r34
+  python -u src/train_usf.py --bands vvcoh_int --model unet_r34   # VV coherence + intensity: what HyP3 can supply
 Outputs runs/usf/<model>_<bands>/: best.pt, history.csv, metrics.json (per-class IoU/F1/P/R on the full validation list)
 """
 from __future__ import annotations
@@ -26,7 +27,12 @@ from models import build  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
 USF = ROOT / "data/benchmarks/usf"
-BANDS = {"co_int": [6, 7], "int": [4, 5, 6, 7], "all": list(range(8)), "coh": [0, 1, 2, 3]}
+BANDS = {"co_int": [6, 7], "int": [4, 5, 6, 7], "all": list(range(8)), "coh": [0, 1, 2, 3],
+         # ASF HyP3 burst InSAR processes VV and HH only (VH is rejected by the API), so bands 0 and 2 can never be
+         # produced for our own events. This subset is what an operational pipeline built on HyP3 can actually assemble:
+         # VV coherence (pre, co) + all four intensity bands. Training on it keeps the transfer test honest — matched
+         # inputs at train and test time, instead of zero-filling two bands the model was trained to rely on.
+         "vvcoh_int": [1, 3, 4, 5, 6, 7]}
 IGN = 255
 
 

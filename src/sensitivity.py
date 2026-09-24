@@ -17,6 +17,7 @@ from scipy import ndimage as ndi
 
 sys.path.insert(0, str(Path(__file__).parent))
 from sarlib import metrics  # noqa: E402
+from make_event_products import pick_co  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
 CFG = yaml.safe_load(open(ROOT / "config/events.yaml"))
@@ -47,8 +48,9 @@ def clean(m, mmu):
 
 def main(a):
     ev = a.event; cfg = EVENTS[ev]
-    d = ROOT / f"data/events/{ev}"; out = ROOT / f"outputs/{ev}"; tab = out / "tables"; tab.mkdir(parents=True, exist_ok=True)
-    co_f = sorted((d / "rtc").glob("co_*.tif"))[0]
+    d = ROOT / f"data/events/{ev}"
+    co_f, sfx = pick_co(d, a.co)
+    out = ROOT / f"outputs/{ev}{sfx}"; tab = out / "tables"; tab.mkdir(parents=True, exist_ok=True)
     bdir = d / "baseline" if (d / "baseline/stats.csv").exists() else d / "baseline" / co_f.stem.split("_")[1]
     anc = d / "anc"
     ref = rioxarray.open_rasterio(co_f, masked=True).isel(band=0)
@@ -56,8 +58,15 @@ def main(a):
     valid = np.isfinite(ref.values)
 
     masks = {f.stem.replace("flood_", ""): (rd(f).values == 1) for f in sorted(bdir.glob("flood_*.tif"))}
-    dl = {"dl_" + f.stem.replace("_flood", ""): (rd(f).values == 1) for f in sorted((d / "dl").glob("*_flood.tif"))} \
-        if (d / "dl").exists() else {}
+    rjf = bdir / "rejected_methods.json"
+    if rjf.exists():
+        for m in [k for k in json.load(open(rjf)) if k != "split_vv_support"]:
+            masks.pop(m, None)
+    if not masks:
+        sys.exit(f"no flood_*.tif in {bdir} — run: python -u src/baseline_classical.py {ev}"
+                 + (f" --co {co_f.stem.split('_')[1]}" if sfx else ""))
+    dl = {"dl_" + f.stem.replace("_flood", ""): (rd(f).values == 1) for f in sorted((d / f"dl{sfx}").glob("*_flood.tif"))} \
+        if (d / f"dl{sfx}").exists() else {}
     gates = {}
     for n in dl:
         mj = ROOT / "runs/s1f11" / n[3:] / "metrics.json"
@@ -72,29 +81,36 @@ def main(a):
         if ok:
             stack.append(np.sum([dl[n] for n in ok], axis=0) * 2 >= len(ok))      # DL casts a single vote
         votes = np.sum(stack, axis=0); n = len(stack)
-        need = n / 2 + 0.5 if rule == "majority" else (n if rule == "unanimous" else int(rule[0]))
+        need = n / 2 + 0.5 if rule == "majority" else (n if rule == "unanimous" else min(int(rule[0]), n))
         return (votes >= need) & valid, voters + (["dl_ensemble"] if ok else []), ok
 
-    base, base_voters, base_ok = ensemble(DEFAULT["gate"], DEFAULT["rule"], DEFAULT["vh"])
+    base, base_voters, base_ok = ensemble(DEFAULT["gate"], "majority", DEFAULT["vh"])
+    if not base_voters:
+        sys.exit("no voters left (all classical methods rejected and no DL runs) — nothing to test")
 
     # ---- 1. vote rule / gate / VH inclusion -------------------------------------------------
+    # rules are expressed relative to however many voters survive (methods can be rejected upstream, e.g. a global
+    # threshold that is not a water threshold), so the table never reports a rule that cannot be satisfied
+    nv = len(base_voters)
     rows = []
-    variants = [("default (3 of 4: 3 classical + 1 DL vote)", DEFAULT["gate"], "3of4", False),
-                ("looser vote (2 of 4)", DEFAULT["gate"], "2of4", False),
-                ("unanimous (4 of 4)", DEFAULT["gate"], "unanimous", False),
-                ("DL gate 0.55", 0.55, "3of4", False), ("DL gate 0.65", 0.65, "3of4", False),
-                ("DL gate 1.01 (classical only, 2 of 3)", 1.01, "majority", False),
-                ("classical only, unanimous (3 of 3)", 1.01, "unanimous", False),
-                ("+ VH-Otsu as a 5th voter (3 of 5)", DEFAULT["gate"], "3of4", True),
-                ("every DL model votes separately (majority of 8)", -1.0, "majority", False)]
+    variants = [(f"default (majority of {nv})", DEFAULT["gate"], "majority", False),
+                (f"any one of {nv}", DEFAULT["gate"], "1", False),
+                (f"unanimous ({nv} of {nv})", DEFAULT["gate"], "unanimous", False),
+                ("DL gate 0.55", 0.55, "majority", False), ("DL gate 0.65", 0.65, "majority", False),
+                ("classical only, majority", 1.01, "majority", False),
+                ("classical only, unanimous", 1.01, "unanimous", False),
+                ("+ VH-Otsu as an extra voter", DEFAULT["gate"], "majority", True),
+                ("every DL model votes separately", -1.0, "majority", False)]
     for name, gate, rule, vh in variants:
         if name.startswith("every DL"):
             stack = [masks[v] for v in CLASSICAL if v in masks] + list(dl.values())
-            m = (np.sum(stack, axis=0) * 2 > len(stack)) & valid; ok = list(dl)
+            if not stack:
+                continue
+            m = (np.sum(stack, axis=0) * 2 > len(stack)) & valid; ok = list(dl); voters = None
         else:
-            m, _, ok = ensemble(gate, rule, vh)
+            m, voters, ok = ensemble(gate, rule, vh)
         rows.append(dict(variant=name, area_km2=float(m.sum() * px_km2), iou_vs_default=iou(m, base),
-                         dl_models_voting=len(ok)))
+                         n_voters=len(voters) if voters else len(CLASSICAL) + len(dl), dl_models_voting=len(ok)))
     pd.DataFrame(rows).to_csv(tab / "sens_vote.csv", index=False)
 
     # ---- 2. post-processing thresholds ------------------------------------------------------
@@ -131,5 +147,5 @@ def main(a):
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
-    ap.add_argument("event")
+    ap.add_argument("event"); ap.add_argument("--co", help="co-event date (YYYY-MM-DD) for multi-date events")
     main(ap.parse_args())
